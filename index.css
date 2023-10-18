@@ -6,7 +6,8 @@
 @font-face {
     font-family: 'Micro';
     src: url('/font/Micro\ bold.ttf') format('woff2');
-    font-weight: "bold";}
+    font-weight: "bold";
+}
 
 body, html {
     margin: 0;
@@ -14,7 +15,20 @@ body, html {
     overflow: hidden;
 }
 body {
-    cursor: url('assets/pointer.png') 0 0, none;
+    cursor: none;
+}
+
+#custom-cursor {
+    width: 90px;
+    height: 100px;
+    background-image: url('assets/pointer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    pointer-events: none;
+    transition: transform 3s ease-out; /* This gives the fluid effect */
+    transform-origin: center;
+    z-index: 9999;
 }
 
 .background {
