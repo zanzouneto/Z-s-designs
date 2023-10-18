@@ -8,8 +8,12 @@
     src: url('/font/Micro\ bold.ttf') format('woff2');
     font-weight: "bold";
 }
+::selection {
+    background-color: #ffcc00; /* This is a yellow color */
+    color: black; /* Optional: change the text color of the selected text */
+}
 body {
-  background: #000000;
+  background-image: linear-gradient(18deg, #2e0e0e, #591120 28.56%, #300404 71.41%);
   font-family: micro;
   margin: 0;
   padding: 0;
@@ -49,18 +53,26 @@ body {
 }
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     color: aliceblue;
 }
 .logo-div{
     width: 80vw;
-    height: 55vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+
 }
 .logo-img{
     max-width: 400px;
-    max-height: 300px;
+    max-height: 350px;
     object-fit: cover;
+}
+.swiper-slide-shadow.swiper-slide-shadow-cards{
+    border-radius: 30px;
 }

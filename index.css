@@ -16,6 +16,7 @@ body, html {
 }
 body {
     cursor: none;
+    background-color: rgb(28, 17, 17);
 }
 
 #custom-cursor {
