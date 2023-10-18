@@ -40,7 +40,7 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = e.pageY - 16 + 'px';
 
     // Scale it up
-    cursor.style.transform = 'scale(1.3)';
+    cursor.style.transform = 'scale(1.7)';
 });
 
 document.addEventListener('mouseout', () => {
@@ -48,7 +48,7 @@ document.addEventListener('mouseout', () => {
 });
 
 document.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'scale(1.3)';
+    cursor.style.transform = 'scale(1.7)';
 });
 
 // Return to original size after a delay

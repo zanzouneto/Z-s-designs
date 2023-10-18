@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    background: #253946;
+}
+.fullwidth{
+    margin: auto;
+    width: 100%;
+    object-fit: cover;
+    
+}
+section{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 60px;
+}
+h1{
+    font-family: 'Micro';
+    font-size: 133.402px;
+    color: #FFFFFF;
+}
+.h1div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    width: 843.76px;
+    height: 156.12px;
+    left: calc(50% - 843.76px/2 - 0px);
+    background: #1C122D;
+    border-radius: 40px;
+}
+.highlighted{
+    color: #ffcc00;
+    font-family: coda, sans-serif;
+    font-size: 40px;
+} 
+p{
+    color: #FFF;
+    font-family: coda, sans-serif;
+    font-size: 25px;
+}

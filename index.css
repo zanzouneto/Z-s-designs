@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
     position: absolute;
     pointer-events: none;
-    transition: transform 3s ease-out; /* This gives the fluid effect */
+    transition: transform 4s ease-out; /* This gives the fluid effect */
     transform-origin: center;
     z-index: 9999;
 }

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro.otf') format('opentype');
+    font-weight: "regular";
+}
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro\ bold.ttf') format('truetype');
+    font-weight: "bold";
+}
+/* @font-face {
+    font-family: 'Coda';
+    src: url('/font/Coda-Regular.ttf') format('truetype');
+    font-weight: "regular";
+}
+@font-face {
+    font-family: 'Coda';
+    src: url('/font/Coda-ExtraBold.ttf') format('truetype');
+    font-weight: "bold";
+} */
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
+
+::selection {
+    background-color: #ffcc00; /* This is a yellow color */
+    color: black; /* Optional: change the text color of the selected text */
+}
