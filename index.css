@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro.otf') format('woff2');
+    font-weight: "regular";
+}
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro\ bold.ttf') format('woff2');
+    font-weight: "bold";}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    cursor: url('assets/pointer.png') 0 0, none;
+}
+
+.background {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 0.3s;
+    align-items: flex-star;
+    justify-content: flex-end;
+}
+
+#backgroundA {
+    background-image: url('assets/zeina-bottomright.jpg');
+    background-size: cover;
+    opacity: 1;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.p-a{
+    font-size: 7vw;
+    line-height: 6vw;
+    color: white;
+    font-family: micro;
+    margin-left: 50px;
+}
+.p-b{
+    font-size: 7vw;
+    line-height: 6vw;
+    font-family: micro;
+    text-align: right;
+    color: white;
+    margin-right: 50px;
+}
+
+#backgroundB {
+    background-image: url('assets/zeina-topright.jpg');
+    background-size: cover;
+    opacity: 0;
+}
