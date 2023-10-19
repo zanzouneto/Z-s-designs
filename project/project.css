@@ -1,6 +1,5 @@
 body{
-    margin: 0;
-    background: #253946;
+    margin: 0 0 40px 0;
 }
 .fullwidth{
     margin: auto;
@@ -37,6 +36,13 @@ h1{
     font-family: coda, sans-serif;
     font-size: 30.61px;
 } 
+.highlighted.removetop{
+    margin-top: 0;
+}
+.highlighted.smaller{
+    font-size: 17px;
+    line-height: 16px;
+}
 p{
     color: #FFF;
     font-family: coda, sans-serif;
