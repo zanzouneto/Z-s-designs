@@ -64,6 +64,10 @@ h1{
     position: relative;
 }
 .morebutton{
+    bottom: 20px;
+
+}
+.morebutton{
     position: fixed;
     top: 40px;
     right: 20px;
@@ -90,17 +94,22 @@ h1{
     align-items: center;
 }
 .painting{
-    width: 80vw;
+    width: 90vw;
     height: 80vh;
     object-fit:contain;
     border-radius: 30px;
 }
 
-/* Default styles for mobile devices */
-
 
 /* Tablet styles */
 @media (min-width: 600px) {
+    .printer{
+        height: 85vh;
+        width: 60vw;
+    }    
+    .painting{
+        width: 80vw;
+    }
 }
 
 /* Desktop styles */
