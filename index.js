@@ -29,7 +29,7 @@ document.addEventListener('click', function(e) {
     if (window.getComputedStyle(bgA).opacity === "1") {
         window.open('cv.html', '_blank');
     } else if (window.getComputedStyle(bgB).opacity === "1") {
-        window.location.href = 'newslider.html';
+        window.location.href = 'portfolio.html';
     }
 });
 const cursor = document.getElementById('custom-cursor');

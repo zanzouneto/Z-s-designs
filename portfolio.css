@@ -1,126 +1,83 @@
-@font-face {
-    font-family: 'Micro';
-    src: url('font/Micro.otf') format('woff2');
-    font-weight: "regular";
+body {
+  background-color: #1b4a68;;
+  font-family: micro;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
 }
-@font-face {
-    font-family: 'Micro';
-    src: url('font/Micro\ bold.ttf') format('woff2');
-    font-weight: "bold";
+
+.swiper-section{
+    width: 80vw;
+    height: 90vh;
+    margin-bottom: 60px;
 }
-    
-body{
-    background-color: #F4E7C7; 
-    font-family: micro;
-    padding: 0;
-    margin: 0;
-    max-width: 100vw;
+
+.swiper-container {
+  margin-bottom: 40px;
+  border-radius: 30px;
 }
-a{
-    text-decoration: none;
-    text-align: center;
-    border-radius: 50px;
-}
-.title{
-    font-size: 30px;
-    margin-left: 40px;
-    line-height: 14px;
-}
-.header-section{
+
+.swiper-slide {
+    width: 85vw;
+    height: 85vh;  
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.header-div{
-    background-image:url('assets/background\ computer.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; 
-    height: 95vh;
-    width: 150vh;
-    display: flex;
-    margin-top: 20px;
-    flex-direction: column;
-}
-.computer-screen{
-    margin: 120px auto auto auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.computer-label{
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.button{
-    background-color: #271201;
-    color: #F7F0D3;
-    text-align: center;
-    font-size: 20px;
-    padding: 10px 40px;
-    border-radius: 50px;
-}
-.major-button{
-    border: 2px solid #000;
-    background: #FFFFDB;
-    color: #000;
-    font-size: 30px;
-    padding: 15px 40px;
-    box-shadow: #000 10px 10px 0;
-    margin: 50px 0 80px 0;
+    border-radius: 30px;
 }
 
-.divider{
-    font-size: 40px;
-    text-align: center;
-    line-height: 60px;
-    background-color: #FFFFDB;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    color: #CECEB1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.dot{
-    min-width: 22.27px;
-    min-height: 22.27px;
-    border-radius: 100%;
-    fill: #653511;
-}
-
-.projects-section{
-    padding: 40px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.project-main-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F9E0BA;
-    box-shadow: 0px 3.833px 10px 0px rgba(0, 0, 0, 0.45);
-    border-radius: 20px;
-    margin-bottom: 40px;
-    transition: transform 0.3s;
-    position: sticky;
-    top: 10px;
-}
-h2{
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 10px;
-}
 .project-img{
-    max-height: 80vh;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    margin: 0 40px 20px 40px;
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: aliceblue;
+}
+.logo-div{
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 30px;
+
+}
+.logo-img{
+    max-width: 400px;
+    max-height: 350px;
+    object-fit: cover;
+}
+.swiper-slide-shadow.swiper-slide-shadow-cards{
+    border-radius: 30px;
+    position: relative;
+}
+.morebutton{
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    background-color: rgb(247, 235, 8);
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: black 0 0 10px;
+    color: #2e0e0e;
+    transition: ease-in;
+}
+.morebutton :hover{
+    background-color: antiquewhite;
 }
 .printer{
     margin: 30px 0;
@@ -131,4 +88,21 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.painting{
+    width: 80vw;
+    height: 80vh;
+    object-fit:contain;
+    border-radius: 30px;
+}
+
+/* Default styles for mobile devices */
+
+
+/* Tablet styles */
+@media (min-width: 600px) {
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
 }
