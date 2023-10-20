@@ -12,9 +12,10 @@ body {
 }
 
 .swiper-section{
-    width: 80vw;
-    height: 90vh;
+    width: 103vw;
+    height: 39vh;
     margin-bottom: 60px;
+    margin-left: 40px;
 }
 
 .swiper-container {
@@ -43,8 +44,8 @@ h1{
     color: aliceblue;
 }
 .logo-div{
-    width: 80vw;
-    height: 70vh;
+    width: 100vw;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,6 +58,8 @@ h1{
 .logo-img{
     max-width: 400px;
     max-height: 350px;
+    max-width: 80vw;
+    max-height: 350px;
     object-fit: cover;
 }
 .swiper-slide-shadow.swiper-slide-shadow-cards{
@@ -64,12 +67,8 @@ h1{
     position: relative;
 }
 .morebutton{
-    bottom: 20px;
-
-}
-.morebutton{
     position: fixed;
-    top: 40px;
+    bottom: 20px;
     right: 20px;
     background-color: rgb(247, 235, 8);
     border-radius: 30px;
@@ -109,6 +108,24 @@ h1{
     }    
     .painting{
         width: 80vw;
+    }
+    .morebutton{
+        bottom: auto;
+        top: 40px;
+    }    
+    .swiper-section{
+        width: 80vw;
+        height: 90vh;
+        margin-bottom: 60px;
+        margin-left: 0;
+    }
+    .logo-img{
+        max-width: 400px;
+        max-height: 350px;
+    }
+    .logo-div{
+        width: 80vw;
+        height: 70vh;
     }
 }
 
