@@ -1,14 +1,3 @@
-@font-face {
-    font-family: 'Micro';
-    src: url('/font/Micro.otf') format('woff2');
-    font-weight: "regular";
-}
-@font-face {
-    font-family: 'Micro';
-    src: url('/font/Micro\ bold.ttf') format('woff2');
-    font-weight: "bold";
-}
-
 body, html {
     margin: 0;
     padding: 0;

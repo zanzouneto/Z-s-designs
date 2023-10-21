@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="navigation.css">
+    <script src="navigation.js" defer></script>
+</head>
+<body>
+    <menu-container>
+        <div class="nav-div">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="assets/webclip.png">
+            </div>
+            <div class="dropdown-menu">
+                <div class="menu-a-s">
+                    <a href="cv.html">CV</a> 
+                    <a href="portfolio.html">Portfolio</a> 
+                    <a onclick="openForm(event)" href="#">Contact me</a> 
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-popup" id="contactForm">
+            <div class="form-container">
+                <img class="close" onclick="closeForm()" src="assets/x.svg">
+                <form class="form" action="navigation.php" method="post">
+                    <h2>Contact Me</h2>
+                    <input class="input" type="text" name="name" placeholder="Name" required>
+                    <input class="input" type="email" name="email" placeholder="Email" required>
+                    <textarea class="input" name="message" placeholder="Message" required></textarea>
+                    <button class="button" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </menu-container>
+</body>
+</html>

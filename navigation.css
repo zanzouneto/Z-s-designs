@@ -1,0 +1,109 @@
+body {
+    font-family: micro, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contact-form-popup{
+    display: none;
+}
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+.menu-icon img{
+    width: 80px;
+    height: 80px;
+}
+
+.dropdown-menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: -90vw;
+    width: 90vw;
+    height: 100px;
+    background-color: #1C122D;
+    transition: left 0.3s;
+    overflow-y: auto;
+    border-radius: 0 30px 30px 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(247, 235, 8);
+    color: #1C122D;
+    border-radius: 30px;
+}
+.menu-a-s{
+    display: flex;
+    flex-direction: row;
+    margin-left: 120px;
+    justify-content: space-around;
+}
+.form-container{
+    position: relative;
+    color: aliceblue;
+    width: 80vw;
+    height: 80vh;
+    background-color: #1C122D;
+    margin: 10vh 10vw;
+    border-radius: 30px;
+}
+.form{
+    row-gap: 10px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 70vh;
+    max-width: 70vw;
+}
+.button{
+    margin-top: 40px;
+    background-color: rgb(247, 235, 8);
+    border-radius: 30px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: black 0 0 10px;
+    color: #2e0e0e;
+    transition: ease-in;
+}
+.input{
+    background-color:#1c122d00;
+    border: #555 none;
+    border-bottom: rgb(247, 235, 8) solid 1px;
+    font-family: coda, sans-serif;
+    color: rgb(247, 235, 8);
+    padding: 15px;
+    max-width: 60vw;
+    max-height: 20vh;
+}
+.close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}
+@keyframes shiver {
+    0% { transform: rotate(-1deg); }
+    50% { transform: rotate(1deg); }
+    100% { transform: rotate(-1deg); }
+}
+.menu-icon img {
+    animation: shiver 0.5s infinite alternate;
+}
