@@ -1,18 +1,17 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $fromEmail = $_POST['email'];
     $message = $_POST['message'];
 
-    $to = "zeina.m.saade@gmail.com"; 
-    $subject = "New Contact Form Submission";
-    $headers = "From: " . $email;
+    $toEmail = "zeina.m.saade@gmail.com";  // Replace with your email
+    $subject = "New message from " . $name;
+    $headers = "From: " . $fromEmail;
 
-    mail($to, $subject, $message, $headers);
-    echo "Email sent!";
+    if (mail($toEmail, $subject, $message, $headers)) {
+        echo "Email sent successfully!";
+    } else {
+        echo "There was an error sending the email.";
+    }
 }
 ?>
