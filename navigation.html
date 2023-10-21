@@ -21,7 +21,22 @@
                 </div>
             </div>
         </div>
-        <div class="contact-form-popup" id="contactForm">
+        <form
+            action="https://formspree.io/f/xleyzdvq"
+            method="POST"
+            >
+            <label>
+                Your email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Your message:
+                <textarea name="message"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+        </form>
+        <!-- <div class="contact-form-popup" id="contactForm">
             <div class="form-container">
                 <img class="close" onclick="closeForm()" src="assets/x.svg">
                 <form class="form" action="navigation.php" method="post">
@@ -32,7 +47,7 @@
                     <button class="button" type="submit">Submit</button>
                 </form>
             </div>
-        </div>
+        </div> -->
     </menu-container>
 </body>
 </html>
