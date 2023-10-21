@@ -40,7 +40,7 @@ body {
 }
 h1{
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     color: aliceblue;
 }
 .logo-div{
@@ -98,10 +98,29 @@ h1{
     object-fit:contain;
     border-radius: 30px;
 }
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /* Tablet styles */
 @media (min-width: 600px) {
+    .h1{
+        font-size: 60px;
+    }
     .printer{
         height: 85vh;
         width: 60vw;
