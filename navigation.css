@@ -1,10 +1,12 @@
 body {
     font-family: micro, sans-serif;
+    position: relative;
     margin: 0;
     padding: 0;
 }
 .contact-form-popup{
     display: none;
+    z-index: 2000;
 }
 .menu-icon {
     font-size: 30px;
@@ -18,6 +20,11 @@ body {
 .menu-icon img{
     width: 80px;
     height: 80px;
+}
+.nav-div{
+    z-index: 2000;
+    top: 10px;
+    left: 10px;
 }
 
 .dropdown-menu {
