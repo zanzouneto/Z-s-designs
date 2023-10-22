@@ -106,9 +106,9 @@ body {
     cursor: pointer;
 }
 @keyframes shiver {
-    0% { transform: rotate(-1deg); }
-    50% { transform: rotate(1deg); }
-    100% { transform: rotate(-1deg); }
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
 }
 .menu-icon img {
     animation: shiver 0.5s infinite alternate;
