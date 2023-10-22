@@ -88,8 +88,8 @@ h1{
 }
 .printer{
     margin: 30px 0;
-    height: 100vw;
-    width: 80vw;
+    height: 85vw;
+    width: 90vw;
 }
 .center{
     display: flex;
@@ -98,11 +98,14 @@ h1{
 }
 .painting{
     width: 90vw;
-    height: 80vh;
+    height: 65vw;
     object-fit:contain;
     border-radius: 30px;
 }
-
+iframe{
+    width:90vw;
+    height:50vw;
+}
 
 
 /* Tablet styles */
@@ -119,6 +122,7 @@ h1{
     }    
     .painting{
         width: 80vw;
+        height: 80vh;
     }
     .morebutton{
         bottom: auto;
@@ -144,6 +148,10 @@ h1{
     }
     .swiper-slide{
         size: 85vw;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
     }
 }
 
