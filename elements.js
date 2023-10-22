@@ -44,6 +44,9 @@ class HeaderLinks extends HTMLElement {
                 background-color: #ffcc00; 
                 color: black; 
             }
+            body{
+                position: relative;
+            }
         `;
         head.appendChild(styleElem);
     }

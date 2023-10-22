@@ -2,32 +2,36 @@ class NavMenu extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
+        this.basePath = this.getAttribute('base-path') || '';  // default to empty if not provided
         this.render();
         this.initEventListeners();
     }
-
     render() {
         const template = `
         <style>
-            @import 'navigation.css';
+            @import '${this.basePath}navigation.css';
+            ::selection {
+                background-color: #ffcc00; 
+                color: black; 
+            }
         </style>
         
-        <menu-container>
+        <menu-container class="element-container">
             <div class="nav-div">
                 <div class="menu-icon">
-                    <img src="assets/webclip.png">
+                    <img src="${this.basePath}assets/webclip.png">
                 </div>
                 <div class="dropdown-menu">
                     <div class="menu-a-s">
-                        <a href="cv.html">CV</a> 
-                        <a href="portfolio.html">Portfolio</a> 
+                        <a href="${this.basePath}cv.html">CV</a> 
+                        <a href="${this.basePath}portfolio.html">Portfolio</a> 
                         <a href="#">Contact me</a> 
                     </div>
                 </div>
             </div>
             <div class="contact-form-popup" id="contactForm">
                 <div class="form-container">
-                    <img class="close" src="assets/x.svg">
+                    <img class="close" src="${this.basePath}assets/x.svg">
                     <form class="form" action="https://formspree.io/f/xleyzdvq" method="POST">
                         <h2>Lets build awesomeness</h2>
                         <label>
