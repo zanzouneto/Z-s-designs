@@ -1,5 +1,5 @@
 body{
-    margin: 20px;
+    margin: 100px 20px;
     background-attachment: fixed;
 }
 .fullwidth{
@@ -7,6 +7,33 @@ body{
     width: 100%;
     object-fit: cover;
 }
+/* width */
+.fullwidth.w90{
+    width: 100%;
+}
+.fullwidth.w80{
+    width: 90%;
+}
+.fullwidth.w70{
+    width: 100%;
+}
+.fullwidth.w60{
+    width: 100%;
+}
+.fullwidth.w50{
+    width: 100%;
+}
+.fullwidth.l-non{
+    margin-left: 0;
+}
+.fullwidth.r-non{
+    margin-right: 0;
+}
+.fullwidth.radius20{
+    border-radius: 20px;
+}
+/* END width */
+
 section{
     max-width: 950px;
     margin: 30px auto;
@@ -88,6 +115,24 @@ section.active{
     h1{
         font-size: 103.31px ;
     }
+    /* width */
+    .fullwidth.w90{
+        width: 90vw;
+    }
+    .fullwidth.w80{
+        width: 80vw;
+    }
+    .fullwidth.w70{
+        width: 70vw;
+    }
+    .fullwidth.w60{
+        width: 60vw;
+    }
+    .fullwidth.w50{
+        width: 50vw;
+        margin-left: 25%;
+    }
+    /* END width */
 }
 @media (min-width: 1024px) {
 }
