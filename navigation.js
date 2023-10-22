@@ -55,10 +55,10 @@ class NavMenu extends HTMLElement {
 
     toggleMenu() {
         const menu = this.shadowRoot.querySelector('.dropdown-menu');
-        if (menu.style.left === "-90vw") {
+        if (menu.style.left === "-110%") {
             menu.style.left = "0px";
         } else {
-            menu.style.left = "-90vw";
+            menu.style.left = "-110%";
         }
     }
 
@@ -66,7 +66,7 @@ class NavMenu extends HTMLElement {
         event.preventDefault();
         this.shadowRoot.getElementById('contactForm').style.display = 'block';
         const menu = this.shadowRoot.querySelector('.dropdown-menu');
-        menu.style.left = "-90vw";
+        menu.style.left = "-110%";
     }
 
     closeForm() {
@@ -84,13 +84,13 @@ class NavMenu extends HTMLElement {
         const menuContainer = this.shadowRoot.querySelector('.element-container');
         menuContainer.addEventListener('mouseenter', () => {
             const menu = this.shadowRoot.querySelector('.dropdown-menu');
-            if (menu.style.left === "-90vw") {
+            if (menu.style.left === "-110%") {
                 this.toggleMenu();
             }
         });
         menuContainer.addEventListener('mouseleave', () => {
             const menu = this.shadowRoot.querySelector('.dropdown-menu');
-            if (menu.style.left !== "-90vw") {
+            if (menu.style.left !== "-110%") {
                 this.toggleMenu();
             }
         });

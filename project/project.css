@@ -1,12 +1,11 @@
 body{
-    margin: 40px 0 40px 0;
+    margin: 20px;
     background-attachment: fixed;
 }
 .fullwidth{
     margin: auto;
     width: 100%;
     object-fit: cover;
-    
 }
 section{
     max-width: 950px;
@@ -14,11 +13,10 @@ section{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* margin: 60px; */
 }
 h1{
     font-family: 'Micro';
-    font-size: 103.31px ;
+    font-size: 40px ;
     color: #FFFFFF;
 }
 .h1div{
@@ -26,8 +24,9 @@ h1{
     align-items: center;
     justify-content: center;
     margin: 30px auto;
-    width: 843.76px;
-    height: 156.12px;
+    padding: 20px 30px;
+    min-width: 60vw;
+    line-height: 10%;
     left: calc(50% - 843.76px/2 - 0px);
     background: #1C122D;
     border-radius: 40px;
@@ -78,4 +77,17 @@ section.active{
     left: 0;
     width: 100%;
     height: 100%;
+}
+@media (min-width: 600px) {
+    body{
+        margin: 40px 0 40px 0;
+    }
+    .h1div{
+        padding: 30px 70px;
+    }
+    h1{
+        font-size: 103.31px ;
+    }
+}
+@media (min-width: 1024px) {
 }

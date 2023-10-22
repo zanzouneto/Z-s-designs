@@ -22,20 +22,18 @@ body {
     top: 10px;
     left: 10px;
 }
-
 .dropdown-menu {
     position: fixed;
     display: flex;
     align-items: center;
-    left: -90vw;
-    width: 90vw;
+    left: -110%;
     height: 100px;
     background-color: #1C122D;
     transition: left 0.3s;
     overflow-y: auto;
     border-radius: 0 30px 30px 0;
+    padding: 0 30px 0 0;
 }
-
 .dropdown-menu a {
     font-family: code, sans-serif;
     text-decoration: none;
@@ -123,4 +121,7 @@ body {
     top: 10px;
     position: fixed;
     z-index: 20000;
+}
+@media (min-width: 600px) {
+    
 }
