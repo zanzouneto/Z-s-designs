@@ -73,12 +73,29 @@ class NavMenu extends HTMLElement {
         this.shadowRoot.getElementById('contactForm').style.display = 'none';
     }
 
+    
     initEventListeners() {
         this.shadowRoot.querySelector('.menu-icon').addEventListener('click', this.toggleMenu.bind(this));
         const contactLink = this.shadowRoot.querySelector('.menu-a-s a:nth-child(3)');
         contactLink.addEventListener('click', this.openForm.bind(this));
         this.shadowRoot.querySelector('.close').addEventListener('click', this.closeForm.bind(this));
+        // ... [rest of the code]
+    
+        const menuContainer = this.shadowRoot.querySelector('.element-container');
+        menuContainer.addEventListener('mouseenter', () => {
+            const menu = this.shadowRoot.querySelector('.dropdown-menu');
+            if (menu.style.left === "-90vw") {
+                this.toggleMenu();
+            }
+        });
+        menuContainer.addEventListener('mouseleave', () => {
+            const menu = this.shadowRoot.querySelector('.dropdown-menu');
+            if (menu.style.left !== "-90vw") {
+                this.toggleMenu();
+            }
+        });
     }
+    
 }
 
 customElements.define('nav-menu', NavMenu);
