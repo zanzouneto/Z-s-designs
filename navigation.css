@@ -88,7 +88,7 @@ body {
     font-family: coda, sans-serif;
     color: rgb(247, 235, 8);
     padding: 15px;
-    max-width: 60vw;
+    width: 100%;
     max-height: 20vh;
 }
 .close{
