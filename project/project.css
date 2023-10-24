@@ -47,7 +47,7 @@ section{
 }
 h1{
     font-family: 'Micro';
-    font-size: 40px ;
+    font-size: 30px ;
     color: #FFFFFF;
 }
 .h1div{
@@ -111,7 +111,7 @@ section.active{
         margin: 40px 0 40px 0;
     }
     h1{
-        font-size: 103.31px ;
+        font-size: 50px ;
     }
     /* width */
     .fullwidth.w90{
@@ -133,6 +133,9 @@ section.active{
     /* END width */
 }
 @media (min-width: 1024px) {
+    h1{
+        font-size: 50px;
+    }
     .h1div{
         min-width: 950px;
         width: 950px;
