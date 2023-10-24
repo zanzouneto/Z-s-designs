@@ -1,14 +1,11 @@
-body {
-    background-image: linear-gradient(1deg, #1BB5CA 0%, #24163C 100%);  
-    font-family: micro;
-    margin: 0;
-    padding: 100px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 100vw;
-    overflow-x: hidden;
+body{
+    margin: 100px 20px;
+    background-attachment: fixed;    
+}
+.fullwidth{
+    margin: auto;
+    width: 100%;
+    object-fit: cover;
 }
 /* width */
 .fullwidth.w90{
