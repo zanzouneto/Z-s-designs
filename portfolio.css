@@ -168,13 +168,14 @@ iframe{
         overflow-x: hidden;
     }
     .container{
-        width: 1300px;
+        max-width: 1300px;
         overflow-x: visible;
         margin: auto;
     }
     .swiper-section{
         scale: 1;
         width: 95vw;
+        margin-left: 2.5vw;
         max-width: 1300px;
         height: 70vw;
         max-height: 850px;
@@ -187,5 +188,8 @@ iframe{
     }
     .logo-div{
         width: 100%;
+    }
+    .painting{
+        width: 95vw;
     }
 }
