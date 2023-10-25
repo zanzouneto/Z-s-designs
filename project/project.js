@@ -10,7 +10,7 @@ function reveal() {
 
       // If screen width is less than or equal to 768px (common breakpoint for mobile)
       if (window.innerWidth <= 768) {
-          elementVisible = 50; // Adjust this value to suit your requirements
+          elementVisible = 40; // Adjust this value to suit your requirements
       }
 
       if (elementTop < windowHeight - elementVisible) {
