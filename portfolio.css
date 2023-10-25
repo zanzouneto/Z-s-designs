@@ -129,6 +129,15 @@ iframe{
 .project-img.web{
     display: none;
 }
+p{
+    color: aliceblue;
+    font-size: 16px;
+    font-family: coda, sans-serif;
+    font-weight: 400;
+    margin: 0 40px 10px 40px;
+    max-width: 900px;
+    text-align: center;
+}
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
