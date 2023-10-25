@@ -46,7 +46,7 @@ h1{
     font-size: 30px;
     color: aliceblue;
 }
-.swiper-section.logo-section{
+.swiper-section.logo-section, .swiper-section.project-section{
     height: 85vh;
 }
 .logo-div{
@@ -142,15 +142,19 @@ iframe{
     }    
     .swiper-section{
         width: 100vw;
-        height: 60vw;
+        /* height: 60vw; */
         margin-left: 10vw;
         margin-bottom: 60px;
         margin-left: 0;
     }
     .swiper-section.logo-section{
         width: 100vw;
-        height: 60vh;
+        /* height: 60vh; */
         margin-bottom: 20px;
+    }
+    .swiper-section.project-section{
+        width: 100vw;
+        height: 80vh;
     }
     .logo-div{
         width: 100vw;
@@ -172,7 +176,7 @@ iframe{
     }
 }
 /* Desktop styles */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
     h1{
         font-size: 70px;
     }
@@ -185,24 +189,35 @@ iframe{
         overflow-x: visible;
         margin: auto;
     }
+    .swiper-section.project-section{
+        width: 90vw;
+        height: 58vw;
+        max-width: 1300px;
+        max-height: 900px;
+    }
     .swiper-section{
         scale: 1;
         width: 95vw;
         margin-left: 2.5vw;
         max-width: 1300px;
-        height: 70vw;
-        max-height: 850px;
+        height: 100vh;
     }
     .swiper-section.logo-section{
         width: 95vw;
+        height: 40vw;
         max-width: 1300px;
-        height: 60vw;
         max-height: 700px;
     }
     .logo-div{
-        width: 100%;
+        width: 95vw;
+        height: 40vw;
+        max-width: 1300px;
+        max-height: 700px;
     }
     .painting{
-        width: 95vw;
+        width: 90vw;
+        height: 58vw;
+        max-width: 1300px;
+        max-height: 900px;
     }
 }
