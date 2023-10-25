@@ -47,11 +47,11 @@ h1{
     color: aliceblue;
 }
 .swiper-section.logo-section, .swiper-section.project-section{
-    height: 85vh;
+    height: 150vw;
 }
 .logo-div{
     width: 100vw;
-    height: 80vh;
+    height: 150vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,6 +97,10 @@ h1{
     flex-direction: column;
     align-items: center;
 }
+.swiper-section.painting{
+    width: 100vw;
+    height: 70vw;
+}
 .painting{
     width: 100vw;
     height: 67vw;
@@ -132,7 +136,7 @@ iframe{
     }
     .painting{
         width: 100vw;
-        height: 67vw;
+        height: 55vw;
         max-width: 1300px;
         max-height: 870px;
     }
@@ -149,12 +153,16 @@ iframe{
     }
     .swiper-section.logo-section{
         width: 100vw;
-        /* height: 60vh; */
+        height: 55vw;
         margin-bottom: 20px;
     }
     .swiper-section.project-section{
         width: 100vw;
-        height: 80vh;
+        height: 58vw;
+    }
+    .swiper-section.painting{
+        height: 90vw;
+        height: 48vw;
     }
     .logo-div{
         width: 100vw;
@@ -219,5 +227,9 @@ iframe{
         height: 58vw;
         max-width: 1300px;
         max-height: 900px;
+    }
+    .swiper-section.painting{
+        height: 100vw;
+        height: 55vw;
     }
 }
