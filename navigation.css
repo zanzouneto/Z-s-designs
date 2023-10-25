@@ -32,14 +32,14 @@ body {
     transition: left 0.3s;
     overflow-y: auto;
     border-radius: 0 30px 30px 0;
-    padding: 0 30px 0 0;
+    padding: 0 10px 0 0;
 }
 .dropdown-menu a {
     font-family: code, sans-serif;
     text-decoration: none;
     color: white;
     display: block;
-    padding: 20px;
+    padding: 10px;
 }
 
 .dropdown-menu a:hover {
@@ -123,5 +123,10 @@ body {
     z-index: 20000;
 }
 @media (min-width: 600px) {
-    
+    .dropdown-menu a {
+        padding: 20px;
+    }
+    .dropdown-menu {
+        padding: 0 30px 0 0;
+    }
 }
