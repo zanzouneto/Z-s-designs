@@ -62,3 +62,39 @@ body {
     opacity: 0;
     background-position: center;
 }
+.hover{
+    display: none;
+}
+.phone{
+    position: relative;
+    background-image:url(assets/zeina-background-phone.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+a{
+    position: fixed;
+    font-size: 40px;
+    color: aliceblue;
+    font-family: micro, sans-serif;
+    text-decoration: none;
+}
+.right{
+    text-align: end;
+    top: 20px;
+    right: 20px;
+}
+.left{
+    left: 10px;
+    bottom: 20px;
+}
+@media (min-width: 1024px) {
+    .phone{
+        display: none;
+    }
+    .hover{
+        display: block;
+    }
+}

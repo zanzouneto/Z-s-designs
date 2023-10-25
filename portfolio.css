@@ -13,7 +13,7 @@ body {
 }
 .swiper-section{
     width: 100vw;
-    height: 70vw;
+    height: 75vw;
     scale: 0.9;
 }
 .swiper-container {
@@ -25,7 +25,7 @@ body {
     font-family: coda, sans-serif;
     text-align: center;
     margin-top: -20px;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
 }
 .swiper-slide {
     width: 85%;
@@ -43,11 +43,11 @@ body {
 }
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     color: aliceblue;
 }
 .swiper-section.logo-section{
-    height: 90vh;
+    height: 85vh;
 }
 .logo-div{
     width: 100vw;
@@ -73,7 +73,7 @@ h1{
 }
 .morebutton{
     position: fixed;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     background-color: rgb(247, 235, 8);
     border-radius: 30px;
@@ -98,59 +98,94 @@ h1{
     align-items: center;
 }
 .painting{
-    width: 90vw;
-    height: 46vh;
+    width: 100vw;
+    height: 67vw;
     object-fit:contain;
     border-radius: 30px;
 }
 iframe{
     width: 90vw;
     height: 51vw;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     width: 100vw;
     overflow-x: hidden;
+}
+.center{
+    display: flex;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
         font-size: 60px;
     }
-    .printer{
-        height: 85vh;
-        width: 60vw;
-    }    
     .painting{
-        width: 90vw;
-        height: 80vh;
+        width: 100vw;
+        height: 67vw;
+        max-width: 1300px;
+        max-height: 870px;
     }
     .morebutton{
         bottom: auto;
         top: 40px;
     }    
     .swiper-section{
-        margin-left: 40px;
-        width: 80vw;
-        height: 90vh;
+        width: 100vw;
+        height: 60vw;
+        margin-left: 10vw;
         margin-bottom: 60px;
         margin-left: 0;
     }
     .swiper-section.logo-section{
-        height: 90vh;
+        width: 100vw;
+        height: 60vh;
+        margin-bottom: 20px;
     }
     .logo-div{
         width: 100vw;
-        height: 90vh;
+        height: 60vh;
     }
     .logo-img{
         max-width: 400px;
         max-height: 350px;
+    }
+    .printer{
+        height: 75vh;
+        width: 90vh;
     }
 }
 /* Desktop styles */
 @media (min-width: 1024px) {
     h1{
         font-size: 70px;
+    }
+    .bigger-container{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    .container{
+        width: 1300px;
+        overflow-x: visible;
+        margin: auto;
+    }
+    .swiper-section{
+        scale: 1;
+        width: 95vw;
+        max-width: 1300px;
+        height: 70vw;
+        max-height: 850px;
+    }
+    .swiper-section.logo-section{
+        width: 95vw;
+        max-width: 1300px;
+        height: 60vw;
+        max-height: 700px;
+    }
+    .logo-div{
+        width: 100%;
     }
 }

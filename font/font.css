@@ -21,6 +21,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap');
 
 ::selection {
-    background-color: #ffcc00; /* This is a yellow color */
-    color: black; /* Optional: change the text color of the selected text */
+    background-color: #ffcc00; 
+    color: black; 
 }
