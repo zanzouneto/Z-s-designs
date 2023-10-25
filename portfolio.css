@@ -118,6 +118,13 @@ iframe{
 .center{
     display: flex;
 }
+
+.project-img.phone{
+    display: block;
+}
+.project-img.web{
+    display: none;
+}
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
@@ -157,9 +164,15 @@ iframe{
         height: 75vh;
         width: 90vh;
     }
+    .project-img.phone{
+        display: none;
+    }
+    .project-img.web{
+        display: block;
+    }
 }
 /* Desktop styles */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
     h1{
         font-size: 70px;
     }
