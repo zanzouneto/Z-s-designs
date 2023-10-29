@@ -97,5 +97,6 @@ class NavMenu extends HTMLElement {
     }
     
 }
-
-customElements.define('nav-menu', NavMenu);
+document.addEventListener("DOMContentLoaded", function() {
+    customElements.define('nav-menu', NavMenu);
+});
