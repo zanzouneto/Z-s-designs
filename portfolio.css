@@ -46,6 +46,11 @@ h1{
     font-size: 30px;
     color: aliceblue;
 }
+h2{
+    text-align: center;
+    font-size: 20px;
+    color: aliceblue;
+}
 .swiper-section.logo-section, .swiper-section.project-section{
     height: 150vw;
 }
@@ -134,14 +139,18 @@ p{
     font-size: 16px;
     font-family: coda, sans-serif;
     font-weight: 400;
-    margin: 0 40px 10px 40px;
+    padding: 0 40px 10px 40px;
     max-width: 900px;
+    margin: auto;
     text-align: center;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
         font-size: 60px;
+    }
+    .h2{
+        font-size: 45px;
     }
     .painting{
         width: 100vw;
@@ -196,6 +205,9 @@ p{
 @media (min-width: 1024px) {
     h1{
         font-size: 70px;
+    }
+    h2{
+        font-size: 50px;
     }
     .bigger-container{
         width: 100vw;
