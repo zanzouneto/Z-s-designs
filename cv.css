@@ -36,7 +36,7 @@ body{
 }
 a{
     color: #1C122D;
-    text-decoration-color: rgb(247, 235, 8);
+    text-decoration-color: var(--main-yellow);
 }
 .portrait{
     width: auto;

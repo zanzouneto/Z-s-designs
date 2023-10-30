@@ -21,7 +21,7 @@ body {
 }
 .swipe{
     font-size: 18px;
-    color: rgb(247, 235, 8);
+    color: var(--main-yellow);
     font-family: coda, sans-serif;
     text-align: center;
     margin-top: -20px;
@@ -80,7 +80,7 @@ h2{
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgb(247, 235, 8);
+    background-color: var(--main-yellow);
     border-radius: 30px;
     padding: 10px 30px;
     text-decoration: none;

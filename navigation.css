@@ -43,7 +43,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-    background-color: rgb(247, 235, 8);
+    background-color: var(--main-yellow);
     color: #1C122D;
     border-radius: 30px;
 }
@@ -78,7 +78,7 @@ body {
     font-family: coda, sans-serif;
     font-weight: 700;
     margin-top: 40px;
-    background-color: rgb(247, 235, 8);
+    background-color: var(--main-yellow);
     border-radius: 30px;
     padding: 10px 30px;
     text-decoration: none;
@@ -90,9 +90,9 @@ body {
 .input{
     background-color:#1c122d00;
     border: #555 none;
-    border-bottom: rgb(247, 235, 8) solid 1px;
+    border-bottom: var(--main-yellow) solid 1px;
     font-family: coda, sans-serif;
-    color: rgb(247, 235, 8);
+    color: var(--main-yellow);
     padding: 15px;
     width: 100%;
     max-height: 20vh;

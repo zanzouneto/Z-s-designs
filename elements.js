@@ -41,11 +41,14 @@ class HeaderLinks extends HTMLElement {
                 font-weight: 700;  
             }    
             ::selection {
-                background-color: #ffcc00; 
+                background-color: var(--main-yellow); 
                 color: black; 
             }
             body{
                 position: relative;
+            }
+            :root {
+                --main-yellow: #ffcc00; 
             }
         `;
         head.appendChild(styleElem);
@@ -95,8 +98,11 @@ class HeaderLinksProjects extends HTMLElement {
                 font-weight: 700;  
             }    
             ::selection {
-                background-color: #ffcc00; 
+                background-color: var(--main-yellow); 
                 color: black; 
+            }
+            :root {
+                --main-yellow: #ffcc00; 
             }
         `;
         head.appendChild(styleElem);
