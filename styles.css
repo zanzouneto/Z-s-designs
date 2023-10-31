@@ -1,0 +1,42 @@
+:root {
+    --main-yellow: #ffcc00; 
+    --black: #0d1820;
+}
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro.otf') format('opentype');
+    font-weight: 400; 
+}
+@font-face {
+    font-family: 'Micro';
+    src: url("/font/Micro bold.ttf") format('truetype');
+    font-weight: 700;  
+}    
+::selection {
+    background-color: var(--main-yellow); 
+    color: var(--black); 
+}
+body{
+    position: relative;
+    cursor: auto;
+}
+#cursor1, #cursor2 {
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%); 
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 0.6;
+}
+#cursor1 {
+    width: 25px;
+    height: 25px;
+    background-color: var(--main-yellow);
+    transition: top 0.4s ease, left 0.4s ease;
+}
+#cursor2 {
+    width: 30px;
+    height: 30px;
+    border: var(--main-yellow) solid 3px;
+    transition: top 0.9s ease, left 0.9s ease;
+}

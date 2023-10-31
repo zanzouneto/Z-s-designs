@@ -1,5 +1,5 @@
 body {
-    background-color: #0e1c26;;
+    background-color: var(--black);
     font-family: micro;
     margin: 0;
     padding: 0;
@@ -58,7 +58,6 @@ body {
     border-radius: 30px;
     position: relative;
 }
-
 .swipe{
     font-size: 18px;
     color: var(--main-yellow);
@@ -86,9 +85,10 @@ h2{
     padding: 10px 30px;
     text-decoration: none;
     cursor: pointer;
-    box-shadow: black 0 0 10px;
-    color: #2e0e0e;
+    box-shadow: var(--black) 0 0 10px;
+    color: var(--black);
     transition: ease-in;
+    font-weight: 700;
 }
 .morebutton :hover{
     background-color: antiquewhite;
@@ -128,7 +128,22 @@ iframe{
 .center{
     display: flex;
 }
-
+.hireme{
+    background-color: var(--main-yellow);
+    color: var(--black);
+    font-family: coda, sans-serif;
+    padding: 5px 40px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition:ease;
+}
+.hireme:hover{
+    margin-top: -20px;
+    padding: 25px 40px;
+    margin-bottom: 10px;
+}
 .project-img.phone{
     display: block;
 }

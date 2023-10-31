@@ -27,7 +27,7 @@ summary {
 body{
     background-color: #9ec1d7;
     font-family: coda, sans-serif;
-    color: #1C122D;
+    color: var(--black);
 }
 .container{
     padding: 70px 20px 50px 20px;
@@ -35,7 +35,7 @@ body{
     margin: auto;
 }
 a{
-    color: #1C122D;
+    color: var(--black);
     text-decoration-color: var(--main-yellow);
 }
 .portrait{
