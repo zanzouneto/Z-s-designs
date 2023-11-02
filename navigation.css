@@ -28,7 +28,7 @@ body {
     align-items: center;
     left: -110%;
     height: 100px;
-    background-color: #1C122D;
+    background-color: var(--main-yellow);
     transition: left 0.3s;
     overflow-y: auto;
     border-radius: 0 30px 30px 0;
@@ -37,14 +37,14 @@ body {
 .dropdown-menu a {
     font-family: code, sans-serif;
     text-decoration: none;
-    color: white;
+    color: var(--black);
     display: block;
     padding: 10px;
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--main-yellow);
-    color: #1C122D;
+    background-color: var(--black);
+    color: var(--main-yellow);
     border-radius: 30px;
 }
 .menu-a-s{

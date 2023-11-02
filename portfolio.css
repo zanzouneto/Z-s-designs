@@ -9,7 +9,11 @@ body {
     flex-direction: column;
     width: 100vw;
     overflow-x: hidden;
-    margin-top: 60px;
+    /* margin-top: 60px; */
+}
+.bigger-container{
+    position: relative;
+    z-index: 1;
 }
 .swiper-section{
     width: 100vw;
@@ -160,6 +164,28 @@ p{
     margin: auto;
     text-align: center;
     letter-spacing: 1px;
+}
+.grainy-div{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+.grainy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(30.67% 38.44% at 80.67% 75.58%, rgba(254, 214, 3, 0.271875) 9.38%, rgba(254, 214, 3, 0) 100%), radial-gradient(49.38% 94.55% at 83.52% 20.1%, rgba(148, 25, 224, 0.4) 11.03%, rgba(0, 0, 0, 0) 100%), radial-gradient(33.33% 44.13% at 16.67% 27.89%, rgba(7, 233, 248, 0.3) 0.75%, rgba(7, 233, 248, 0) 100%), #000000;
+}
+.grain{
+    position: absolute;
+    background-image: url(assets/noisy.png);
+    mix-blend-mode: multiply;
+    background-repeat: repeat;
+    background-size: 30%;
+    /* z-index: 2; */
+    width: 100%;
+    height: 100%;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
