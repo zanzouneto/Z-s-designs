@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me</title>
+    <script src="elements.js" defer></script>
+    <link rel="stylesheet" href="navigation.css">
+    <header-links></header-links>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hire-me.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-div">
+            <p>I'm available for projects</p>
+            <p>Lets build</p>
+            <p>Awesomeness together</p>
+            <img class="hire-me" src="assets/hire me.png">
+        </div>
+        <div class="buttondiv">
+            <button class="tablink" onclick="openCity('London', this, 'var(--main-yellow)', 'var(--black)')" id="defaultOpen">Email me</button>
+            <button class="tablink" onclick="openCity('Paris', this, '#fbfcfd','var(--black)')">Book a consult</button>
+        </div>
+        <div id="London" class="tabcontent">
+            <form action="https://formspree.io/f/xleyzdvq" method="POST">
+                <h2>Lets build awesomeness</h2>
+                <label>
+                    <input placeholder="Your Email" type="email" name="email" class="input">
+                </label>
+                <label>
+                    <textarea placeholder="Subject" name="Subject" class="input"></textarea>
+                </label>
+                <label>
+                    <textarea placeholder="Tell me things" name="message" class="input"></textarea>
+                </label>
+                <button class="button" type="submit">Send</button>
+            </form>
+        </div>
+        <div id="Paris" class="tabcontent calendar">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/zeina-saade/consultation?background_color=0d1820&text_color=ffffff" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </div>
+    <nav-menu></nav-menu>
+    <script src="hire-me.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>

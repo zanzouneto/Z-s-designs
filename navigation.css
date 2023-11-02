@@ -122,7 +122,64 @@ body {
     position: fixed;
     z-index: 20000;
 }
+.hire-me-div{
+    position:fixed;
+    right: 10px;
+    bottom: 10px;
+    transform-origin: 100% 100%; 
+    animation: twirlInOutDepth 20s infinite; 
+    transition:ease-in 0.5s;
+    scale: 1;
+}
+.hire-me-div:hover{
+    scale: 1.1;
+}
+.hire-me-div img{
+    width: 125px;
+}
+.hire-me-p{
+    font-size: 25px;
+    line-height: 20px;
+    text-align: end;
+    font-family: micro, sans-serif;
+    color: var(--main-yellow);
+    position: fixed;
+    right: 0;
+    padding: 0;
+    margin: 0 10px 0 0;
+    text-shadow: 1px 0px 5px rgb(0 0 0);
+}
+@keyframes twirlInOutDepth {
+    0%, 100% {
+        transform: rotate(90deg) scale(0.5);
+        opacity: 0;
+    }
+    5% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0deg) scale(1.2);  
+        opacity: 1;
+    }
+    60% {
+        transform: rotate(-90deg) scale(0.5);  
+        opacity: 0;
+    }
+    95% {
+        transform: rotate(-90deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
 @media (min-width: 600px) {
+    .hire-me-p{
+        font-size: 45px;
+        line-height: 40px;
+    }
+    .hire-me-div img{
+        width: 200px;
+    }    
     .dropdown-menu a {
         padding: 20px;
     }

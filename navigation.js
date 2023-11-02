@@ -2,10 +2,11 @@ class NavMenu extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.basePath = this.getAttribute('base-path') || '';  // default to empty if not provided
+        this.basePath = this.getAttribute('base-path') || ''; 
         this.render();
         this.initEventListeners();
     }
+
     render() {
         const template = `
         <style>
@@ -25,26 +26,8 @@ class NavMenu extends HTMLElement {
                     <div class="menu-a-s">
                         <a href="${this.basePath}cv.html">CV</a> 
                         <a href="${this.basePath}portfolio.html">Portfolio</a> 
-                        <a href="#">Contact me</a> 
+                        <a href="${this.basePath}hire-me.html">Contact me</a> 
                     </div>
-                </div>
-            </div>
-            <div class="contact-form-popup" id="contactForm">
-                <div class="form-container">
-                    <img class="close" src="${this.basePath}assets/x.svg">
-                    <form class="form" action="https://formspree.io/f/xleyzdvq" method="POST">
-                        <h2>Lets build awesomeness</h2>
-                        <label>
-                            <input placeholder="Your Email" type="email" name="email" class="input">
-                        </label>
-                        <label>
-                            <textarea placeholder="Subject" name="Subject" class="input"></textarea>
-                        </label>
-                        <label>
-                            <textarea placeholder="Tell me things" name="message" class="input"></textarea>
-                        </label>
-                        <button class="button" type="submit">Send</button>
-                    </form>
                 </div>
             </div>
         </menu-container>
@@ -53,50 +36,58 @@ class NavMenu extends HTMLElement {
         this.shadowRoot.innerHTML = template;
     }
 
-    toggleMenu() {
-        const menu = this.shadowRoot.querySelector('.dropdown-menu');
-        if (menu.style.left === "-110%") {
-            menu.style.left = "0px";
-        } else {
-            menu.style.left = "-110%";
-        }
-    }
-
-    openForm(event) {
-        event.preventDefault();
-        this.shadowRoot.getElementById('contactForm').style.display = 'block';
-        const menu = this.shadowRoot.querySelector('.dropdown-menu');
-        menu.style.left = "-110%";
-    }
-
-    closeForm() {
-        this.shadowRoot.getElementById('contactForm').style.display = 'none';
-    }
-
-    
     initEventListeners() {
-        this.shadowRoot.querySelector('.menu-icon').addEventListener('click', this.toggleMenu.bind(this));
-        const contactLink = this.shadowRoot.querySelector('.menu-a-s a:nth-child(3)');
-        contactLink.addEventListener('click', this.openForm.bind(this));
-        this.shadowRoot.querySelector('.close').addEventListener('click', this.closeForm.bind(this));
-        // ... [rest of the code]
-    
-        const menuContainer = this.shadowRoot.querySelector('.element-container');
-        menuContainer.addEventListener('mouseenter', () => {
-            const menu = this.shadowRoot.querySelector('.dropdown-menu');
-            if (menu.style.left === "-110%") {
-                this.toggleMenu();
+        const menuIcon = this.shadowRoot.querySelector('.menu-icon');
+        const dropdownMenu = this.shadowRoot.querySelector('.dropdown-menu');
+        const elementContainer = this.shadowRoot.querySelector('.element-container');
+
+        // Toggle the dropdown display state
+        const toggleMenu = (show) => {
+            dropdownMenu.style.left = show ? "0px" : "-110%";
+        };
+
+        // Mouse enters on menu icon or dropdown menu should show the menu
+        menuIcon.addEventListener('mouseenter', () => toggleMenu(true));
+        dropdownMenu.addEventListener('mouseenter', () => toggleMenu(true));
+
+        // Mouse leaves the menu icon or dropdown menu should hide the menu, 
+        // with a check to prevent closing when moving between them
+        menuIcon.addEventListener('mouseleave', (event) => {
+            if (!elementContainer.contains(event.relatedTarget)) {
+                toggleMenu(false);
             }
         });
-        menuContainer.addEventListener('mouseleave', () => {
-            const menu = this.shadowRoot.querySelector('.dropdown-menu');
-            if (menu.style.left !== "-110%") {
-                this.toggleMenu();
-            }
-        });
+
+        dropdownMenu.addEventListener('mouseleave', () => toggleMenu(false));
     }
-    
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     customElements.define('nav-menu', NavMenu);
 });
+
+class HireMeComponent extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.basePath = this.getAttribute('base-path') || '';  
+        this.render();
+        this.initEventListeners();
+    }
+
+    render() {
+        const template = `
+        <style>
+        @import '${this.basePath}navigation.css';
+        </style>
+        <div class="hire-me-div">
+            <a href="${this.basePath}hire-me.html">
+                <p class="hire-me-p">Hire<br>Me</p>
+                <img src="${this.basePath}assets/hire me.png">
+            </a>
+        </div>`;
+        this.shadowRoot.innerHTML = template;
+    }
+}
+
+customElements.define('hire-me-component', HireMeComponent);
