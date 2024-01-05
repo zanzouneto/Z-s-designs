@@ -19,6 +19,7 @@
 body{
     position: relative;
     cursor: auto;
+    font-family: coda, sans-serif;
 }
 #cursor1, #cursor2 {
     border-radius: 50%;
