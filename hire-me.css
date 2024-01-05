@@ -65,7 +65,12 @@ body{
 }
 #London {background-color: var(--main-yellow);}
 #Paris {background-color:#fbfcfd;}
-  
+.sk-ww-linkedin-recommendations{
+    margin-top: 50px;
+}
+.tutorial_link{
+    display: none;
+}
 /* form */
 .input {
     background-color: #1c122d00;
