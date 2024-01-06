@@ -1,3 +1,4 @@
+// NAV MEMU 
 class NavMenu extends HTMLElement {
     constructor() {
         super();
@@ -66,6 +67,54 @@ document.addEventListener("DOMContentLoaded", function() {
     customElements.define('nav-menu', NavMenu);
 });
 
+// FOOTER 
+class MainFooter extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+        this.basePath = this.getAttribute('base-path') || ''; 
+        this.render();
+        this.initEventListeners();
+    }
+
+    render() {
+        const template = `
+            <style>
+                @import '${this.basePath}navigation.css';
+                ::selection {
+                    background-color: #ffcc00; 
+                    color: black; 
+                }
+                footer {
+                    position: relative; /* or another position value as needed */
+                    z-index: 10; /* Example z-index value */
+                }
+            </style>
+            <footer>
+                <div class="footer">
+                    <h2>Zeina's Designs</h2>
+                    <p> I'm currently open for new projects relating to Graphic Design & Web projects.<br>So get in touch</p>
+                    <div class="footer-structure">
+                        <div class="footer-div">
+                            <a class="footer-a" href="${this.basePath}hire-me.html">Contact me</a>
+                            <a class="footer-a" href="${this.basePath}cv.html">CV</a>
+                        </div>
+                        <div class="footer-div">
+                            <a class="footer-a" href="${this.basePath}portfolio.html" style="margin-bottom: 10px;">Full portfolio</a>
+                            <a class="footer-a" href="${this.basePath}logo.html">Logo designs</a>
+                            <a class="footer-a" href="${this.basePath}logo.html">Web projects</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        `;
+        this.shadowRoot.innerHTML = template;
+    }
+}
+
+customElements.define('main-footer', MainFooter);
+
+// HIRE ME 
 class HireMeComponent extends HTMLElement {
     constructor() {
         super();
@@ -77,15 +126,16 @@ class HireMeComponent extends HTMLElement {
 
     render() {
         const template = `
-        <style>
-        @import '${this.basePath}navigation.css';
-        </style>
-        <div class="hire-me-div">
-            <a href="${this.basePath}hire-me.html">
-                <p class="hire-me-p">Hire<br>Me</p>
-                <img src="${this.basePath}assets/hire me.png">
-            </a>
-        </div>`;
+            <style>
+                @import '${this.basePath}navigation.css';
+            </style>
+            <div class="hire-me-div">
+                <a href="${this.basePath}hire-me.html">
+                    <p class="hire-me-p">Hire<br>Me</p>
+                    <img src="${this.basePath}assets/hire me.png">
+                </a>
+            </div>
+        `;
         this.shadowRoot.innerHTML = template;
     }
 }
