@@ -62,15 +62,14 @@ p {
     justify-content: center;
 }
 .cta{
-    /* display: none; */
     background-color: var(--black); 
     padding: 13px 5px 5px 5px;
     border-radius: 5px;
     text-decoration: none;
     position: fixed;
     bottom: 10px;
-    left: 10px;
-    /* max-width: 70vw; */
+    left: 50%;
+    transform: translateX(-50%);
 }
 .cta :hover{
     color: var(--main-yellow);
@@ -80,9 +79,6 @@ p {
     .cta{
         position: fixed;
         bottom: 10px;
-        transform: translateX(-50%);
-        left: 50%;
-        max-width: 70vw;    
         display: block;
     }
     h1 {
