@@ -70,6 +70,7 @@ p {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    width: 70vw;
 }
 .cta :hover{
     color: var(--main-yellow);
@@ -80,6 +81,7 @@ p {
         position: fixed;
         bottom: 10px;
         display: block;
+        width: auto;
     }
     h1 {
         font-size: 60px;
