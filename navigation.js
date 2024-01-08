@@ -87,13 +87,13 @@ class MainFooter extends HTMLElement {
                 }
                 footer {
                     position: relative; /* or another position value as needed */
-                    z-index: 10; /* Example z-index value */
+                    z-index: 5; /* Example z-index value */
                 }
             </style>
             <footer>
                 <div class="footer">
-                    <h2>Zeina's Designs</h2>
-                    <p> I'm currently open for new projects relating to Graphic Design & Web projects.<br>So get in touch</p>
+                    <h2 class="footer-h2">Zeina's Designs</h2>
+                    <p class="footer-p"> I'm currently open for new projects relating to Graphic Design & Web projects.<br>So get in touch</p>
                     <div class="footer-structure">
                         <div class="footer-div">
                             <a class="footer-a" href="${this.basePath}hire-me.html">Contact me</a>
@@ -102,7 +102,7 @@ class MainFooter extends HTMLElement {
                         <div class="footer-div">
                             <a class="footer-a" href="${this.basePath}portfolio.html" style="margin-bottom: 10px;">Full portfolio</a>
                             <a class="footer-a" href="${this.basePath}logo.html">Logo designs</a>
-                            <a class="footer-a" href="${this.basePath}logo.html">Web projects</a>
+                            <a class="footer-a" href="${this.basePath}website.html">Web projects</a>
                         </div>
                     </div>
                 </div>

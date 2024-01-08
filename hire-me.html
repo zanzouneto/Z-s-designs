@@ -33,29 +33,31 @@
             <button class="tablink" onclick="openCity('London', this, 'var(--main-yellow)', 'var(--black)')" id="defaultOpen">Email me</button>
             <button class="tablink" onclick="openCity('Paris', this, '#fbfcfd','var(--black)')">Book a consult</button>
         </div>
-        <div id="London" class="tabcontent">
-            <form action="https://formspree.io/f/xleyzdvq" method="POST">
-                <h2>Lets build awesomeness</h2>
-                <label>
-                    <input placeholder="Your Email" type="email" name="email" class="input">
-                </label>
-                <label>
-                    <textarea placeholder="Subject" name="Subject" class="input"></textarea>
-                </label>
-                <label>
-                    <textarea placeholder="Tell me things" name="message" class="input"></textarea>
-                </label>
-                <button class="button" type="submit">Send</button>
-            </form>
-        </div>
-        <div id="Paris" class="tabcontent calendar">
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/zeina-saade/consultation?background_color=0d1820&text_color=ffffff" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
+        <div class="tabs-div">
+            <div id="London" class="tabcontent">
+                <form action="https://formspree.io/f/xleyzdvq" method="POST">
+                    <h2>Lets build awesomeness</h2>
+                    <label>
+                        <input placeholder="Your Email" type="email" name="email" class="input">
+                    </label>
+                    <label>
+                        <textarea placeholder="Subject" name="Subject" class="input"></textarea>
+                    </label>
+                    <label>
+                        <textarea placeholder="Tell me things" name="message" class="input"></textarea>
+                    </label>
+                    <button class="button" type="submit">Send</button>
+                </form>
+            </div>
+            <div id="Paris" class="tabcontent calendar">
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/zeina-saade/consultation?background_color=0d1820&text_color=ffffff" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
         </div>
         <p class="title">What others say about me</p>
-        <div class='sk-ww-linkedin-recommendations' data-embed-id='251591'></div><script src='https://widgets.sociablekit.com/linkedin-recommendations/widget.js' async defer></script>
+        <div class='sk-ww-linkedin-recommendations' style="margin: 50px 0;" data-embed-id='251591'></div><script src='https://widgets.sociablekit.com/linkedin-recommendations/widget.js' async defer></script>
     </div>
     <div class="grainy-div">
         <div class="grainy">

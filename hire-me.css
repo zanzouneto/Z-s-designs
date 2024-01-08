@@ -65,11 +65,11 @@ body{
 }
 #London {background-color: var(--main-yellow);}
 #Paris {background-color:#fbfcfd;}
-.sk-ww-linkedin-recommendations{
-    margin-top: 50px;
-}
 .tutorial_link{
     display: none;
+}
+.tabs-div{
+    margin-bottom: 50px;
 }
 /* form */
 .input {
