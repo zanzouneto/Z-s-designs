@@ -49,6 +49,7 @@ class HeaderLinks extends HTMLElement {
             }
             :root {
                 --main-yellow: #ffcc00; 
+                --black: #0d1820;
             }
         `;
         head.appendChild(styleElem);
@@ -103,6 +104,7 @@ class HeaderLinksProjects extends HTMLElement {
             }
             :root {
                 --main-yellow: #ffcc00; 
+                --black: #0d1820;
             }
         `;
         head.appendChild(styleElem);

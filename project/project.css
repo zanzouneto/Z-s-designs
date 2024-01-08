@@ -119,7 +119,12 @@ section.active{
 .arrowdiv img{
     display: none;
 }
-
+.black-container{
+    background-color: black;
+    border-radius: 20px;
+    padding: 50px;
+    margin: auto;
+}
 @media (min-width: 600px) {
     body{
         margin: 40px 0 40px 0;
