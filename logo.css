@@ -62,16 +62,15 @@ p {
     justify-content: center;
 }
 .cta{
-    display: none;
+    /* display: none; */
     background-color: var(--black); 
     padding: 13px 5px 5px 5px;
     border-radius: 5px;
+    text-decoration: none;
     position: fixed;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    max-width: 70vw;
+    left: 10px;
+    /* max-width: 70vw; */
 }
 .cta :hover{
     color: var(--main-yellow);
@@ -79,6 +78,11 @@ p {
 /* Tablet styles */
 @media (min-width: 600px) {
     .cta{
+        position: fixed;
+        bottom: 10px;
+        transform: translateX(-50%);
+        left: 50%;
+        max-width: 70vw;    
         display: block;
     }
     h1 {
