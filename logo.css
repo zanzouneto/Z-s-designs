@@ -57,7 +57,7 @@ p {
     display: flex;
     flex-direction: column;
 }
-.center-all{
+.center-all{                                                                                                                                                          
     display: flex;
     justify-content: center;
 }
