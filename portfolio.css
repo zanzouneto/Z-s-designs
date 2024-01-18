@@ -167,7 +167,7 @@ p{
 }
 .project-div-container{
     margin: 50px;
-    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(336px, 1fr)); */
     display: grid;
     grid-gap: 36px;
     list-style: none;
@@ -226,8 +226,9 @@ p{
 }
 .pagination-button{
     background-color: var(--main-yellow);
-    padding: 15px;
+    padding: 15px 80px;
     border-radius: 10px;
+    font-weight: bolder;
     cursor: pointer;
 }
 .pagination-button :hover{
@@ -287,6 +288,10 @@ p{
     .project-img.web{
         display: block;
     }
+    .project-div-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    }
 }
 /* Desktop styles */
 @media (min-width: 1024px) {
@@ -339,5 +344,8 @@ p{
     .swiper-section.painting{
         height: 100vw;
         height: 55vw;
+    }
+    .project-div-container {
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
     }
 }
