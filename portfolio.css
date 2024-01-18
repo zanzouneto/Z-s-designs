@@ -179,7 +179,7 @@ p{
     border-radius: 10px;
 }
 .project-div-container .logo-div{
-    max-width: calc(100vw - 40px);     
+    max-width: calc(100vw - 40px -100px);     
     height: 100%;
     border-radius: 10px;
     aspect-ratio: 3 / 2;
