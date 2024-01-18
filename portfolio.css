@@ -193,14 +193,13 @@ p{
 .project-div-container .logo-div{
     max-width: calc(100vw - 140px);     
     height: 100%;
-    max-height: 40vh;
     border-radius: 10px;
     aspect-ratio: 3 / 2;
     padding: 50px;
 }
 .project-div-container .logo-img{
     max-width: 80%;
-    max-height: 80%;
+    max-height: 40vh;
 }
 .project-title{
     text-align: left;
@@ -301,6 +300,10 @@ p{
     .project-div-container .logo-div{
         max-width: 100%;
         padding: 0;
+    }
+    .project-div-container .logo-img{
+        max-width: 80%;
+        max-height: 80%;
     }
 }
 /* Desktop styles */
