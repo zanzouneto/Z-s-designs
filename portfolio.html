@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <meta name="description" content="Professional freelance graphic and web designer portfolio open to new projects.">
+    <meta name="keywords" content="freelance graphic design, freelance web design, freelance, designer, logo design, web design">  
     <script src="elements.js" defer></script>
     <header-links></header-links>
     <link rel="stylesheet" href="styles.css">
@@ -29,29 +31,469 @@
     </div>
     <div class="bigger-container">
         <div class="container">
+            <h1>Highlighted</h1>
+            <p>My favourite work</p>
+            <p class="swipe"><-- swipe for more  --></p>
+            <section class="swiper-section project-section">
+                <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+                    <swiper-slide>
+                        <img class="project-img web" loading="lazy" src="assets/ZBuzz-1-min.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
+                        <img class="project-img phone" loading="lazy" src="assets/zbuzz phone.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
+                        <a class="morebutton" href="project/zbuzz.html">Check it out -></a>
+                    </swiper-slide>
+                    <swiper-slide>   
+                        <img class="project-img web"  rel="preload" loading="eager" src="assets/HR-min.png" style="background: #253946d1;" alt="web design project for an HR company">  
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/hr phone.png" style="background: #253946d1;" alt="web design project for an HR company">  
+                        <a class="morebutton" href="project/lift99-hr.html">Check it out -></a>   
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img class="project-img web" rel="preload" loading="eager" src="assets/Active mode-min.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/am phone.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
+                        <a class="morebutton" href="project/active-mode.html">Check it out -></a>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img class="project-img web" loading="lazy"  src="assets/Help99-min.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
+                        <img class="project-img phone" loading="lazy"  src="assets/help99 phone.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
+                        <a class="morebutton" href="project/help99.html">Check it out -></a>   
+                    </swiper-slide>
+                    <swiper-slide>
+                        <img class="project-img web" loading="lazy"  src="assets/UA 911.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
+                        <img class="project-img phone" loading="lazy"  src="assets/911 phone.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
+                        <a class="morebutton" href="project/ua911.html">Check it out -></a>   
+                    </swiper-slide>
+                </swiper-container>
+            </section>
+
+            <!-- <h1>All projects</h1>
+            <div class="project-div-container">
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web"  rel="preload" loading="eager" src="assets/HR-min.png" style="background: #253946d1;" alt="web design project for an HR company">  
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/hr phone.png" style="background: #253946d1;" alt="web design project for an HR company">  
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">LIFT99 HR platform</p>
+                        <p class="project-tags">#Web design #Webflow development</p>
+                        <a class="project-button" href="/project/lift99-hr.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy" src="assets/ZBuzz-1-min.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
+                        <img class="project-img phone" loading="lazy" src="assets/zbuzz phone.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">ZBuzz Ecommerce</p>
+                        <p class="project-tags">#Ecommerce #Webflow development</p>
+                        <a class="project-button" href="/project/zbuzz.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy" src="assets/DAO-min.png" style="background: #311742d6;" alt="web design project for a web3 project">
+                        <img class="project-img phone" loading="lazy" src="assets/DAO phone.png" style="background: #311742d6;" alt="web design project for a web3 project">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Web3 DAO Project</p>
+                        <p class="project-tags">#Web3 #DAO development</p>
+                        <a class="project-button" href="/project/lift99-dao.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy" src="assets/M4U web projectr cover.jpg" style="background: white;" alt="web design project for a non-profit organisation">
+                        <img class="project-img phone" loading="lazy" src="assets/M4U phone cover.png" style="background: white;" alt="web design project for a non-profit organisation">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Mission for Ukraine</p>
+                        <p class="project-tags">#Non-profit #Webflow development</p>
+                        <a class="project-button" href="/project/mission-for-ukraine.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="eager" src="assets/Coaches for Ukraine-min.png" style="background: #434c5ab9;" alt="web design project for a coaching project">
+                        <img class="project-img phone" loading="eager" src="assets/Coaches for Ukraine phone.png" style="background: #434c5ab9;" alt="web design project for a coaching project">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Coaches for Ukraine</p>
+                        <p class="project-tags">#Coaching #Webflow development</p>
+                        <a class="project-button" href="/project/coaching.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy"  src="assets/Help99-min.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
+                        <img class="project-img phone" loading="lazy"  src="assets/help99 phone.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Help99 Initiative</p>
+                        <p class="project-tags">#Non-profit #Webflow development</p>
+                        <a class="project-button" href="/project/help99.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy"  src="assets/UA 911.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
+                        <img class="project-img phone" loading="lazy"  src="assets/911 phone.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">UA 911 Fundraising</p>
+                        <p class="project-tags">#Fundraising #Webflow development</p>
+                        <a class="project-button" href="/project/ua911.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy"  src="assets/AAZ web preview-min.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for a fertilizer company">
+                        <img class="project-img phone" loading="lazy"  src="assets/aaz phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for a fertilizer company">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">AAZ Fertilizer Company</p>
+                        <p class="project-tags">#Fertilizer #Web design</p>
+                        <a class="project-button" href="/project/Leonardite.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy"  src="assets/Sudoculus-1-min.png" style="background: #4e5560ce;" alt="web design project for a mathematical game named Sudoculus">
+                        <img class="project-img phone" loading="lazy"  src="assets/Sudoculus phone.png" style="background: #4e5560ce;" alt="web design project for a mathematical game named Sudoculus">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Sudoculus Game</p>
+                        <p class="project-tags">#Game #Web design</p>
+                        <a class="project-button" href="/project/sudoculus.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy" src="assets/Art of scandenavia web preview.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for an art collector">
+                        <img class="project-img phone" loading="lazy"  src="assets/artbay phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for an art collector">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Art of Scandinavia</p>
+                        <p class="project-tags">#Art #Collector #Web design</p>
+                        <a class="project-button" href="/project/artbay.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="eager" src="assets/Pilar-1-min.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;" alt="web design project for an artist, a painter">
+                        <img class="project-img phone" loading="eager" src="assets/pilar phone.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;" alt="web design project for an artist, a painter">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Pilar Elias Art</p>
+                        <p class="project-tags">#Art #Painting #Web design #Web coding</p>
+                        <a class="project-button" href="/project/pilar-elias-art.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" rel="preload" loading="eager" src="assets/Active mode-min.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/am phone.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Active Mode App</p>
+                        <p class="project-tags">#App design #Icon design #Sports platform</p>
+                        <a class="project-button" href="/project/active-mode.html">Check it out-></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" src="assets/Sudoculus app.jpg" alt="App design with full set of icon design for Sudoculus, a math based game">
+                        <img class="project-img phone" src="assets/Sudoculus phone.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Sudoculus, a math based game"> 
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Sudoculus App</p>
+                        <p class="project-tags">#App design #Icon design #Math game</p>
+                        <a class="project-button" href="/project/sudoculus.html">Check it out-></a>    
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <img class="project-img web" loading="lazy" src="assets/word puzzle.jpg" alt="App design for a puzzle game">
+                        <img class="project-img phone" loading="lazy" src="assets/puzzle phone.png" alt="App design for a puzzle game">
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Word Puzzle Game</p>
+                        <p class="project-tags">#App design #Puzzle game</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Active mode logo bg-min.jpg');">
+                            <img class="logo-img" alt="Custom logo design featuring geometric icon of the AM initials and bold typography for ActiveMode" rel="preload" loading="eager" src="assets/active mode logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">ActiveMode Logo</p>
+                        <p class="project-tags">#Logo design #Geometric #Typography</p>
+                        <a class="project-button" href="project/active-mode.html">Check it out -></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Tottaly jasmine logo bg-min.jpg');">
+                            <img class="logo-img" alt="Totally Jasmin logo design with a flower icon" loading="eager" src="assets/totally jasmin logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Totally Jasmin Logo</p>
+                        <p class="project-tags">#Logo design #Floral #Elegant</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Emuse logo bg.jpg');">
+                            <img class="logo-img" alt="Logo design for EMUSE, minimalistic typographical logo" loading="lazy" src="assets/emuse logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">EMUSE Logo</p>
+                        <p class="project-tags">#Logo design #Minimalistic #Typography</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-color: #1C1D1D;">
+                            <img class="logo-img" alt="Custom logo design with fluid typography for ZBUZZ" loading="lazy" src="assets/zbuzz logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">ZBUZZ Logo</p>
+                        <p class="project-tags">#Logo design #Fluid Typography</p>
+                        <a class="project-button" href="project/
+                        zbuzz.html">Check it out -></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: linear-gradient(160deg, #363642 25.84%, #0B0B0C 76.08%);">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the MU initials and bold typography for Mission 4 Ukraine" loading="lazy" src="assets/m4u logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Mission 4 Ukraine Logo</p>
+                        <p class="project-tags">#Logo design #Geometric #Bold Typography</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Middle litoral logo bg-min.jpg');">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the ML initials and bold typography for Middle Litoral, logo in Arabic and English"  loading="lazy"  src="assets/middle litoral logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Middle Litoral Logo</p>
+                        <p class="project-tags">#Logo design #Abstract #Bilingual</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-color: #1D315C;">
+                            <img class="logo-img" alt="Logo design with an icon of AAZ initials" loading="lazy" src="assets/aaz trading co logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">AAZ Trading Co. Logo</p>
+                        <p class="project-tags">#Logo design #Initials #Iconic</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Charm of the elements logo bg-min.jpg');">
+                            <img class="logo-img" alt="Charm of the elements logo design, minimalistic logo" loading="lazy" src="assets/charm of  the elements logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Charm of the Elements Logo</p>
+                        <p class="project-tags">#Logo design #Minimalistic</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Katia G Saade logo bg-min.jpg');">
+                            <img class="logo-img" alt="Katia G Saade logo design for an architect" loading="lazy" src="assets/katia g saade logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Katia G Saade Logo</p>
+                        <p class="project-tags">#Logo design #Architectural</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Gallivanters log logo bg-min.jpg');">
+                            <img class="logo-img" alt="Custom logo design options circular designs in different design styles for Galivanter's Log" loading="lazy" src="assets/galivanter log logo highlighted.png" style="max-width: 500px;">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Galivanter's Log Logo</p>
+                        <p class="project-tags">#Logo design #Circular #Versatile</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: linear-gradient(160deg, #363642 25.84%, #0B0B0C 76.08%);">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric typography for DEPO" loading="lazy" src="assets/depo logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">DEPO Logo</p>
+                        <p class="project-tags">#Logo design #Abstract #Geometric</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #FFFCF3;">
+                            <img class="logo-img" alt="paragliding logo design in Arabic text" loading="lazy" src="assets/paragliding logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Kafroun Paragliding Logo</p>
+                        <p class="project-tags">#Logo design #Paragliding #Arabic</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #F8F5F1;">
+                            <img class="logo-img" alt="Logo design with icon of AAZ initials for a fertilizer" loading="lazy" src="assets/aaz leonardite logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">AAZ Leonardite Logo</p>
+                        <p class="project-tags">#Logo design #Fertilizer #Iconic</p>
+                        <a class="project-button" href="project/Leonardite.html">Check it out -></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #FFFCF3;">
+                            <img class="logo-img" alt="JAZ logo design featuring a geometric backdrop and bold typography" loading="lazy" src="assets/jaz logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">JAZ Logo</p>
+                        <p class="project-tags">#Logo design #Geometric #Bold Typography</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #FFF;">
+                            <img class="logo-img" alt="sudoculus logo design for a math game" loading="lazy" src="assets/sudoculus logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Sudoculus Logo</p>
+                        <p class="project-tags">#Logo design #Math Game</p>
+                        <a class="project-button" href="project/sudoculus.html">Check it out -></a>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Amal logo bg.jpg');">
+                            <img class="logo-img" alt="Charity logo design in Arabic letters" loading="lazy" src="assets/amal logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Amal Charity Logo</p>
+                        <p class="project-tags">#Logo design #Charity #Arabic</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Angelic Assosiation of Anis Saade logo bg-min.jpg');">
+                            <img class="logo-img" alt="Charity logo design in Arabic and English" loading="lazy" src="assets/aaas logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Angelic Association of Anis Saade Logo</p>
+                        <p class="project-tags">#Logo design #Charity #Bilingual</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #D7EBF2;">
+                            <img class="logo-img" alt="Wolffeels Kennel logo design with a dog icon" loading="lazy" src="assets/keenel logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Wolffeels Kennel Logo</p>
+                        <p class="project-tags">#Logo design #Kennel #Dog Icon</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background: #FFFCF3;">
+                            <img class="logo-img" alt="Z Bowls Logo design" loading="lazy" src="assets/zbowls logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Z Bowls Logo</p>
+                        <p class="project-tags">#Logo design #Bowls</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-color: #FFDE17;">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the WY initials for Walid Yamout Sports Events" loading="lazy" src="assets/walid logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Walid Yamout Sports Events Logo</p>
+                        <p class="project-tags">#Logo design #Sports #Geometric</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-image: url('assets/Golden dynasty logo bg-min.jpg');">
+                            <img class="logo-img" alt="Golden dynasty logo deisng with stylised arabic letters as an icon" loading="lazy" src="assets/golden dynasty logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">Golden Dynasty Logo</p>
+                        <p class="project-tags">#Logo design #Arabic #Stylised</p>
+                    </div>
+                </div>
+                <div class="project-div-main">
+                    <div class="project-uppper-div">
+                        <div class="logo-div" style="background-color: #FDED1C;">
+                            <img class="logo-img" alt="SkyLux Avia logo design for an airline company" loading="lazy" src="assets/skylux avia logo.png">
+                        </div>
+                    </div>
+                    <div class="project-lower-div">
+                        <p class="project-title">SkyLux Avia Logo</p>
+                        <p class="project-tags">#Logo design #Airline</p>
+                    </div>
+                </div>  
+            </div>
+            <div id="pagination" class="pagination-div">
+                <button class="pagination-button" id="next-btn">Load More</button>
+            </div> -->
+
             <h1>Websites</h1>
             <p>Web Design + Webflow Development projects</p>
             <p class="swipe"><-- swipe for more  --></p>
             <section class="swiper-section project-section">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>   
-                        <img class="project-img web" rel="preload" loading="eager" src="assets/HR-min.png" style="background: #253946d1;">  
-                        <img class="project-img phone" rel="preload" loading="eager" src="assets/hr phone.png" style="background: #253946d1;">  
+                        <img class="project-img web"  rel="preload" loading="eager" src="assets/HR-min.png" style="background: #253946d1;" alt="web design project for an HR company">  
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/hr phone.png" style="background: #253946d1;" alt="web design project for an HR company">  
                         <a class="morebutton" href="project/lift99-hr.html">Check it out -></a>   
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy" src="assets/ZBuzz-1-min.png" style="background: #9d9d9db4;">
-                        <img class="project-img phone" loading="lazy" src="assets/zbuzz phone.png" style="background: #9d9d9db4;">
+                        <img class="project-img web" loading="lazy" src="assets/ZBuzz-1-min.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
+                        <img class="project-img phone" loading="lazy" src="assets/zbuzz phone.png" style="background: #9d9d9db4;" alt="web design project for an ecommerce shop">
                         <a class="morebutton" href="project/zbuzz.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy" src="assets/DAO-min.png" style="background: #311742d6;">
-                        <img class="project-img phone" loading="lazy" src="assets/DAO phone.png" style="background: #311742d6;">
+                        <img class="project-img web" loading="lazy" src="assets/DAO-min.png" style="background: #311742d6;" alt="web design project for a web3 project">
+                        <img class="project-img phone" loading="lazy" src="assets/DAO phone.png" style="background: #311742d6;" alt="web design project for a web3 project">
                         <a class="morebutton" href="project/lift99-dao.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy" src="assets/M4U web projectr cover.jpg" style="background: white;">
-                        <img class="project-img phone" loading="lazy" src="assets/M4U phone cover.png" style="background: white;">
+                        <img class="project-img web" loading="lazy" src="assets/M4U web projectr cover.jpg" style="background: white;" alt="web design project for a non-profit organisation">
+                        <img class="project-img phone" loading="lazy" src="assets/M4U phone cover.png" style="background: white;" alt="web design project for a non-profit organisation">
                         <a class="morebutton" href="project/mission-for-ukraine.html">Check it out -></a>
                     </swiper-slide>
                 </swiper-container>
@@ -61,18 +503,18 @@
             <section class="swiper-section project-section">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
-                        <img class="project-img web" loading="eager" src="assets/Coaches for Ukraine-min.png" style="background: #434c5ab9;">
-                        <img class="project-img phone" loading="eager" src="assets/Coaches for Ukraine phone.png" style="background: #434c5ab9;">
+                        <img class="project-img web" loading="eager" src="assets/Coaches for Ukraine-min.png" style="background: #434c5ab9;" alt="web design project for a coaching project">
+                        <img class="project-img phone" loading="eager" src="assets/Coaches for Ukraine phone.png" style="background: #434c5ab9;" alt="web design project for a coaching project">
                         <a class="morebutton" href="project/coaching.html">Check it out -></a>   
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy"  src="assets/Help99-min.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);">
-                        <img class="project-img phone" loading="lazy"  src="assets/help99 phone.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);">
+                        <img class="project-img web" loading="lazy"  src="assets/Help99-min.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
+                        <img class="project-img phone" loading="lazy"  src="assets/help99 phone.png" style="background: linear-gradient(155deg, #043016 5.33%, rgba(55, 90, 50, 0.66) 36.6%, #0F2F04 90.9%);" alt="web design project for a non-profit organisation">
                         <a class="morebutton" href="project/help99.html">Check it out -></a>   
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy"  src="assets/UA 911.png" style="background-color: #253946dc;">
-                        <img class="project-img phone" loading="lazy"  src="assets/911 phone.png" style="background-color: #253946dc;">
+                        <img class="project-img web" loading="lazy"  src="assets/UA 911.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
+                        <img class="project-img phone" loading="lazy"  src="assets/911 phone.png" style="background-color: #253946dc;" alt="web design project for a fundraising initiative in Ukraine">
                         <a class="morebutton" href="project/ua911.html">Check it out -></a>   
                     </swiper-slide>
                 </swiper-container>
@@ -82,18 +524,18 @@
             <section class="swiper-section project-section">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy"  src="assets/AAZ web preview-min.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);">
-                        <img class="project-img phone" loading="lazy"  src="assets/aaz phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);">
+                        <img class="project-img web" loading="lazy"  src="assets/AAZ web preview-min.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for a fertilizer company">
+                        <img class="project-img phone" loading="lazy"  src="assets/aaz phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for a fertilizer company">
                         <a class="morebutton" href="project/Leonardite.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy"  src="assets/Sudoculus-1-min.png" style="background: #4e5560ce;">
-                        <img class="project-img phone" loading="lazy"  src="assets/Sudoculus phone.png" style="background: #4e5560ce;">
+                        <img class="project-img web" loading="lazy"  src="assets/Sudoculus-1-min.png" style="background: #4e5560ce;" alt="web design project for a mathematical game named Sudoculus">
+                        <img class="project-img phone" loading="lazy"  src="assets/Sudoculus phone.png" style="background: #4e5560ce;" alt="web design project for a mathematical game named Sudoculus">
                         <a class="morebutton" href="project/sudoculus.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy" src="assets/Art of scandenavia web preview.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);">
-                        <img class="project-img phone" loading="lazy"  src="assets/artbay phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);">
+                        <img class="project-img web" loading="lazy" src="assets/Art of scandenavia web preview.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for an art collector">
+                        <img class="project-img phone" loading="lazy"  src="assets/artbay phone.png" style="background: linear-gradient(180deg, #395B6A 0%, rgba(57, 91, 106, 0.66) 55.07%, #395B6A 100%);" alt="web design project for an art collector">
                         <a class="morebutton" href="project/artbay.html">Check it out -></a>
                     </swiper-slide>
                 </swiper-container>
@@ -103,8 +545,8 @@
             <section class="swiper-section project-section">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
-                        <img class="project-img web" loading="eager" src="assets/Pilar-1-min.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;">
-                        <img class="project-img phone" loading="eager" src="assets/pilar phone.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;">
+                        <img class="project-img web" loading="eager" src="assets/Pilar-1-min.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;" alt="web design project for an artist, a painter">
+                        <img class="project-img phone" loading="eager" src="assets/pilar phone.png" style="background: linear-gradient(18deg, #59111fe0 28.56%, #ad2f2fd7 71.41%), #ffffffb7;" alt="web design project for an artist, a painter">
                         <a class="morebutton" href="project/pilar-elias-art.html">Check it out -></a>
                     </swiper-slide>
                 </swiper-container>
@@ -115,18 +557,18 @@
             <section class="swiper-section project-section">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
-                        <img class="project-img web" rel="preload" loading="eager" src="assets/Active mode-min.png" style="background: #434c5ad1;">
-                        <img class="project-img phone" rel="preload" loading="eager" src="assets/am phone.png" style="background: #434c5ad1;">
+                        <img class="project-img web" rel="preload" loading="eager" src="assets/Active mode-min.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
+                        <img class="project-img phone" rel="preload" loading="eager" src="assets/am phone.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Active Mode, a sport social media platform">
                         <a class="morebutton" href="project/active-mode.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>   
-                        <img class="project-img web" src="assets/Sudoculus app.jpg"> 
-                        <img class="project-img phone" src="assets/Sudoculus phone.png" style="background: #434c5ad1;"> 
+                        <img class="project-img web" src="assets/Sudoculus app.jpg" alt="App design with full set of icon design for Sudoculus, a math based game">
+                        <img class="project-img phone" src="assets/Sudoculus phone.png" style="background: #434c5ad1;" alt="App design with full set of icon design for Sudoculus, a math based game"> 
                         <a class="morebutton" href="project/sudoculus.html">Check it out -></a>    
                     </swiper-slide>
                     <swiper-slide>
-                        <img class="project-img web" loading="lazy" src="assets/word puzzle.jpg">
-                        <img class="project-img phone" loading="lazy" src="assets/puzzle phone.png">
+                        <img class="project-img web" loading="lazy" src="assets/word puzzle.jpg" alt="App design for a puzzle game">
+                        <img class="project-img phone" loading="lazy" src="assets/puzzle phone.png" alt="App design for a puzzle game">
                     </swiper-slide>
                 </swiper-container>
             </section>
@@ -136,116 +578,116 @@
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Active\ mode\ logo\ bg-min.jpg);">
-                            <img class="logo-img" rel="preload" loading="eager" src="assets/active mode logo.png">
+                            <img class="logo-img" alt="Custom logo design featuring geometric icon of the AM initials and bold typography for ActiveMode" rel="preload" loading="eager" src="assets/active mode logo.png">
                         </div>
                         <a class="morebutton" href="project/active-mode.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Tottaly\ jasmine\ logo\ bg-min.jpg);" >
-                            <img class="logo-img" loading="eager" src="assets/totally jasmin logo.png">
+                            <img class="logo-img" alt="Totally Jasmin logo design with a flower icon" loading="eager" src="assets/totally jasmin logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Emuse\ logo\ bg.jpg);" >
-                            <img class="logo-img"  loading="lazy"  src="assets/emuse logo.png">
+                            <img class="logo-img" alt="Logo design for EMUSE, minimalistic typographical logo" loading="lazy"  src="assets/emuse logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-color: #1C1D1D;" >
-                            <img class="logo-img" loading="lazy" src="assets/zbuzz logo.png">
+                            <img class="logo-img" alt="Custom logo design with fluid typography for ZBUZZ" loading="lazy" src="assets/zbuzz logo.png">
                         </div>
                         <a class="morebutton" href="project/zbuzz.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: linear-gradient(160deg, #363642 25.84%, #0B0B0C 76.08%);">
-                            <img class="logo-img" loading="lazy" src="assets/m4u logo.png">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the MU initials and bold typography for Mission 4 Ukraine" loading="lazy" src="assets/m4u logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Middle\ litoral\ logo\ bg-min.jpg);" >
-                            <img class="logo-img"  loading="lazy"  src="assets/middle litoral logo.png">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the ML initials and bold typography for Middle Litoral, logo in Arabic and English"  loading="lazy"  src="assets/middle litoral logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-color: #1D315C;" >
-                            <img class="logo-img"  loading="lazy"  src="assets/aaz trading co logo.png">
+                            <img class="logo-img" alt="Logo design with an icon of AAZ initials" loading="lazy"  src="assets/aaz trading co logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Charm\ of\ the\ elements\ logo\ bg-min.jpg);" >
-                            <img class="logo-img"  loading="lazy"  src="assets/charm of  the elements logo.png">
+                            <img class="logo-img" alt="Charm of the elements logo design, minimalistic logo" loading="lazy"  src="assets/charm of  the elements logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Katia\ G\ Saade\ logo\ bg-min.jpg);" >
-                            <img class="logo-img"  loading="lazy"  src="assets/katia g saade logo.png">
+                            <img class="logo-img" alt="Katia G Saade logo design for an architect" loading="lazy"  src="assets/katia g saade logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>            
                         <div class="logo-div" style="background-image: url(assets/Gallivanters\ log\ logo\ bg-min.jpg);" >
-                            <img class="logo-img"  loading="lazy"  src="assets/galivanter log logo.png" style="max-width: 500px;">
+                            <img class="logo-img" alt="Custom logo design options circular designs in different design styles for Galivanter's Log" loading="lazy"  src="assets/galivanter log logo.png" style="max-width: 500px;">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: linear-gradient(160deg, #363642 25.84%, #0B0B0C 76.08%);" >
-                            <img class="logo-img"  loading="lazy" src="assets/depo logo.png">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric typography for DEPO" loading="lazy" src="assets/depo logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Kafroun\ paragliding\ logo\ bg-min.jpg);" >
-                            <img class="logo-img" loading="lazy" src="assets/paragliding logo.png">
+                            <img class="logo-img" alt="paragliding logo design in Arabic text" loading="lazy" src="assets/paragliding logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: #F8F5F1;" >
-                            <img class="logo-img"  loading="lazy"  src="assets/aaz leonardite logo.png">
+                            <img class="logo-img" alt="Logo design with icon of AAZ initials for a fertilizer" loading="lazy"  src="assets/aaz leonardite logo.png">
                             <a class="morebutton" href="project/Leonardite.html">Check it out -></a>
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: #FFFCF3;" >
-                            <img class="logo-img" loading="lazy" src="assets/jaz logo.png">
+                            <img class="logo-img" alt="JAZ logo design featuring a geometric backdrop and bold typography" loading="lazy" src="assets/jaz logo.png">
                         </div> 
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: #FFF;" >
-                            <img class="logo-img" loading="lazy" src="assets/sudoculus logo.png">
+                            <img class="logo-img" alt="sudoculus logo design for a math game" loading="lazy" src="assets/sudoculus logo.png">
                         </div>
                         <a class="morebutton" href="project/sudoculus.html">Check it out -></a>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Amal\ logo\ bg.jpg);" >
-                            <img class="logo-img" loading="lazy" src="assets/amal logo.png">
+                            <img class="logo-img" alt="Charity logo design in Arabic letters" loading="lazy" src="assets/amal logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Angelic\ Assosiation\ of\ Anis\ Saade\ logo\ bg-min.jpg);" >
-                            <img class="logo-img" loading="lazy" src="assets/aaas logo.png">
+                            <img class="logo-img" alt="Charity logo design in Arabic and English" loading="lazy" src="assets/aaas logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: #D7EBF2;" >
-                            <img class="logo-img" loading="lazy" src="assets/keenel logo.png">
+                            <img class="logo-img" alt="Wolffeels Kennel logo design with a dog icon" loading="lazy" src="assets/keenel logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background: #FFFCF3;" >
-                            <img class="logo-img" loading="lazy" src="assets/zbowls logo.png">
+                            <img class="logo-img" alt="Z Bowls Logo design" loading="lazy" src="assets/zbowls logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-color: #FFDE17;" >
-                            <img class="logo-img" loading="lazy" src="assets/walid logo.png">
+                            <img class="logo-img" alt="Custom logo design featuring abstract geometric icon of the WY initials for Walid Yamout Sports Events" loading="lazy" src="assets/walid logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-image: url(assets/Golden\ dynasty\ logo\ bg-min.jpg);" >
-                            <img class="logo-img" loading="lazy" src="assets/golden dynasty logo.png">
+                            <img class="logo-img" alt="Golden dynasty logo deisng with stylised arabic letters as an icon" loading="lazy" src="assets/golden dynasty logo.png">
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="logo-div" style="background-color: #FDED1C;" >
-                            <img class="logo-img" loading="lazy" src="assets/skylux avia logo.png">
+                            <img class="logo-img" alt="SkyLux Avia logo design for an airline company" loading="lazy" src="assets/skylux avia logo.png">
                         </div>
                     </swiper-slide>
                 </swiper-container>
@@ -256,34 +698,34 @@
             <section class="swiper-section painting">
                 <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
                     <swiper-slide>
-                        <img src="assets/bugeyes.jpg" rel="preload" loading="eager" style="background-color: #273128;" class="painting">
+                        <img src="assets/bugeyes.jpg" rel="preload" loading="eager" style="background-color: #273128;" class="painting" alt="digital painting of a bug">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/book orb.jpg" loading="eager" style="background-color: #101010;" class="painting">
+                        <img src="assets/book orb.jpg" loading="eager" style="background-color: #101010;" class="painting" alt="digital painting of a book and an orb">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/skull.jpg" loading="lazy" style="background-color: #222327;" class="painting">
+                        <img src="assets/skull.jpg" loading="lazy" style="background-color: #222327;" class="painting" alt="digital painting of a skull">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/fruits edited.jpg" loading="lazy" style="background-color: #B5B6BA;" class="painting">
+                        <img src="assets/fruits edited.jpg" loading="lazy" style="background-color: #B5B6BA;" class="painting" alt="digital painting of fruits">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/pot.jpg" loading="lazy" style="background-color: #1C1F28;" class="painting">
+                        <img src="assets/pot.jpg" loading="lazy" style="background-color: #1C1F28;" class="painting" alt="digital painting of a pot">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/up.jpg" loading="lazy" style="background-color: #224194;" class="painting">
+                        <img src="assets/up.jpg" loading="lazy" style="background-color: #224194;" class="painting" alt="digital painting of up">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/mulan.jpg" loading="lazy" style="background-color: #FAD48B;" class="painting">
+                        <img src="assets/mulan.jpg" loading="lazy" style="background-color: #FAD48B;" class="painting" alt="digital painting of mulan">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/prespective.jpg" loading="lazy" style="background-color: #F0F0F0;" class="painting">
+                        <img src="assets/prespective.jpg" loading="lazy" style="background-color: #F0F0F0;" class="painting" alt="digital painting of a house in prespective">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/eye.jpg" loading="lazy" style="background-color: #49524F;" class="painting">
+                        <img src="assets/eye.jpg" loading="lazy" style="background-color: #49524F;" class="painting" alt="digital painting of an eye">
                     </swiper-slide>
                     <swiper-slide>
-                        <img src="assets/fruits.jpg" loading="lazy" style="background-color: #8D8E93;" class="painting">
+                        <img src="assets/fruits.jpg" loading="lazy" style="background-color: #8D8E93;" class="painting" alt="digital painting of fruits">
                     </swiper-slide>
                 </swiper-container>
             </section>
@@ -298,6 +740,7 @@
     <nav-menu></nav-menu>
     <main-footer></main-footer>
     <script src="navigation.js"></script>
+    <script src="portfolio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="styles.js"></script>
 </body>

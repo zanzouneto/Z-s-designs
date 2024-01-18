@@ -165,7 +165,74 @@ p{
     text-align: center;
     letter-spacing: 1px;
 }
-
+.project-div-container{
+    margin: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    display: grid;
+    grid-gap: 36px;
+    list-style: none;
+}
+.project-div-main{
+    aspect-ratio: 2;
+}
+.project-div-container .project-img{
+    height: auto;
+    border-radius: 10px;
+}
+.project-div-container .logo-div{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    aspect-ratio: 3 / 2;
+}
+.project-div-container .logo-img{
+    max-width: 80%;
+    max-height: 80%;
+}
+.project-title{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.project-tags{
+    opacity: 0.3;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+.project-upper-div{
+    width: 100%;
+    aspect-ratio: 2;
+}
+.project-lower-div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+.project-button{
+    color: var(--main-yellow);
+    font-size: small;
+    font-family: coda, sans-serif;
+    text-underline-offset: 5px;
+    margin-top: 10px;
+}
+.pagination-div{
+    display: flex;
+    justify-content: center;
+}
+.current-page{
+    color: aliceblue;
+    font-family: coda, sans-serif;
+}
+.pagination-button{
+    background-color: var(--main-yellow);
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.pagination-button :hover{
+    opacity: 0.8;
+}
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
