@@ -225,7 +225,7 @@ p{
     font-family: coda, sans-serif;
 }
 .pagination-button{
-    bottom: 50px;
+    margin-bottom: 100px;
     background-color: var(--main-yellow);
     padding: 15px 80px;
     border-radius: 10px;
