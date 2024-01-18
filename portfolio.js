@@ -34,5 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('currentPage:', currentPage);
     });
 
+
     renderGrid(true);
 });
