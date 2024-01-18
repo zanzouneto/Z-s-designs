@@ -125,6 +125,9 @@ section.active{
     padding: 50px;
     margin: auto;
 }
+.main-footer{
+    left: -20px;
+}
 @media (min-width: 600px) {
     body{
         margin: 40px 0 40px 0;
