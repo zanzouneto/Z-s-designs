@@ -234,6 +234,7 @@ p{
     border-radius: 10px;
     font-weight: bolder;
     cursor: pointer;
+    color: black;
 }
 .pagination-button :hover{
     opacity: 0.8;
