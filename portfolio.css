@@ -239,6 +239,21 @@ p{
 .pagination-button :hover{
     opacity: 0.8;
 }
+.client-main-div{
+    display: flex;
+    column-gap: 80px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 140px;
+    padding: 0 40px;
+}
+.client-logo{
+    height: 40px;
+    opacity: 0.4;
+}
 /* Tablet styles */
 @media (min-width: 600px) {
     .h1{
