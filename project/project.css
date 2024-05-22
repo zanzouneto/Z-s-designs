@@ -1,6 +1,7 @@
 body{
     margin: 100px 20px;
     background-attachment: fixed;
+    background-color: black;
 }
 .fullwidth{
     margin: auto;
@@ -56,7 +57,7 @@ h1{
     justify-content: center;
     margin: 20px auto;
     width: 100%;
-    background: #1C122D;
+    background: var(--main-yellow);
     border-radius: 40px;
 }
 .highlighted{
