@@ -122,6 +122,9 @@ body {
     position: fixed;
     z-index: 20000;
 }
+
+/* HIRE ME element */
+
 .hire-me-div{
     position:fixed;
     right: 10px;
@@ -134,6 +137,9 @@ body {
 }
 .hire-me-div:hover{
     scale: 1.1;
+}
+.hire-me-div a{
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="28" font-size="30">👋</text></svg>') 16 16, auto;
 }
 .hire-me-div img{
     width: 125px;
@@ -150,6 +156,10 @@ body {
     margin: 0 10px 0 0;
     text-shadow: 1px 0px 5px rgb(0 0 0);
 }
+
+
+/* FOOTER element  */
+
 #main-footer{
     z-index: 2;
 }

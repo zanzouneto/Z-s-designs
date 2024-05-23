@@ -21,6 +21,20 @@ body{
     cursor: auto;
     font-family: coda, sans-serif;
 }
+
+
+a:hover {
+    animation: cursorFlip 0.8s infinite;     
+}
+@keyframes cursorFlip {
+    0%, 100% {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="28" font-size="24">👀</text></svg>') 16 16, auto;
+    }
+    50% {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" transform="scale(-1, 1)"><text y="28" font-size="24">👀</text></svg>') 16 16, auto;
+    }
+}
+
 #cursor1, #cursor2 {
     border-radius: 50%;
     position: fixed;
