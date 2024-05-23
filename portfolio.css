@@ -253,6 +253,11 @@ p{
 .client-logo{
     height: 40px;
     opacity: 0.4;
+    transition: transform 1s ease, opacity 2s ease;
+}
+.client-logo:hover {
+    transform: scale(1.2); /* Increase size by 20% */
+    opacity: 0.8;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
