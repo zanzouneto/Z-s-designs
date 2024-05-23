@@ -139,7 +139,7 @@ body {
     scale: 1.1;
 }
 .hire-me-div a{
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="28" font-size="30">👋</text></svg>') 16 16, auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32"><text y="28" font-size="24">👋</text></svg>') 16 16, auto;
 }
 .hire-me-div img{
     width: 125px;
