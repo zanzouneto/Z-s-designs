@@ -262,6 +262,11 @@ p{
     margin-bottom: 140px;
     padding: 0 ;
 }
+.client-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 .client-logo{
     scale: 0.7;
     height: 40px;
@@ -271,6 +276,9 @@ p{
 .client-logo:hover {
     transform: scale(1.2); /* Increase size by 20% */
     opacity: 1;
+}
+.client-label{
+    opacity: 0.3;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
