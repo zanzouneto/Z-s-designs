@@ -1,0 +1,49 @@
+/* Add your CSS styling here */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#player-section, #theme-section, #game-section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+#player-section input, #theme-section select, #player-section button, #theme-section button, #game-section button {
+    margin: 10px 0;
+    padding: 10px;
+}
+.question-part {
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.green {
+    background-color: ##caf3ca;
+    color: darkgreen;
+    padding: 50px;
+}
+
+.red {
+    background-color: f2c1c1;
+    color: darkred;
+    padding: 50px;
+}
+
+.or {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.288);
+    background-color: #f9f8f4;
+    border-radius: 110px;
+    text-align: center;
+}
+p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: stretch;
+    text-align: center;
+}
