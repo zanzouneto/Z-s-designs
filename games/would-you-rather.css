@@ -1,6 +1,6 @@
-/* Add your CSS styling here */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9d7d7;
 }
 
 #player-section, #theme-section, #game-section {
@@ -9,9 +9,24 @@ body {
     border: 1px solid #ccc;
 }
 
-#player-section input, #theme-section select, #player-section button, #theme-section button, #game-section button {
+#player-section input, #theme-section select, #theme-section button, #player-section button, #game-section button {
     margin: 10px 0;
     padding: 10px;
+}
+.input-outer-div{
+    display: flex;
+    gap: 10px;
+}
+button, input{
+    cursor: pointer;
+}
+#player-section button{
+    font-size: x-large ;
+}
+.themes-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .question-part {
     display: inline-block;
@@ -33,10 +48,10 @@ body {
 }
 
 .or {
-    font-size: 40px;
+    font-size: medium;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.288);
-    background-color: #f9f8f4;
+    background-color: #f9f8f43f;
     border-radius: 110px;
     text-align: center;
 }
@@ -46,4 +61,12 @@ p{
     align-items: center;
     align-items: stretch;
     text-align: center;
+}
+#player{
+    font-size: x-large;
+}
+.second-button{
+    background-color: rgba(255, 255, 255, 0); 
+    border-color: rgba(255, 255, 255, 0);
+    text-decoration: underline;
 }
