@@ -169,7 +169,7 @@ document.getElementById('get-task-btn').addEventListener('click', function() {
 
 function animateTaskDisplay(pieceNumber, task) {
     const taskDisplay = document.getElementById('task-display');
-    taskDisplay.innerHTML = `<div style="text-align: center; font-size: 24px;">${pieceNumber}</div><br><div style="text-align: left;">`; // Display the piece number with a line break
+    taskDisplay.innerHTML = `<div style="text-align: center; font-size: 24px;">${pieceNumber}</div>`; // Display the piece number with a line break
 
     let index = 0;
     const intervalId = setInterval(() => {
