@@ -446,9 +446,10 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
-// Variables to track touch position
+// Variables to track touch position and card movement
 let xDown = null;
 let yDown = null;
+let card = document.getElementById('card');
 
 function handleTouchStart(event) {
     xDown = event.touches[0].clientX;
@@ -466,10 +467,18 @@ function handleTouchMove(event) {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (xDiff > 0) {
             // Swipe left
-            passWord();
+            card.classList.add('swipe-left');
+            setTimeout(() => {
+                passWord();
+                card.classList.remove('swipe-left');
+            }, 300); // Adjust the duration to match your CSS transition duration
         } else {
             // Swipe right
-            guessedWord();
+            card.classList.add('swipe-right');
+            setTimeout(() => {
+                guessedWord();
+                card.classList.remove('swipe-right');
+            }, 300); // Adjust the duration to match your CSS transition duration
         }
     }
 

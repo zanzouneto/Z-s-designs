@@ -20,6 +20,15 @@ body {
     background-color: aliceblue;
     border: 1px solid black;
     border-radius: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.swipe-left {
+    transform: translateX(-100%);
+}
+
+.swipe-right {
+    transform: translateX(100%);
 }
 
 #taboo-words {
