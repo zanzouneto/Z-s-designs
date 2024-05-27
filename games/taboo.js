@@ -470,6 +470,7 @@ function handleTouchMove(event) {
             card.classList.add('swipe-left');
             setTimeout(() => {
                 passWord();
+                card.style.transform = '';
                 card.classList.remove('swipe-left');
             }, 300); // Adjust the duration to match your CSS transition duration
         } else {
@@ -477,6 +478,7 @@ function handleTouchMove(event) {
             card.classList.add('swipe-right');
             setTimeout(() => {
                 guessedWord();
+                card.style.transform = '';
                 card.classList.remove('swipe-right');
             }, 300); // Adjust the duration to match your CSS transition duration
         }
