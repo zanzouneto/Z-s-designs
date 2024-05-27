@@ -6,31 +6,75 @@
     <link rel="stylesheet" href="would-you-rather.css">
 </head>
 <body>
-    <div id="player-section">
-        <h2>Add Players</h2>
-        <div class="input-outer-div">
-            <input type="text" id="player-name" placeholder="Player name">
-            <button onclick="addPlayer()">+</button>
-        </div>
-        <ul id="player-list"></ul>
-    </div>
     <div id="theme-section">
-        <h2>Select Themes</h2>
+        <h2>Filter Themes</h2>
         <div class="themes-container">
             <label><input type="checkbox" id="general" value="general" checked> General</label>
             <label><input type="checkbox" id="funny" value="funny" checked> Funny</label>
             <label><input type="checkbox" id="serious" value="serious" checked> Serious</label>
             <label><input type="checkbox" id="adults" value="adults" checked> Adults</label>
         </div>
+    </div>
+    <div class="intro-div">
+        <h2>Drinking Game Option</h2>
+        <p class="note">
+            In the non-drinking game, each player gets a unique question. <br>
+            In the drinking game, the same question is posed to all players.
+        </p> 
+        <label><input type="checkbox" id="general" value="general"> Drinking game</label>
+        <br>
+        <div class="toggle-container">
+            <button class="toggle-btn">Rules for Turning "Would You Rather" into a Drinking Game:</button>
+            <div class="content">
+                <p>
+                    <ol>
+                        <li>players answer the question simultaneously.</li>
+                        <ul>
+                            <li>Use cards to identify your answer: green for the first option, red for the second.</li>
+                            <li>Alternatively, use your hands: one finger for the first option, two fingers for the second.</li>
+                            <li>Or get cretive and find your own identifiers.</li>
+                        </ul>
+                        <li>Count the votes for each option.</li>
+                        <li>Minority voters drink.</li>
+                        <li>You can abstain from answering a question by taking a double drink.</li>
+                    </ol>  
+                </p>
+            </div>
+        </div>   
+    </div>
+    <div id="player-section">
+        <h2>Add Players</h2>
+        <p class="note">
+            Optional
+        </p> 
+        <div class="input-outer-div">
+            <input type="text" id="player-name" placeholder="Player name">
+            <button onclick="addPlayer()">+</button>
+        </div>
+        <ul id="player-list"></ul>
+    </div>
+    <div class="intro-div">
         <button onclick="startGame()">Start Game</button>
     </div>
     <div id="game-section" style="display: none;">
-        <h2>Would You Rather</h2>
         <p id="player"></p>
         <p id="question"></p>
         <button onclick="nextQuestion()">Next Question</button>
+        <br>
         <button class="second-button" onclick="editPlayers()">Edit Players</button>
+        <button class="second-button" onclick="editFilters()">Edit Filters</button>
     </div>
+    <div id="edit-filter-section" style="display: none;">
+        <h2>Edit Filters</h2>
+        <div class="themes-container">
+            <label><input type="checkbox" id="general-edit" value="general"> General</label>
+            <label><input type="checkbox" id="funny-edit" value="funny"> Funny</label>
+            <label><input type="checkbox" id="serious-edit" value="serious"> Serious</label>
+            <label><input type="checkbox" id="adults-edit" value="adults"> Adults</label>
+        </div>
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="returnToGame()">Return to Game</button>
+    </div>    
     <div id="edit-player-section" style="display: none;">
         <h2>Edit Players</h2>
         <input type="text" id="new-player-name" placeholder="Enter new player name">
@@ -38,7 +82,6 @@
         <ul id="edit-player-list"></ul>
         <button onclick="returnToGame()">Return to Game</button>
     </div>
-
     <script src="would-you-rather.js"></script>
 </body>
 </html>

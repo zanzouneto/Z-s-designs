@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenga Task Game</title>
+    <link rel="stylesheet" href="jenga.css">
+</head>
+<body>
+    <div>
+        <div id="filter-section">
+            <div class="container">
+                <h2>Jenga challenges</h2>
+                <p class="note">
+                    Label your Jenga pieces with unique numbers to play this game
+                </p>
+            </div>
+            <div class="container">
+                <h2>Select Categories</h2>
+                <div class="filters-div">
+                    <label><input type="checkbox" value="fun" class="category" checked> Fun</label>
+                    <label><input type="checkbox" value="trivia" class="category" checked> Trivia</label>
+                    <label><input type="checkbox" value="social" class="category" checked> Social</label>
+                    <label><input type="checkbox" value="physical" class="category" checked> Physical activity</label>
+                    <label><input type="checkbox" value="drinking" class="category"> Drinking</label>
+                    <label><input type="checkbox" value="strip" class="category"> Strip</label>
+                </div>
+                <button id="start-game-btn">Start Game</button>
+            </div>
+        </div>
+        <div id="game-section" style="display: none;">
+            <div class="container">
+                <h2>Jenga challenges</h2>
+            </div>
+            <div class="container">
+                <p class="note">Enter Piece Number:</p>
+                <h1 id="number-display">0</h1>
+                <div class="keypad">
+                    <div class="keypad-numbers">
+                        <button class="keypad-btn" data-number="1">1</button>
+                        <button class="keypad-btn" data-number="2">2</button>
+                        <button class="keypad-btn" data-number="3">3</button>
+                        <button class="keypad-btn" data-number="4">4</button>
+                        <button class="keypad-btn" data-number="5">5</button>
+                        <button class="keypad-btn" data-number="6">6</button>
+                        <button class="keypad-btn" data-number="7">7</button>
+                        <button class="keypad-btn" data-number="8">8</button>
+                        <button class="keypad-btn" data-number="9">9</button>
+                    </div>
+                    <div class="keypad-bottom>">
+                        <button class="keypad-btn z" data-number="0">0</button>
+                        <button id="get-task-btn">Get Task</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p id="task-display"></p>
+            </div>
+            <div >
+                <p class="note">
+                    If you fail to complete your task again, you go again. <br>
+                    If you drop the tower, you must pick 3 pieces at random and perform their tasks 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="jenga.js"></script>
+</body>
+</html>

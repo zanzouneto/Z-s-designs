@@ -1,9 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9d7d7;
+    font-family: cursive, Arial, sans-serif;
+    background-color: #f9e5d7;
+    font-size: 20px;
 }
 
-#player-section, #theme-section, #game-section {
+#player-section, #theme-section, #game-section, .intro-div {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
@@ -19,6 +20,14 @@ body {
 }
 button, input{
     cursor: pointer;
+}
+#game-section button, #theme-section button, #player-section input, .intro-div button{
+    padding: 20px;
+    width: 100%;
+}
+#game-section button{
+    font-size: 20px;
+    border: 0px solid darkred;
 }
 #player-section button{
     font-size: x-large ;
@@ -36,21 +45,23 @@ button, input{
 }
 
 .green {
-    background-color: ##caf3ca;
+    background-color: #d4f5d449;
     color: darkgreen;
+    border: 1px solid darkgreen;
     padding: 50px;
 }
 
 .red {
-    background-color: f2c1c1;
+    background-color: #f0c8c8ac;
     color: darkred;
+    border: 1px solid darkred;
     padding: 50px;
 }
 
 .or {
     font-size: medium;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.288);
+    color: rgba(0, 0, 0, 0.731);
     background-color: #f9f8f43f;
     border-radius: 110px;
     text-align: center;
@@ -69,4 +80,39 @@ p{
     background-color: rgba(255, 255, 255, 0); 
     border-color: rgba(255, 255, 255, 0);
     text-decoration: underline;
+}
+label{
+    background-color: #fff3f3;
+    padding: 5px;
+}
+.toggle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 30px;
+}
+.note{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.toggle-container{
+    margin-top: 20px;
+}
+.toggle-btn{
+    background-color: #ebffef00;
+    border-style: none;
+    background-color: #c6a8a847;
+    text-align: left;
 }

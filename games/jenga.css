@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0efd6;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #2a654d;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0e2c20;
+}
+input{
+    cursor: pointer;
+}
+.filters-div{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+}
+.keypad-numbers{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    justify-content: space-between;
+}
+.keypad{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 250px;
+    width: 250px;
+    margin: 0 auto;
+}
+#number-display{
+    font-size: x-large;
+}
+.keypad-btn{
+    border-radius: 30px;
+    background-color: #b1ead3;
+    color: #000305;
+}
+.keypad-btn:hover{
+    background-color: #7eae9b;
+}
+.z{
+    width: 30%; 
+    margin-right: 2%;
+}
+#get-task-btn{
+    width: 65%;
+}
+.keypad-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.note{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: 0.5;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#task-display {
+    animation: fadeIn 0.5s ease;
+    text-align: left;
+    max-width: 440px;
+}

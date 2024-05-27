@@ -280,7 +280,6 @@ const questions = {
     ]
 };
 
-
 document.getElementById('player-name').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         addPlayer();
@@ -342,8 +341,13 @@ function startGame() {
 
     document.getElementById('player-section').style.display = 'none';
     document.getElementById('theme-section').style.display = 'none';
+    let introDivs = document.getElementsByClassName('intro-div');
+    for (let i = 0; i < introDivs.length; i++) {
+        introDivs[i].style.display = 'none';
+    }
     document.getElementById('game-section').style.display = 'block';
     document.getElementById('edit-player-section').style.display = 'none';
+    document.getElementById('edit-filter-section').style.display = 'none';
 
     usedQuestions.clear();
     askQuestion();
@@ -375,8 +379,12 @@ function askQuestion() {
     const randomQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     usedQuestions.add(randomQuestion);
 
-    const randomPlayer = players[Math.floor(Math.random() * players.length)];
-    document.getElementById('player').textContent = `Hey ${randomPlayer}:`;
+    if (players.length > 0) {
+        const randomPlayer = players[Math.floor(Math.random() * players.length)];
+        document.getElementById('player').textContent = `Hey ${randomPlayer}:`;
+    } else {
+        document.getElementById('player').textContent = '';
+    }
 
     const [firstPart, secondPart] = randomQuestion.split(' or ');
     document.getElementById('question').innerHTML = `
@@ -406,6 +414,33 @@ function editPlayers() {
     });
 }
 
+function editFilters() {
+    document.getElementById('game-section').style.display = 'none';
+    document.getElementById('edit-filter-section').style.display = 'block';
+
+    // Pre-fill checkboxes based on the current selected themes
+    const themeCheckboxes = document.querySelectorAll('#edit-filter-section input[type="checkbox"]');
+    themeCheckboxes.forEach(checkbox => {
+        checkbox.checked = selectedThemes.includes(checkbox.value);
+    });
+}
+
+function applyFilters() {
+    const themeCheckboxes = document.querySelectorAll('#edit-filter-section input[type="checkbox"]');
+    selectedThemes = Array.from(themeCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
+    if (selectedThemes.length === 0) {
+        alert('Please select at least one theme.');
+        return;
+    }
+
+    usedQuestions.clear();
+    askQuestion();
+    returnToGame();
+}
+
 function removePlayer(player) {
     players = players.filter(p => p !== player);
     const editPlayerList = document.getElementById('edit-player-list');
@@ -419,5 +454,21 @@ function removePlayer(player) {
 
 function returnToGame() {
     document.getElementById('edit-player-section').style.display = 'none';
+    document.getElementById('edit-filter-section').style.display = 'none';
     document.getElementById('game-section').style.display = 'block';
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector(".toggle-btn");
+    const content = document.querySelector(".content");
+
+    toggleBtn.addEventListener("click", () => {
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
+        } else {
+            content.style.display = "none";
+            toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
+        }
+    });
+});
