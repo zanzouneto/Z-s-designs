@@ -472,7 +472,7 @@ function handleTouchMove(event) {
                 passWord();
                 card.style.transform = '';
                 card.classList.remove('swipe-left');
-            }, 20); // Adjust the duration to match your CSS transition duration
+            }, 100); // Adjust the duration to match your CSS transition duration
         } else {
             // Swipe right
             card.classList.add('swipe-right');
@@ -480,7 +480,7 @@ function handleTouchMove(event) {
                 guessedWord();
                 card.style.transform = '';
                 card.classList.remove('swipe-right');
-            }, 20); // Adjust the duration to match your CSS transition duration
+            }, 100); // Adjust the duration to match your CSS transition duration
         }
     }
 
