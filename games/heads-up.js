@@ -79,7 +79,7 @@ function handleOrientation(event) {
         // Debounce to prevent multiple detections
         isGameRunning = false;
         setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -90) {
+    } else if (beta < -40) {
         // Tilt backward
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
