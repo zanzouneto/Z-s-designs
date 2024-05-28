@@ -1,5 +1,3 @@
-let recognition;
-
 document.getElementById('start-game').addEventListener('click', () => {
     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
         DeviceOrientationEvent.requestPermission()
@@ -15,6 +13,8 @@ document.getElementById('start-game').addEventListener('click', () => {
         startGame(); // For browsers that do not require permission
     }
 });
+
+let recognition;
 
 
 if ('webkitSpeechRecognition' in window) {
