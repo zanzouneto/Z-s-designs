@@ -32,19 +32,21 @@ function startGame() {
 }
 
 function handleClick() {
-    handleNext();
-}
-
-function handleMouseDown(event) {
-    clickStartTime = Date.now();
-}
-
-function handleMouseUp(event) {
-    const clickDuration = Date.now() - clickStartTime;
-    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
-        handlePass();
+    if (isGameRunning) {
+        handleNext();
     }
 }
+
+// function handleMouseDown(event) {
+//     clickStartTime = Date.now();
+// }
+
+// function handleMouseUp(event) {
+//     const clickDuration = Date.now() - clickStartTime;
+//     if (clickDuration >= 1000) { // Long click duration threshold (1 second)
+//         handlePass();
+//     }
+// }
 
 function handleNext() {
     if (isGameRunning) {
