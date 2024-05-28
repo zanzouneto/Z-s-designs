@@ -40,34 +40,12 @@ function startGame() {
     startTimer(time);
     requestWakeLock();
 
-    window.addEventListener('deviceorientation', handleOrientation);
-    document.addEventListener('click', handleClick);
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
     isGameRunning = true;
-    document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('pointerup', handlePointerUp);
 }
 
 function handleClick() {
     if (isGameRunning) {
         handleNext();
-    }
-}
-document.removeEventListener('mousedown', handleMouseDown);
-document.removeEventListener('mouseup', handleMouseUp);
-
-
-function handleMouseDown(event) {
-    clickStartTime = Date.now();
-}
-
-function handleMouseUp(event) {
-    const clickDuration = Date.now() - clickStartTime;
-    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
-        handlePass();
-    } else {
-        handleClick();
     }
 }
 
@@ -93,10 +71,6 @@ function handlePass() {
     }
 }
 
-// // Button controls
-// document.getElementById('next-button').addEventListener('click', handleNext);
-// document.getElementById('pass-button').addEventListener('click', handlePass);
-
 function displayWord() {
     if (currentWordIndex < words.length) {
         document.getElementById('word-display').innerText = words[currentWordIndex];
@@ -120,7 +94,6 @@ function startTimer(time) {
 function endGame() {
     isGameRunning = false;
     releaseWakeLock();
-    window.removeEventListener('deviceorientation', handleOrientation);
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('score-screen').style.display = 'block';
 
@@ -138,13 +111,9 @@ function endGame() {
         li.classList.add('passed');
         scoreList.appendChild(li);
     });
-    document.removeEventListener('pointerdown', handlePointerDown);
-    document.removeEventListener('pointerup', handlePointerUp);
-
 }
 
 function getWordsForTheme(theme) {
-    // Replace this with actual words for the selected theme
     if (theme === 'animals') {
         return ['Cat', 'Dog', 'Elephant', 'Lion', 'Tiger'];
     } else if (theme === 'movies') {
@@ -186,3 +155,6 @@ function releaseWakeLock() {
 document.getElementById('start-game').addEventListener('click', () => {
     startGame();
 });
+
+document.addEventListener('pointerdown', handlePointerDown);
+document.addEventListener('pointerup', handlePointerUp);
