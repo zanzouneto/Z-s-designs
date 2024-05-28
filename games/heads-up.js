@@ -7,6 +7,22 @@ let isGameRunning = false;
 let wakeLock = null;
 let clickStartTime = 0;
 
+function handlePointerDown(event) {
+    clickStartTime = Date.now();
+}
+
+function handlePointerUp(event) {
+    const clickDuration = Date.now() - clickStartTime;
+    const gameScreen = document.getElementById('game-screen');
+    const isClickOnGameScreen = event.target === gameScreen || gameScreen.contains(event.target);
+
+    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
+        handlePass();
+    } else if (isClickOnGameScreen) {
+        handleClick();
+    }
+}
+
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
     const theme = document.getElementById('theme').value;
@@ -29,6 +45,8 @@ function startGame() {
     document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('mouseup', handleMouseUp);
     isGameRunning = true;
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('pointerup', handlePointerUp);
 }
 
 function handleClick() {
@@ -75,9 +93,9 @@ function handlePass() {
     }
 }
 
-// Button controls
-document.getElementById('next-button').addEventListener('click', handleNext);
-document.getElementById('pass-button').addEventListener('click', handlePass);
+// // Button controls
+// document.getElementById('next-button').addEventListener('click', handleNext);
+// document.getElementById('pass-button').addEventListener('click', handlePass);
 
 function displayWord() {
     if (currentWordIndex < words.length) {
@@ -120,6 +138,9 @@ function endGame() {
         li.classList.add('passed');
         scoreList.appendChild(li);
     });
+    document.removeEventListener('pointerdown', handlePointerDown);
+    document.removeEventListener('pointerup', handlePointerUp);
+
 }
 
 function getWordsForTheme(theme) {
