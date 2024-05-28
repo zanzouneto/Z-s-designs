@@ -1,5 +1,22 @@
 let recognition;
 
+document.getElementById('start-game').addEventListener('click', () => {
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    startGame();
+                } else {
+                    alert('Permission to access device orientation was denied.');
+                }
+            })
+            .catch(console.error);
+    } else {
+        startGame(); // For browsers that do not require permission
+    }
+});
+
+
 if ('webkitSpeechRecognition' in window) {
     recognition = new webkitSpeechRecognition();
     recognition.continuous = false;
