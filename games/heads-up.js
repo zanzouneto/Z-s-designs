@@ -1,50 +1,11 @@
-let recognition;
-
-if ('webkitSpeechRecognition' in window) {
-    recognition = new webkitSpeechRecognition();
-    recognition.continuous = false;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-    recognition.onresult = function(event) {
-        const result = event.results[0][0].transcript.toLowerCase();
-        console.log('Speech Recognition Result:', result);
-        if (result.includes('next')) {
-            handleNext();
-        } else if (result.includes('pass')) {
-            handlePass();
-        }
-    };
-    recognition.onerror = function(event) {
-        console.error('Speech Recognition Error:', event.error);
-    };
-} else {
-    console.error('Speech Recognition API not supported');
-}
-
-function startVoiceRecognition() {
-    if (recognition) {
-        recognition.start();
-        console.log('Voice recognition started');
-        setTimeout(() => {
-            if (recognition && recognition.status === 'listening') {
-                console.log('Recognition is listening, continue...');
-            } else {
-                console.log('Recognition did not start properly, stopping...');
-                stopVoiceRecognition(); // Stop recognition if it didn't start properly
-            }
-        }, 500); // Wait for 500 milliseconds before checking if recognition started
-    }
-}
-function stopVoiceRecognition() {
-    if (recognition) {
-        recognition.stop();
-        console.log('Voice recognition stopped');
-    }
-}
-
-document.getElementById('start-game').addEventListener('click', () => {
-    startGame();
-});
+let words = [];
+let currentWordIndex = 0;
+let correctWords = [];
+let passedWords = [];
+let timerInterval;
+let isGameRunning = false;
+let wakeLock = null;
+let clickStartTime = 0;
 
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
@@ -58,15 +19,31 @@ function startGame() {
 
     document.getElementById('main-menu').style.display = 'none';
     document.getElementById('game-screen').style.display = 'block';
-    
+
     displayWord();
     startTimer(time);
     requestWakeLock();
 
     window.addEventListener('deviceorientation', handleOrientation);
+    document.addEventListener('click', handleClick);
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mouseup', handleMouseUp);
     isGameRunning = true;
+}
 
-    startVoiceRecognition(); // Start voice recognition when the game starts
+function handleClick() {
+    handleNext();
+}
+
+function handleMouseDown(event) {
+    clickStartTime = Date.now();
+}
+
+function handleMouseUp(event) {
+    const clickDuration = Date.now() - clickStartTime;
+    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
+        handlePass();
+    }
 }
 
 function handleNext() {
@@ -95,70 +72,6 @@ function handlePass() {
 document.getElementById('next-button').addEventListener('click', handleNext);
 document.getElementById('pass-button').addEventListener('click', handlePass);
 
-
-document.getElementById('start-game').addEventListener('click', () => {
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        DeviceOrientationEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === 'granted') {
-                    startGame();
-                } else {
-                    alert('Permission to access device orientation was denied.');
-                }
-            })
-            .catch(console.error);
-    } else {
-        startGame(); // For browsers that do not require permission
-    }
-});
-
-let words = [];
-let currentWordIndex = 0;
-let correctWords = [];
-let passedWords = [];
-let timerInterval;
-let isGameRunning = false;
-let wakeLock = null;
-
-document.getElementById('start-game').addEventListener('click', () => {
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        DeviceOrientationEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === 'granted') {
-                    startGame();
-                } else {
-                    alert('Permission to access device orientation was denied.');
-                }
-            })
-            .catch(console.error);
-    } else {
-        startGame(); // For browsers that do not require permission
-    }
-});
-
-document.getElementById('new-round').addEventListener('click', startNewRound);
-
-function startGame() {
-    const time = parseInt(document.getElementById('time').value);
-    const theme = document.getElementById('theme').value;
-
-    words = getWordsForTheme(theme); // Replace with actual word fetching logic
-    words = shuffleArray(words); // Shuffle the words array
-    currentWordIndex = 0;
-    correctWords = [];
-    passedWords = [];
-
-    document.getElementById('main-menu').style.display = 'none';
-    document.getElementById('game-screen').style.display = 'block';
-    
-    displayWord();
-    startTimer(time);
-    requestWakeLock();
-
-    window.addEventListener('deviceorientation', handleOrientation);
-    isGameRunning = true;
-}
-
 function displayWord() {
     if (currentWordIndex < words.length) {
         document.getElementById('word-display').innerText = words[currentWordIndex];
@@ -168,7 +81,7 @@ function displayWord() {
 function startTimer(time) {
     let remainingTime = time;
     document.getElementById('timer').innerText = `${remainingTime} seconds`;
-    
+
     timerInterval = setInterval(() => {
         remainingTime--;
         document.getElementById('timer').innerText = `${remainingTime} seconds`;
@@ -200,11 +113,6 @@ function endGame() {
         li.classList.add('passed');
         scoreList.appendChild(li);
     });
-}
-
-function startNewRound() {
-    document.getElementById('score-screen').style.display = 'none';
-    document.getElementById('main-menu').style.display = 'block';
 }
 
 function getWordsForTheme(theme) {
@@ -246,4 +154,7 @@ function releaseWakeLock() {
         });
     }
 }
- 
+
+document.getElementById('start-game').addEventListener('click', () => {
+    startGame();
+});
