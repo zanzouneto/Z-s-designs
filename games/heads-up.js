@@ -25,9 +25,16 @@ function startVoiceRecognition() {
     if (recognition) {
         recognition.start();
         console.log('Voice recognition started');
+        setTimeout(() => {
+            if (recognition && recognition.status === 'listening') {
+                console.log('Recognition is listening, continue...');
+            } else {
+                console.log('Recognition did not start properly, stopping...');
+                stopVoiceRecognition(); // Stop recognition if it didn't start properly
+            }
+        }, 500); // Wait for 500 milliseconds before checking if recognition started
     }
 }
-
 function stopVoiceRecognition() {
     if (recognition) {
         recognition.stop();
