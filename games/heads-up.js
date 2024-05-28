@@ -39,24 +39,6 @@ document.getElementById('start-game').addEventListener('click', () => {
     startGame();
 });
 
-// document.getElementById('start-game').addEventListener('click', () => {
-//     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-//         DeviceOrientationEvent.requestPermission()
-//             .then(permissionState => {
-//                 if (permissionState === 'granted') {
-//                     startGame();
-//                 } else {
-//                     alert('Permission to access device orientation was denied.');
-//                 }
-//             })
-//             .catch(console.error);
-//     } else {
-//         startGame(); // For browsers that do not require permission
-//     }
-// });
-
-// document.getElementById('new-round').addEventListener('click', startNewRound);
-
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
     const theme = document.getElementById('theme').value;
@@ -188,33 +170,6 @@ function startTimer(time) {
             endGame();
         }
     }, 1000);
-}
-
-function handleOrientation(event) {
-    if (!isGameRunning) return;
-
-    const { beta } = event;
-    console.log(`Device beta: ${beta}`);
-
-    if (beta > 90) {
-        // Tilt forward
-        console.log('Tilt forward detected');
-        correctWords.push(words[currentWordIndex]);
-        currentWordIndex++;
-        displayWord();
-        // Debounce to prevent multiple detections
-        isGameRunning = false;
-        setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -300) {
-        // Tilt backward
-        console.log('Tilt backward detected');
-        passedWords.push(words[currentWordIndex]);
-        currentWordIndex++;
-        displayWord();
-        // Debounce to prevent multiple detections
-        isGameRunning = false;
-        setTimeout(() => isGameRunning = true, 1000);
-    }
 }
 
 function endGame() {
