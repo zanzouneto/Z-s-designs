@@ -36,6 +36,9 @@ function handleClick() {
         handleNext();
     }
 }
+document.removeEventListener('mousedown', handleMouseDown);
+document.removeEventListener('mouseup', handleMouseUp);
+
 
 // function handleMouseDown(event) {
 //     clickStartTime = Date.now();
