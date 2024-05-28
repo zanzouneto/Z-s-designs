@@ -3,6 +3,7 @@ let currentWordIndex = 0;
 let correctWords = [];
 let passedWords = [];
 let timerInterval;
+let isGameRunning = false;
 
 document.getElementById('start-game').addEventListener('click', startGame);
 document.getElementById('new-round').addEventListener('click', startNewRound);
@@ -23,6 +24,7 @@ function startGame() {
     startTimer(time);
 
     window.addEventListener('deviceorientation', handleOrientation);
+    isGameRunning = true;
 }
 
 function displayWord() {
@@ -46,21 +48,31 @@ function startTimer(time) {
 }
 
 function handleOrientation(event) {
+    if (!isGameRunning) return;
+
     const { beta } = event;
     if (beta > 45) {
         // Tilt forward
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
+        // Debounce to prevent multiple detections
+        isGameRunning = false;
+        setTimeout(() => isGameRunning = true, 1000);
     } else if (beta < -45) {
         // Tilt backward
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
+        // Debounce to prevent multiple detections
+        isGameRunning = false;
+        setTimeout(() => isGameRunning = true, 1000);
     }
 }
 
 function endGame() {
+    isGameRunning = false;
+    window.removeEventListener('deviceorientation', handleOrientation);
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('score-screen').style.display = 'block';
 
@@ -96,3 +108,18 @@ function getWordsForTheme(theme) {
     }
     return [];
 }
+document.getElementById('start-game').addEventListener('click', () => {
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    startGame();
+                } else {
+                    alert('Permission to access device orientation was denied.');
+                }
+            })
+            .catch(console.error);
+    } else {
+        startGame(); // For browsers that do not require permission
+    }
+});
