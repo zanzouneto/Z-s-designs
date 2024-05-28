@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenga Task Game</title>
+    <title>Jenga Dares</title>
     <link rel="stylesheet" href="jenga.css">
+    <link rel="stylesheet" href="games-general.css">
 </head>
 <body>
     <div>
         <div id="filter-section">
             <div class="container">
-                <h2>Jenga challenges</h2>
+                <h2>Jenga Dares</h2>
                 <p class="note">
                     Label your Jenga pieces with unique numbers to play this game
                 </p>
             </div>
             <div class="container">
                 <h2>Select Categories</h2>
-                <div class="filters-div">
+                <div class="checkbox-container">
                     <label><input type="checkbox" value="fun" class="category" checked> Fun</label>
                     <label><input type="checkbox" value="trivia" class="category" checked> Trivia</label>
                     <label><input type="checkbox" value="social" class="category" checked> Social</label>
@@ -34,6 +35,7 @@
             </div>
             <div class="container">
                 <p class="note">Enter Piece Number:</p>
+      
                 <h1 id="number-display">0</h1>
                 <div class="keypad">
                     <div class="keypad-numbers">

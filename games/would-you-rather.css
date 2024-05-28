@@ -1,14 +1,12 @@
 body {
-    font-family: cursive, Arial, sans-serif;
     background-color: #f9e5d7;
-    font-size: 20px;
 }
 
-#player-section, #theme-section, #game-section, .intro-div {
+/* #player-section, #theme-section, #game-section, .intro-div {
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-}
+} */
 
 #player-section input, #theme-section select, #theme-section button, #player-section button, #game-section button {
     margin: 10px 0;
@@ -81,10 +79,6 @@ p{
     border-color: rgba(255, 255, 255, 0);
     text-decoration: underline;
 }
-label{
-    background-color: #fff3f3;
-    padding: 5px;
-}
 .toggle-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -99,13 +93,6 @@ label{
     background-color: #f9f9f9;
     font-size: 16px;
     line-height: 30px;
-}
-.note{
-    font-size: 14px;
-    line-height: 20px;
-    text-align: left;
-    font-style: italic;
-    margin-bottom: 30px;
 }
 .toggle-container{
     margin-top: 20px;

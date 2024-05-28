@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What do you meme</title>
+    <link rel="stylesheet" href="what-do-you-meme.css">
+    <link rel="stylesheet" href="games-general.css">
+</head>
+<body>
+    <div id="setup-container">
+        <h1>Welcome to What Do You Meme?</h1>
+        <label for="player-name">Enter your name:</label>
+        <input type="text" id="player-name">
+        <button onclick="startOrJoinGame()">Start/Join Game</button>
+        <p id="game-link-info"></p>
+    </div>
+    <div id="game-container" style="display: none;">
+        <div id="meme"></div>
+        <div id="caption-form">
+            <input type="text" id="caption-input" placeholder="Enter your caption...">
+            <button onclick="submitCaption()">Submit Caption</button>
+        </div>
+        <div id="caption-list"></div>
+        <div id="voting">
+            <p>Vote for the best caption:</p>
+            <div id="vote-buttons"></div>
+        </div>
+        <div id="winner"></div>
+        <button id="next-round" onclick="nextRound()" style="display: none;">Next Round</button>
+    </div>
+    <script src="what-do-you-meme.js"></script>
+</body>
+</html>

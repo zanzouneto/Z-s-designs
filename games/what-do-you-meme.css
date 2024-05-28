@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#meme {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#caption-form {
+    margin-top: 20px;
+}
+
+#caption-input {
+    padding: 5px;
+    width: 200px;
+}
+
+#caption-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#voting {
+    margin-top: 20px;
+}
+
+#vote-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#winner {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
