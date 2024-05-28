@@ -71,7 +71,7 @@ function handleOrientation(event) {
     const { beta } = event;
     console.log(`Device beta: ${beta}`);
 
-    if (beta > 60) {
+    if (beta > 90) {
         // Tilt forward
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
@@ -79,7 +79,7 @@ function handleOrientation(event) {
         // Debounce to prevent multiple detections
         isGameRunning = false;
         setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -60) {
+    } else if (beta < -90) {
         // Tilt backward
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
