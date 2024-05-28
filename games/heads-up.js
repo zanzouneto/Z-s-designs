@@ -40,16 +40,18 @@ document.removeEventListener('mousedown', handleMouseDown);
 document.removeEventListener('mouseup', handleMouseUp);
 
 
-// function handleMouseDown(event) {
-//     clickStartTime = Date.now();
-// }
+function handleMouseDown(event) {
+    clickStartTime = Date.now();
+}
 
-// function handleMouseUp(event) {
-//     const clickDuration = Date.now() - clickStartTime;
-//     if (clickDuration >= 1000) { // Long click duration threshold (1 second)
-//         handlePass();
-//     }
-// }
+function handleMouseUp(event) {
+    const clickDuration = Date.now() - clickStartTime;
+    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
+        handlePass();
+    } else {
+        handleClick();
+    }
+}
 
 function handleNext() {
     if (isGameRunning) {
