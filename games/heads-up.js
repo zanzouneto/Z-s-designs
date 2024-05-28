@@ -1,3 +1,4 @@
+
 let words = [];
 let currentWordIndex = 0;
 let correctWords = [];
@@ -5,23 +6,7 @@ let passedWords = [];
 let timerInterval;
 let isGameRunning = false;
 let wakeLock = null;
-let clickStartTime = 0;
-
-function handlePointerDown(event) {
-    clickStartTime = Date.now();
-}
-
-function handlePointerUp(event) {
-    const clickDuration = Date.now() - clickStartTime;
-    const gameScreen = document.getElementById('game-screen');
-    const isClickOnGameScreen = event.target === gameScreen || gameScreen.contains(event.target);
-
-    if (clickDuration >= 1000) { // Long click duration threshold (1 second)
-        handlePass();
-    } else if (isClickOnGameScreen) {
-        handleClick();
-    }
-}
+let clickTimeout = null;
 
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
@@ -40,12 +25,34 @@ function startGame() {
     startTimer(time);
     requestWakeLock();
 
-    isGameRunning = true;
+    setTimeout(() => {
+        document.addEventListener('click', handleClick, { passive: false });
+        document.addEventListener('dblclick', handleDoubleClick, { passive: false });
+        isGameRunning = true;
+    }, 300); // Delay to prevent immediate click handling
 }
 
-function handleClick() {
+function handleClick(event) {
+    if (clickTimeout !== null) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+    }
+
+    clickTimeout = setTimeout(() => {
+        if (isGameRunning) {
+            handleNext();
+        }
+    }, 300); // Wait 300ms to distinguish single click
+}
+
+function handleDoubleClick(event) {
+    if (clickTimeout !== null) {
+        clearTimeout(clickTimeout);
+        clickTimeout = null;
+    }
+
     if (isGameRunning) {
-        handleNext();
+        handlePass();
     }
 }
 
@@ -54,9 +61,6 @@ function handleNext() {
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
-        // Debounce to prevent multiple detections
-        isGameRunning = false;
-        setTimeout(() => isGameRunning = true, 1000);
     }
 }
 
@@ -65,9 +69,6 @@ function handlePass() {
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
-        // Debounce to prevent multiple detections
-        isGameRunning = false;
-        setTimeout(() => isGameRunning = true, 1000);
     }
 }
 
@@ -111,6 +112,9 @@ function endGame() {
         li.classList.add('passed');
         scoreList.appendChild(li);
     });
+
+    document.removeEventListener('click', handleClick);
+    document.removeEventListener('dblclick', handleDoubleClick);
 }
 
 function getWordsForTheme(theme) {
@@ -152,9 +156,10 @@ function releaseWakeLock() {
     }
 }
 
-document.getElementById('start-game').addEventListener('click', () => {
-    startGame();
-});
+function startNewRound() {
+    document.getElementById('score-screen').style.display = 'none';
+    document.getElementById('main-menu').style.display = 'block';
+}
 
-document.addEventListener('pointerdown', handlePointerDown);
-document.addEventListener('pointerup', handlePointerUp);
+document.getElementById('start-game').addEventListener('click', startGame);
+document.getElementById('new-round').addEventListener('click', startNewRound);

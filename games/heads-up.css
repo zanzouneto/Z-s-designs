@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    user-select: none; /* Disable text selection */
+    touch-action: manipulation; /* Prevent zooming */
 }
 #game-screen, #score-screen {
     display: none;
