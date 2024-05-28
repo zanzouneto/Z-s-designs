@@ -4,6 +4,7 @@ let correctWords = [];
 let passedWords = [];
 let timerInterval;
 let isGameRunning = false;
+let wakeLock = null;
 
 document.getElementById('start-game').addEventListener('click', () => {
     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
@@ -28,6 +29,7 @@ function startGame() {
     const theme = document.getElementById('theme').value;
 
     words = getWordsForTheme(theme); // Replace with actual word fetching logic
+    words = shuffleArray(words); // Shuffle the words array
     currentWordIndex = 0;
     correctWords = [];
     passedWords = [];
@@ -37,6 +39,7 @@ function startGame() {
     
     displayWord();
     startTimer(time);
+    requestWakeLock();
 
     window.addEventListener('deviceorientation', handleOrientation);
     isGameRunning = true;
@@ -68,7 +71,7 @@ function handleOrientation(event) {
     const { beta } = event;
     console.log(`Device beta: ${beta}`);
 
-    if (beta > 45 && beta < 135) {
+    if (beta > 60) {
         // Tilt forward
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
@@ -76,7 +79,7 @@ function handleOrientation(event) {
         // Debounce to prevent multiple detections
         isGameRunning = false;
         setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -45 && beta > -135) {
+    } else if (beta < -60) {
         // Tilt backward
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
@@ -89,6 +92,7 @@ function handleOrientation(event) {
 
 function endGame() {
     isGameRunning = false;
+    releaseWakeLock();
     window.removeEventListener('deviceorientation', handleOrientation);
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('score-screen').style.display = 'block';
@@ -125,6 +129,35 @@ function getWordsForTheme(theme) {
     }
     return [];
 }
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+async function requestWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', () => {
+            console.log('Screen Wake Lock was released');
+        });
+        console.log('Screen Wake Lock is active');
+    } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+    }
+}
+
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            wakeLock = null;
+        });
+    }
+}
+
 
 document.getElementById('start-game').addEventListener('click', () => {
     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
