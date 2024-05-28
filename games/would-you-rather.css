@@ -103,3 +103,28 @@ p{
     background-color: #c6a8a847;
     text-align: left;
 }
+.App {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 300px;
+    margin: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    margin: 10px;
+  }
+  

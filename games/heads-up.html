@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads Up Game</title>
+    <link rel="stylesheet" href="heads-up.css">
+</head>
+<body>
+    <div id="main-menu">
+        <h1>Heads Up</h1>
+        <label for="time">Choose time per round:</label>
+        <select id="time">
+            <option value="60">1 minute</option>
+            <option value="120">2 minutes</option>
+            <option value="180">3 minutes</option>
+        </select>
+        <label for="theme">Choose a theme:</label>
+        <select id="theme">
+            <option value="animals">Animals</option>
+            <option value="movies">Movies</option>
+            <option value="celebrities">Celebrities</option>
+            <!-- Add more themes as needed -->
+        </select>
+        <button id="start-game">Start Game</button>
+    </div>
+    <div id="game-screen" style="display: none;">
+        <h1 id="word-display"></h1>
+        <p id="timer"></p>
+    </div>
+    <div id="score-screen" style="display: none;">
+        <h1>Score</h1>
+        <ul id="score-list"></ul>
+        <button id="new-round">Start New Round</button>
+    </div>
+    <script src="heads-up.js"></script>
+</body>
+</html>
