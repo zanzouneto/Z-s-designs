@@ -36,22 +36,26 @@ function stopVoiceRecognition() {
 }
 
 document.getElementById('start-game').addEventListener('click', () => {
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        DeviceOrientationEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === 'granted') {
-                    startGame();
-                } else {
-                    alert('Permission to access device orientation was denied.');
-                }
-            })
-            .catch(console.error);
-    } else {
-        startGame(); // For browsers that do not require permission
-    }
+    startGame();
 });
 
-document.getElementById('new-round').addEventListener('click', startNewRound);
+// document.getElementById('start-game').addEventListener('click', () => {
+//     if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+//         DeviceOrientationEvent.requestPermission()
+//             .then(permissionState => {
+//                 if (permissionState === 'granted') {
+//                     startGame();
+//                 } else {
+//                     alert('Permission to access device orientation was denied.');
+//                 }
+//             })
+//             .catch(console.error);
+//     } else {
+//         startGame(); // For browsers that do not require permission
+//     }
+// });
+
+// document.getElementById('new-round').addEventListener('click', startNewRound);
 
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
