@@ -1,3 +1,21 @@
+
+
+document.getElementById('start-game').addEventListener('click', () => {
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        DeviceOrientationEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    startGame();
+                } else {
+                    alert('Permission to access device orientation was denied.');
+                }
+            })
+            .catch(console.error);
+    } else {
+        startGame(); // For browsers that do not require permission
+    }
+});
+
 let words = [];
 let currentWordIndex = 0;
 let correctWords = [];
@@ -73,14 +91,16 @@ function handleOrientation(event) {
 
     if (beta > 90) {
         // Tilt forward
+        console.log('Tilt forward detected');
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
         // Debounce to prevent multiple detections
         isGameRunning = false;
         setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -40) {
+    } else if (beta < -60) {
         // Tilt backward
+        console.log('Tilt backward detected');
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
         displayWord();
@@ -157,20 +177,3 @@ function releaseWakeLock() {
         });
     }
 }
-
-
-document.getElementById('start-game').addEventListener('click', () => {
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        DeviceOrientationEvent.requestPermission()
-            .then(permissionState => {
-                if (permissionState === 'granted') {
-                    startGame();
-                } else {
-                    alert('Permission to access device orientation was denied.');
-                }
-            })
-            .catch(console.error);
-    } else {
-        startGame(); // For browsers that do not require permission
-    }
-});

@@ -2,33 +2,26 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
 }
-
 #game-screen, #score-screen {
     display: none;
 }
-
 #word-display {
     font-size: 2em;
     margin: 20px;
 }
-
 #timer {
     font-size: 1.5em;
 }
-
 #score-list {
     list-style-type: none;
     padding: 0;
 }
-
 #score-list li {
     font-size: 1.2em;
 }
-
 .correct {
     color: green;
 }
-
 .passed {
     color: red;
 }
