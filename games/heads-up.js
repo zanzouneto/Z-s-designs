@@ -51,7 +51,7 @@ function handleOrientation(event) {
     if (!isGameRunning) return;
 
     const { beta } = event;
-    if (beta > 45) {
+    if (beta > 60) {
         // Tilt forward
         correctWords.push(words[currentWordIndex]);
         currentWordIndex++;
@@ -59,7 +59,7 @@ function handleOrientation(event) {
         // Debounce to prevent multiple detections
         isGameRunning = false;
         setTimeout(() => isGameRunning = true, 1000);
-    } else if (beta < -45) {
+    } else if (beta < -60) {
         // Tilt backward
         passedWords.push(words[currentWordIndex]);
         currentWordIndex++;
