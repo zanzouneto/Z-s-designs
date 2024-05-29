@@ -53,3 +53,12 @@ select{
 #guessed{
     width: 60%;
 }
+.phonenote{
+    display: block;
+}
+/* Tablet styles */
+@media (min-width: 600px) {
+    .phonenote{
+        display: none;
+    }
+}
