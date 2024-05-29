@@ -16,13 +16,15 @@
     background-color: var(--main-yellow); 
     color: var(--black); 
 }
+
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: #e0efd6;
     margin: 0;
+    align-items: stretch;
+    flex-direction: column;
 }
 .container {
     text-align: center;
@@ -31,7 +33,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
-    max-width: 500px;
 }
 .note{
     font-size: 14px;
@@ -67,4 +68,18 @@ button {
 }
 button:hover{
     background-color: rgb(150, 196, 196);
+}
+/* Tablet styles */
+@media (min-width: 600px) {
+    body{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container {
+        width: 500px;
+    }
+}
+/* Desktop styles */
+@media (min-width: 1024px) {
 }

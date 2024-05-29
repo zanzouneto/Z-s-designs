@@ -43,20 +43,24 @@
         </div>
     </div>
     <div id="game-board" style="display: none;">
-        <div id="timer"><span id="time">60</span></div>
-        <div id="card">
-            <h2 id="word">Word</h2>
-            <ul id="taboo-words">
-                <!-- Taboo words will be inserted here -->
-            </ul>
+        <div class="container">
+            <div id="timer"><span id="time">60</span></div>
+            <div id="card">
+                <h2 id="word">Word</h2>
+                <ul id="taboo-words">
+                    <!-- Taboo words will be inserted here -->
+                </ul>
+            </div>
+            <button id="pass">Pass</button>
+            <button id="guessed">Guessed</button>
         </div>
-        <button id="pass">Pass</button>
-        <button id="guessed">Guessed</button>
     </div>
     <div id="end-screen" style="display: none;">
-        <h2>Round Over</h2>
-        <p>Your score: <span id="score">0</span></p>
-        <button id="new-game">Next player</button>
+        <div class="container">
+            <h2>Round Over</h2>
+            <p>Your score: <span id="score">0</span></p>
+            <button id="new-game">Next player</button>
+        </div>
     </div>
     <script src="taboo.js"></script>
 </body>
