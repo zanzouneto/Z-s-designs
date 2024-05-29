@@ -1,5 +1,8 @@
 body {
     background-color: #f9e5d7;
+    height: auto;
+    max-height: none;
+    overflow:auto;
 }
 
 /* #player-section, #theme-section, #game-section{
