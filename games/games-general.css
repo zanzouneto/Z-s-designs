@@ -1,3 +1,21 @@
+:root {
+    --main-yellow: #ffcc00; 
+    --black: #0d1820;
+}
+@font-face {
+    font-family: 'Micro';
+    src: url('/font/Micro.otf') format('opentype');
+    font-weight: 400; 
+}
+@font-face {
+    font-family: 'Micro';
+    src: url("/font/Micro bold.ttf") format('truetype');
+    font-weight: 700;  
+}    
+::selection {
+    background-color: var(--main-yellow); 
+    color: var(--black); 
+}
 body {
     display: flex;
     justify-content: center;
