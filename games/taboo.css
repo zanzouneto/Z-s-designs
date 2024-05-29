@@ -3,6 +3,7 @@ body {
     text-align: center;
     padding: 20px;
     background-color: antiquewhite;
+    scroll-behavior: none;
 }
 
 #game-board {
@@ -58,6 +59,9 @@ select{
 }
 /* Tablet styles */
 @media (min-width: 600px) {
+    body{
+        scroll-behavior:auto;
+    }
     .phonenote{
         display: none;
     }
