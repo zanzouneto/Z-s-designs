@@ -8,7 +8,7 @@ body {
 }
 
 #game-board {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     width: 90vw;
     max-width: 600px;
 }
