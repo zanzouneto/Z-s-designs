@@ -341,7 +341,7 @@ function startGame() {
 
     document.getElementById('player-section').style.display = 'none';
     document.getElementById('theme-section').style.display = 'none';
-    let introDivs = document.getElementsByClassName('intro-div');
+    let introDivs = document.getElementsByClassName('start-screen');
     for (let i = 0; i < introDivs.length; i++) {
         introDivs[i].style.display = 'none';
     }
