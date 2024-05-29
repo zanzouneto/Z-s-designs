@@ -4,6 +4,7 @@ body {
     padding: 20px;
     background-color: antiquewhite;
     max-height: 90vh;
+    overflow: hidden;
 }
 
 #game-board {
