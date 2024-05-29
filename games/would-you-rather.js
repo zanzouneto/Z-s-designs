@@ -1,15 +1,21 @@
+// let players = [];
+// let usedQuestions = new Set();
+// let currentTheme = '';
+
 let players = [];
+let selectedThemes = [];
 let usedQuestions = new Set();
-let currentTheme = '';
+let isDrinkingGame = false;
+
+
 
 const questions = {
     general: [
         "Would you rather have the ability to fly or be invisible?",
         "Would you rather always be 10 minutes late or 20 minutes early?",
-        "Would you rather have the ability to flyzah or be invisible?",
+        "Would you rather have the ability to fly or be invisible?",
         "Would you rather always be 10 minutes late or 20 minutedfhzdfhs early?",
 
-        // Add more questions
     ],
     funny: [
         "Would you rather have permanent clown makeup or a permanent red nose?",
@@ -85,7 +91,6 @@ const questions = {
         "Would you rather have to hop everywhere you go or crawl like a baby?",
         "Would you rather have to wear a mustache made of tape or eyebrows made of candy?",
         "Would you rather sneeze confetti or burp bubbles?",
-        // Add more questions
     ],
     serious: [
         "Would you rather lose the ability to read or lose the ability to speak?",
@@ -174,7 +179,6 @@ const questions = {
         "Would you rather have the ability to see into the future or change the past?",
         "Would you rather have the power to control minds or control the weather?",
 
-        // Add more questions
     ],
     adults: [
         "Would you rather have sex in a public place or have sex in your parents' house?",
@@ -280,6 +284,201 @@ const questions = {
     ]
 };
 
+// document.getElementById('player-name').addEventListener('keydown', function(event) {
+//     if (event.key === 'Enter') {
+//         addPlayer();
+//     }
+// });
+
+// document.getElementById('new-player-name').addEventListener('keydown', function(event) {
+//     if (event.key === 'Enter') {
+//         addPlayer();
+//     }
+// });
+
+// function addPlayer() {
+//     const playerNameInput = document.getElementById('player-name');
+//     const editPlayerNameInput = document.getElementById('new-player-name');
+//     let playerName = '';
+
+//     if (playerNameInput && playerNameInput.value.trim() !== '') {
+//         playerName = playerNameInput.value.trim();
+//         playerNameInput.value = '';
+//     } else if (editPlayerNameInput && editPlayerNameInput.value.trim() !== '') {
+//         playerName = editPlayerNameInput.value.trim();
+//         editPlayerNameInput.value = '';
+//     }
+
+//     if (playerName) {
+//         players.push(playerName);
+//         const playerList = document.getElementById('player-list');
+//         const editPlayerList = document.getElementById('edit-player-list');
+//         const listItem = document.createElement('li');
+//         listItem.textContent = playerName;
+
+//         if (playerList) {
+//             playerList.appendChild(listItem);
+//         }
+
+//         if (editPlayerList) {
+//             const editListItem = document.createElement('li');
+//             editListItem.textContent = playerName;
+//             const removeButton = document.createElement('button');
+//             removeButton.textContent = 'Remove';
+//             removeButton.onclick = () => removePlayer(playerName);
+//             editListItem.appendChild(removeButton);
+//             editPlayerList.appendChild(editListItem);
+//         }
+//     }
+// }
+
+// function startGame() {
+//     const themeCheckboxes = document.querySelectorAll('#theme-section input[type="checkbox"]');
+//     selectedThemes = Array.from(themeCheckboxes)
+//         .filter(checkbox => checkbox.checked)
+//         .map(checkbox => checkbox.value);
+
+//     if (selectedThemes.length === 0) {
+//         alert('Please select at least one theme.');
+//         return;
+//     }
+
+//     document.getElementById('player-section').style.display = 'none';
+//     document.getElementById('theme-section').style.display = 'none';
+//     let introDivs = document.getElementsByClassName('start-screen');
+//     for (let i = 0; i < introDivs.length; i++) {
+//         introDivs[i].style.display = 'none';
+//     }
+//     document.getElementById('game-section').style.display = 'block';
+//     document.getElementById('edit-player-section').style.display = 'none';
+//     document.getElementById('edit-filter-section').style.display = 'none';
+
+//     usedQuestions.clear();
+//     askQuestion();
+// }
+
+// function getCombinedQuestions() {
+//     let combinedQuestions = [];
+//     selectedThemes.forEach(theme => {
+//         combinedQuestions = combinedQuestions.concat(questions[theme]);
+//     });
+//     return combinedQuestions;
+// }
+
+// function askQuestion() {
+//     const combinedQuestions = getCombinedQuestions();
+//     if (usedQuestions.size >= combinedQuestions.length) {
+//         alert('All questions have been asked. Restarting the game.');
+//         usedQuestions.clear();
+//     }
+
+//     const availableQuestions = combinedQuestions.filter(q => !usedQuestions.has(q));
+
+//     if (availableQuestions.length === 0) {
+//         usedQuestions.clear();
+//         askQuestion();
+//         return;
+//     }
+
+//     const randomQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+//     usedQuestions.add(randomQuestion);
+
+//     if (players.length > 0) {
+//         const randomPlayer = players[Math.floor(Math.random() * players.length)];
+//         document.getElementById('player').textContent = `Hey ${randomPlayer}:`;
+//     } else {
+//         document.getElementById('player').textContent = '';
+//     }
+
+//     const [firstPart, secondPart] = randomQuestion.split(' or ');
+//     document.getElementById('question').innerHTML = `
+//         <div class="question-part green">${firstPart}</div>
+//         <div class="question-part or">OR</div>
+//         <div class="question-part red">${secondPart}</div>
+//     `;
+// }
+
+// function nextQuestion() {
+//     askQuestion();
+// }
+
+// function editPlayers() {
+//     document.getElementById('game-section').style.display = 'none';
+//     document.getElementById('edit-player-section').style.display = 'block';
+//     const editPlayerList = document.getElementById('edit-player-list');
+//     editPlayerList.innerHTML = '';
+//     players.forEach(player => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = player;
+//         const removeButton = document.createElement('button');
+//         removeButton.textContent = 'Remove';
+//         removeButton.onclick = () => removePlayer(player);
+//         listItem.appendChild(removeButton);
+//         editPlayerList.appendChild(listItem);
+//     });
+// }
+
+// function editFilters() {
+//     document.getElementById('game-section').style.display = 'none';
+//     document.getElementById('edit-filter-section').style.display = 'block';
+
+//     // Pre-fill checkboxes based on the current selected themes
+//     const themeCheckboxes = document.querySelectorAll('#edit-filter-section input[type="checkbox"]');
+//     themeCheckboxes.forEach(checkbox => {
+//         checkbox.checked = selectedThemes.includes(checkbox.value);
+//     });
+// }
+
+// function applyFilters() {
+//     const themeCheckboxes = document.querySelectorAll('#edit-filter-section input[type="checkbox"]');
+//     selectedThemes = Array.from(themeCheckboxes)
+//         .filter(checkbox => checkbox.checked)
+//         .map(checkbox => checkbox.value);
+
+//     if (selectedThemes.length === 0) {
+//         alert('Please select at least one theme.');
+//         return;
+//     }
+
+//     usedQuestions.clear();
+//     askQuestion();
+//     returnToGame();
+// }
+
+// function removePlayer(player) {
+//     players = players.filter(p => p !== player);
+//     const editPlayerList = document.getElementById('edit-player-list');
+//     const items = Array.from(editPlayerList.children);
+//     items.forEach(item => {
+//         if (item.firstChild.textContent === player) {
+//             editPlayerList.removeChild(item);
+//         }
+//     });
+// }
+
+// function returnToGame() {
+//     document.getElementById('edit-player-section').style.display = 'none';
+//     document.getElementById('edit-filter-section').style.display = 'none';
+//     document.getElementById('game-section').style.display = 'block';
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const toggleBtn = document.querySelector(".toggle-btn");
+//     const content = document.querySelector(".content");
+
+//     toggleBtn.addEventListener("click", () => {
+//         if (content.style.display === "none" || content.style.display === "") {
+//             content.style.display = "block";
+//             toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
+//         } else {
+//             content.style.display = "none";
+//             toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
+//         }
+//     });
+// });
+
+
+
 document.getElementById('player-name').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         addPlayer();
@@ -291,6 +490,34 @@ document.getElementById('new-player-name').addEventListener('keydown', function(
         addPlayer();
     }
 });
+
+function setGameType(type) {
+    isDrinkingGame = (type === 'drinking');
+    document.getElementById('drinking-game-section').style.display = 'none';
+    document.getElementById('theme-section').style.display = 'block';
+    if (isDrinkingGame) {
+        document.getElementById('player-section').style.display = 'none';
+    }
+}
+
+function continueToPlayerSection() {
+    const themeCheckboxes = document.querySelectorAll('#theme-section input[type="checkbox"]');
+    selectedThemes = Array.from(themeCheckboxes)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+
+    if (selectedThemes.length === 0) {
+        alert('Please select at least one theme.');
+        return;
+    }
+
+    if (isDrinkingGame) {
+        startGame();
+    } else {
+        document.getElementById('theme-section').style.display = 'none';
+        document.getElementById('player-section').style.display = 'block';
+    }
+}
 
 function addPlayer() {
     const playerNameInput = document.getElementById('player-name');
@@ -329,16 +556,11 @@ function addPlayer() {
 }
 
 function startGame() {
-    const themeCheckboxes = document.querySelectorAll('#theme-section input[type="checkbox"]');
-    selectedThemes = Array.from(themeCheckboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.value);
-
-    if (selectedThemes.length === 0) {
-        alert('Please select at least one theme.');
+    if (!isDrinkingGame && players.length === 0) {
+        alert('Please add at least one player.');
         return;
     }
-
+    
     document.getElementById('player-section').style.display = 'none';
     document.getElementById('theme-section').style.display = 'none';
     let introDivs = document.getElementsByClassName('start-screen');
@@ -379,12 +601,13 @@ function askQuestion() {
     const randomQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
     usedQuestions.add(randomQuestion);
 
-    if (players.length > 0) {
+    if (!isDrinkingGame && players.length > 0) {
         const randomPlayer = players[Math.floor(Math.random() * players.length)];
-        document.getElementById('player').textContent = `Hey ${randomPlayer}:`;
+        document.getElementById('player').textContent = `Hey ${randomPlayer}, would you rather...`;
     } else {
-        document.getElementById('player').textContent = '';
+        // document.getElementById('player').textContent = 'Would you rather...';
     }
+    document.getElementById('question').textContent = randomQuestion;
 
     const [firstPart, secondPart] = randomQuestion.split(' or ');
     document.getElementById('question').innerHTML = `
@@ -392,6 +615,7 @@ function askQuestion() {
         <div class="question-part or">OR</div>
         <div class="question-part red">${secondPart}</div>
     `;
+
 }
 
 function nextQuestion() {
@@ -401,28 +625,26 @@ function nextQuestion() {
 function editPlayers() {
     document.getElementById('game-section').style.display = 'none';
     document.getElementById('edit-player-section').style.display = 'block';
-    const editPlayerList = document.getElementById('edit-player-list');
-    editPlayerList.innerHTML = '';
-    players.forEach(player => {
-        const listItem = document.createElement('li');
-        listItem.textContent = player;
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.onclick = () => removePlayer(player);
-        listItem.appendChild(removeButton);
-        editPlayerList.appendChild(listItem);
+}
+
+function removePlayer(playerName) {
+    players = players.filter(player => player !== playerName);
+    const playerList = document.getElementById('edit-player-list');
+    const items = Array.from(playerList.children);
+    items.forEach(item => {
+        if (item.textContent.includes(playerName)) {
+            playerList.removeChild(item);
+        }
     });
 }
 
 function editFilters() {
-    document.getElementById('game-section').style.display = 'none';
-    document.getElementById('edit-filter-section').style.display = 'block';
-
-    // Pre-fill checkboxes based on the current selected themes
     const themeCheckboxes = document.querySelectorAll('#edit-filter-section input[type="checkbox"]');
     themeCheckboxes.forEach(checkbox => {
         checkbox.checked = selectedThemes.includes(checkbox.value);
     });
+    document.getElementById('game-section').style.display = 'none';
+    document.getElementById('edit-filter-section').style.display = 'block';
 }
 
 function applyFilters() {
@@ -435,40 +657,11 @@ function applyFilters() {
         alert('Please select at least one theme.');
         return;
     }
-
-    usedQuestions.clear();
-    askQuestion();
     returnToGame();
 }
 
-function removePlayer(player) {
-    players = players.filter(p => p !== player);
-    const editPlayerList = document.getElementById('edit-player-list');
-    const items = Array.from(editPlayerList.children);
-    items.forEach(item => {
-        if (item.firstChild.textContent === player) {
-            editPlayerList.removeChild(item);
-        }
-    });
-}
-
 function returnToGame() {
-    document.getElementById('edit-player-section').style.display = 'none';
     document.getElementById('edit-filter-section').style.display = 'none';
+    document.getElementById('edit-player-section').style.display = 'none';
     document.getElementById('game-section').style.display = 'block';
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.querySelector(".toggle-btn");
-    const content = document.querySelector(".content");
-
-    toggleBtn.addEventListener("click", () => {
-        if (content.style.display === "none" || content.style.display === "") {
-            content.style.display = "block";
-            toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
-        } else {
-            content.style.display = "none";
-            toggleBtn.textContent = "Rules for Turning Would You Rather into a Drinking Game:";
-        }
-    });
-});

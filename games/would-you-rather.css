@@ -1,5 +1,4 @@
 body {
-    background-color: #f9e5d7;
     height: auto;
     max-height: none;
     overflow:scroll;
@@ -24,13 +23,13 @@ body {
     background-color: #d4f5d449;
     color: darkgreen;
     border: 1px solid darkgreen;
-    padding: 50px;
+    padding: 20px;
 }
 .red {
     background-color: #f0c8c8ac;
     color: darkred;
     border: 1px solid darkred;
-    padding: 50px;
+    padding: 20px;
 }
 .or {
     font-size: medium;
@@ -39,6 +38,7 @@ body {
     background-color: #f9f8f43f;
     border-radius: 110px;
     text-align: center;
+    padding: 0;
 }
 p{
     display: flex;

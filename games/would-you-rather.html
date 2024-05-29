@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="games-general.css">
 </head>
 <body>
-    <div class="start-screen">
+    <!-- <div class="start-screen">
         <div class="container">
             <h2>Would You Rather</h2>
         </div>
@@ -103,7 +103,77 @@
         <button onclick="returnToGame()">Return to Game</button>
     </div>
     <div>
+    </div> -->
+
+
+
+    <div class="start-screen">
+        <div class="container">
+            <h2>Would You Rather</h2>
+        </div>
+        <div class="container" id="drinking-game-section">
+            <h2>Drinking Game Option</h2>
+            <p class="note">
+                In the non-drinking game, each player gets a unique question. <br>
+                In the drinking game, the same question is posed to all players.
+            </p>
+            <label><input type="radio" name="game-type" value="drinking" onclick="setGameType('drinking')"> Drinking game</label>
+            <label><input type="radio" name="game-type" value="non-drinking" onclick="setGameType('non-drinking')"> Non-drinking game</label>
+        </div>
+        <div class="container" id="theme-section" style="display: none;">
+            <h2>Filter Themes</h2>
+            <div class="checkbox-container">
+                <label><input type="checkbox" id="general" value="general" checked> General</label>
+                <label><input type="checkbox" id="funny" value="funny" checked> Funny</label>
+                <label><input type="checkbox" id="serious" value="serious" checked> Serious</label>
+                <label><input type="checkbox" id="adults" value="adults" checked> Adults</label>
+            </div>
+            <button onclick="continueToPlayerSection()">Continue</button>
+        </div>
+        <div class="container" id="player-section" style="display: none;">
+            <h2>Add Players</h2>
+            <p class="note">Optional</p> 
+            <div class="input-outer-div">
+                <input type="text" id="player-name" placeholder="Player name">
+                <button onclick="addPlayer()">+</button>
+            </div>
+            <ul id="player-list"></ul>
+            <button onclick="startGame()">Start Game</button>
+        </div>
     </div>
+    <div id="game-section" style="display: none;">
+        <div class="container">
+            <p id="player"></p>
+            <p id="question"></p>
+            <button onclick="nextQuestion()">Next Question</button>
+            <br>
+            <div>
+                <button class="second-button" onclick="editPlayers()">Edit Players</button>
+                <button class="second-button" onclick="editFilters()">Edit Filters</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-filter-section" style="display: none;">
+        <h2>Edit Filters</h2>
+        <div class="themes-container">
+            <label><input type="checkbox" id="general-edit" value="general"> General</label>
+            <label><input type="checkbox" id="funny-edit" value="funny"> Funny</label>
+            <label><input type="checkbox" id="serious-edit" value="serious"> Serious</label>
+            <label><input type="checkbox" id="adults-edit" value="adults"> Adults</label>
+        </div>
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="returnToGame()">Return to Game</button>
+    </div>    
+    <div id="edit-player-section" style="display: none;">
+        <h2>Edit Players</h2>
+        <input type="text" id="new-player-name" placeholder="Enter new player name">
+        <button onclick="addPlayer()">Add Player</button>
+        <ul id="edit-player-list"></ul>
+        <button onclick="returnToGame()">Return to Game</button>
+    </div>
+    <div>
+    </div>
+
     <script src="would-you-rather.js"></script>
 </body>
 </html>
