@@ -16,9 +16,6 @@ body {
     display: flex;
     gap: 10px;
 }
-button, input{
-    cursor: pointer;
-}
 /* #game-section button{
     font-size: 20px;
     border: 0px solid darkred;
@@ -75,7 +72,11 @@ p{
     font-size: 16px;
     cursor: pointer;
 }
-
+.div-left{
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+}
 .content {
     display: none;
     margin-top: 10px;
@@ -85,37 +86,42 @@ p{
     font-size: 16px;
     line-height: 30px;
 }
-.toggle-container{
-    margin-top: 20px;
-}
 .toggle-btn{
     background-color: #ebffef00;
     border-style: none;
-    background-color: #c6a8a847;
+    background-color: #dfdfdf47;
     text-align: left;
+    font-size: smaller;
 }
 .App {
     text-align: center;
 }
 
 img {
-  max-width: 300px;
-  margin: 20px;
+    max-width: 300px;
+    margin: 20px;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
 }
-
 li {
-  cursor: pointer;
-  padding: 5px;
-  margin: 5px;
-  border: 1px solid #ccc;
+    /* cursor: pointer; */
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid #ccc;
+    text-align: left;
+
 }
 
-button {
-  margin: 10px;
+/* button {
+    margin: 10px;
+} */
+.intro-div{
+    /* margin-top: 60px; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-  
