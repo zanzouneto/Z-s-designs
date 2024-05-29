@@ -1,14 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
     background-color: antiquewhite;
-    max-height: 90vh;
-    overflow: hidden;
 }
 
 #game-board {
-    /* margin-top: 20px; */
+    margin-top: 20px;
     width: 90vw;
     max-width: 600px;
 }

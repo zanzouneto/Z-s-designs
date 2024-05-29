@@ -25,6 +25,10 @@ body {
     margin: 0;
     align-items: stretch;
     flex-direction: column;
+    max-height: 90vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
 }
 .container {
     text-align: center;
