@@ -33,6 +33,7 @@ button:hover {
     margin: 0 auto;
 }
 #number-display{
+    line-height: 5px;
     font-size: x-large;
 }
 .keypad-btn{
