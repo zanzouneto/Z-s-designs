@@ -27,7 +27,7 @@ document.addEventListener('click', function(e) {
     let bgB = document.getElementById('backgroundB');
 
     if (window.getComputedStyle(bgA).opacity === "1") {
-        window.open('cv.html', '_blank');
+        window.open('games.html', '_blank');
     } else if (window.getComputedStyle(bgB).opacity === "1") {
         window.location.href = 'portfolio.html';
     }
