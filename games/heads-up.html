@@ -5,33 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heads Up Game</title>
     <link rel="stylesheet" href="heads-up.css">
+    <link rel="stylesheet" href="games-general.css">
 </head>
 <body>
     <div id="main-menu">
-        <h1>Heads Up</h1>
-        <label for="time">Choose time per round:</label>
-        <select id="time">
-            <option value="20">20 seconds</option>
-            <option value="60">1 minute</option>
-            <option value="120">2 minutes</option>
-            <option value="180">3 minutes</option>
-        </select>
-        <label for="theme">Choose a theme:</label>
-        <select id="theme">
-            <option value="animals">Animals</option>
-            <option value="movies">Movies</option>
-            <option value="celebrities">Celebrities</option>
-        </select>
-        <button id="start-game">Start Game</button>
+        <div class="container">
+            <h1>Heads Up</h1>
+        </div>
+        <div class="container">
+            <div class="intro-div">
+                <div>
+                    <label for="time">Time per round:</label>
+                    <select id="time">
+                        <!-- <option value="10">10 seconds</option> -->
+                        <option value="60">1 minute</option>
+                        <option value="120">2 minutes</option>
+                        <option value="180">3 minutes</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="theme">Choose a theme:</label>
+                    <select id="theme">
+                        <option value="animals">Animals</option>
+                        <option value="movies">Movies</option>
+                        <option value="celebrities">Celebrities</option>
+                        <option value="sports">Sports</option>
+                        <option value="books">Books and Literature</option>
+                        <option value="songs">Songs and Musicians</option>
+                        <option value="food">Food and Drinks</option>
+                        <option value="occupations">Occupations</option>
+                        <option value="fairytales">Fairy Tales and Fantasy Characters</option>
+                    </select>
+                </div>
+                <button id="start-game">Start Game</button>
+            </div>
+        </div>
     </div>
     <div id="game-screen" style="display: none;">
-        <h1 id="word-display"></h1>
-        <p id="timer"></p>
+        <div class="container">
+            <p id="timer"></p>
+            <h1 id="word-display"></h1>
+        </div>
+        <p class="note">
+            Click for next word <br>
+            Double click to pass
+        </p>
     </div>
     <div id="score-screen" style="display: none;">
-        <h1>Score</h1>
-        <ul id="score-list"></ul>
-        <button id="new-round">Start New Round</button>
+        <div class="container">
+            <h1>Score</h1>
+            <ul id="score-list"></ul>
+            <button id="new-round">Start New Round</button>
+        </div>
     </div>
     <script src="heads-up.js"></script></body>
 </html>
