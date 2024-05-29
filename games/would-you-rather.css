@@ -2,16 +2,16 @@ body {
     background-color: #f9e5d7;
 }
 
-/* #player-section, #theme-section, #game-section, .intro-div {
+/* #player-section, #theme-section, #game-section{
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
 } */
 
-#player-section input, #theme-section select, #theme-section button, #player-section button, #game-section button {
+/* #player-section input, #theme-section select, #theme-section button, #player-section button, #game-section button {
     margin: 10px 0;
     padding: 10px;
-}
+} */
 .input-outer-div{
     display: flex;
     gap: 10px;
@@ -19,17 +19,13 @@ body {
 button, input{
     cursor: pointer;
 }
-#game-section button, #theme-section button, #player-section input, .intro-div button{
-    padding: 20px;
-    width: 100%;
-}
-#game-section button{
+/* #game-section button{
     font-size: 20px;
     border: 0px solid darkred;
-}
-#player-section button{
+} */
+/* #player-section button{
     font-size: x-large ;
-}
+} */
 .themes-container{
     display: flex;
     flex-direction: column;
@@ -74,11 +70,6 @@ p{
 #player{
     font-size: x-large;
 }
-.second-button{
-    background-color: rgba(255, 255, 255, 0); 
-    border-color: rgba(255, 255, 255, 0);
-    text-decoration: underline;
-}
 .toggle-btn {
     padding: 10px 20px;
     font-size: 16px;
@@ -105,26 +96,26 @@ p{
 }
 .App {
     text-align: center;
-  }
-  
-  img {
-    max-width: 300px;
-    margin: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    cursor: pointer;
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    margin: 10px;
-  }
+}
+
+img {
+  max-width: 300px;
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin: 10px;
+}
   

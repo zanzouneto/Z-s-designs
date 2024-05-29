@@ -73,6 +73,17 @@ button {
 button:hover{
     background-color: rgb(150, 196, 196);
 }
+.second-button{
+    background-color: rgba(255, 255, 255, 0); 
+    border-color: rgba(255, 255, 255, 0);
+    text-decoration: underline;
+    font-size: 12px;
+}
+.second-button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(43, 85, 85);
+}
+
 /* Tablet styles */
 @media (min-width: 600px) {
     body{

@@ -17,19 +17,20 @@
 </head>
 <body>
     <div>
-        <div class="container">
-            <div id="theme-section">
-                <h2>Filter Themes</h2>
-                <div class="checkbox-container">
-                    <label><input type="checkbox" id="general" value="general" checked> General</label>
-                    <label><input type="checkbox" id="funny" value="funny" checked> Funny</label>
-                    <label><input type="checkbox" id="serious" value="serious" checked> Serious</label>
-                    <label><input type="checkbox" id="adults" value="adults" checked> Adults</label>
-                </div>
-            </div>
-        </div>
         <div class="intro-div">
             <div class="container">
+                <h2>Would You Rather</h2>
+            </div>
+            <div class="container">
+                <div id="theme-section">
+                    <h2>Filter Themes</h2>
+                    <div class="checkbox-container">
+                        <label><input type="checkbox" id="general" value="general" checked> General</label>
+                        <label><input type="checkbox" id="funny" value="funny" checked> Funny</label>
+                        <label><input type="checkbox" id="serious" value="serious" checked> Serious</label>
+                        <label><input type="checkbox" id="adults" value="adults" checked> Adults</label>
+                    </div>
+                </div>
                 <h2>Drinking Game Option</h2>
                 <p class="note">
                     In the non-drinking game, each player gets a unique question. <br>
@@ -55,31 +56,31 @@
                         </p>
                     </div>
                 </div>   
-            </div>
-        </div>
-        <div id="player-section">
-            <div class="container">
-                <h2>Add Players</h2>
-                <p class="note">
-                    Optional
-                </p> 
-                <div class="input-outer-div">
-                    <input type="text" id="player-name" placeholder="Player name">
-                    <button onclick="addPlayer()">+</button>
-                </div>
-                <ul id="player-list"></ul>
-                <div class="intro-div">
+                <div id="player-section">
+                    <h2>Add Players</h2>
+                    <p class="note">
+                        Optional
+                    </p> 
+                    <div class="input-outer-div">
+                        <input type="text" id="player-name" placeholder="Player name">
+                        <button onclick="addPlayer()">+</button>
+                    </div>
+                    <ul id="player-list"></ul>
                     <button onclick="startGame()">Start Game</button>
                 </div>
             </div>
         </div>
         <div id="game-section" style="display: none;">
-            <p id="player"></p>
-            <p id="question"></p>
-            <button onclick="nextQuestion()">Next Question</button>
-            <br>
-            <button class="second-button" onclick="editPlayers()">Edit Players</button>
-            <button class="second-button" onclick="editFilters()">Edit Filters</button>
+            <div class="container">
+                <p id="player"></p>
+                <p id="question"></p>
+                <button onclick="nextQuestion()">Next Question</button>
+                <br>
+                <div>
+                    <button class="second-button" onclick="editPlayers()">Edit Players</button>
+                    <button class="second-button" onclick="editFilters()">Edit Filters</button>
+                </div>
+            </div>
         </div>
         <div id="edit-filter-section" style="display: none;">
             <h2>Edit Filters</h2>
