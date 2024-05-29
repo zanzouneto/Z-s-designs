@@ -3,6 +3,7 @@ body {
     height: auto;
     max-height: none;
     overflow:scroll;
+    justify-content: flex-start;
 }
 
 /* #player-section, #theme-section, #game-section{
