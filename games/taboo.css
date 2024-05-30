@@ -32,7 +32,10 @@ body {
     transform: translateX(100%);
     transition: transform 0s; /* Immediately return to original position */
 }
-
+#pass{
+    opacity: 0.4;
+    width: 30%;
+}
 #taboo-words {
     list-style-type: none;
     padding: 0;
@@ -53,6 +56,9 @@ select{
 }
 .phonenote{
     display: block;
+}
+.two-buttons{
+    width: 100%;
 }
 /* Tablet styles */
 @media (min-width: 600px) {
