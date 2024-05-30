@@ -20,16 +20,16 @@ body {
     margin: 10px 0;
 }
 .green {
-    background-color: #d4f5d449;
+    /* background-color: #00ff0010; */
     color: darkgreen;
-    border: 1px solid darkgreen;
-    padding: 20px;
+    /* border: 1px solid darkgreen; */
+    /* padding: 20px; */
 }
 .red {
-    background-color: #f0c8c8ac;
+    /* background-color: #ff00000e; */
     color: darkred;
-    border: 1px solid darkred;
-    padding: 20px;
+    /* border: 1px solid darkred; */
+    /* padding: 20px; */
 }
 .or {
     font-size: medium;
@@ -46,6 +46,12 @@ p{
     align-items: center;
     align-items: stretch;
     text-align: center;
+}
+.next-question{
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(234, 231, 178);
 }
 #player{
     font-size: x-large;

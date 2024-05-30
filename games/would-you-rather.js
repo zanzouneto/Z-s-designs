@@ -402,7 +402,7 @@ function askQuestion() {
 
     if (!isDrinkingGame && players.length > 0) {
         const randomPlayer = players[Math.floor(Math.random() * players.length)];
-        document.getElementById('player').textContent = `Hey ${randomPlayer}, would you rather...`;
+        document.getElementById('player').textContent = `Hey ${randomPlayer},`;
     } else {
         // document.getElementById('player').textContent = 'Would you rather...';
     }
