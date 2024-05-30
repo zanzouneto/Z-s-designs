@@ -5,7 +5,7 @@ body {
     justify-content: flex-start !important;
 }
 .input-outer-div{
-    display: flex;
+    display: flex;  
     gap: 10px;
 }
 .themes-container{
@@ -49,6 +49,12 @@ p{
 }
 #player{
     font-size: x-large;
+}
+#player-name{
+    flex-grow: 100;
+}
+.input-outer-div button{
+    margin: 0;
 }
 .toggle-btn {
     padding: 10px 20px;
