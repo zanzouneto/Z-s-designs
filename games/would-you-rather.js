@@ -494,7 +494,14 @@ function handleTouchMove(event) {
             card.classList.add('swipe-left');
             setTimeout(() => {
                 nextQuestion();
+                // Instantly reset position
                 card.classList.remove('swipe-left');
+                card.classList.add('instant-reset');
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        card.classList.remove('instant-reset');
+                    });
+                });
             }, 300); // Adjust the duration to match your CSS transition duration
         }
     }
@@ -503,4 +510,3 @@ function handleTouchMove(event) {
     xDown = null;
     yDown = null;
 }
-
