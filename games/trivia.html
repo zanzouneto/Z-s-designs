@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="games-general.css">
+    <link rel="stylesheet" href="trivia.css">
+</head>
+<body>
+
+    <div class="container" id="intro-div">
+        <div id="team-input">
+            <h2>Teams:</h2>
+            <input type="text" id="teamName" placeholder="Team Name" onkeydown="if(event.key === 'Enter') addTeam()">
+            <button onclick="addTeam()">+</button>
+            <ul id="teamList"></ul>
+        </div>
+    
+        <div id="theme-selection">
+            <h2>Theme:</h2>
+            <select id="theme">
+                <option value="general">General Knowledge</option>
+                <option value="sports">Sports</option>
+                <option value="science">Science</option>
+            </select>
+            <br>
+            <br>
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-area">
+        <div class="container">
+            <div id="scoreboard"></div>
+            <div id="question-area">
+                <h2 id="question"></h2>
+                <div id="answers"></div>
+                <button id="show-answer" onclick="showAnswer()">Show Correct Answer</button>
+            </div>
+        </div>
+        <div class="container">
+            <div id="teams-correct"></div>
+            <button id="next-question" style="display:none;" onclick="nextQuestion()">Next Question</button>
+        </div>
+    </div>
+
+
+
+    <script src="trivia.js"></script>
+</body>
+</html>
