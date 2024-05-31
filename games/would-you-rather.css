@@ -122,3 +122,10 @@ li {
     flex-direction: column;
     justify-content: flex-start;
 }
+#card {
+    transition: transform 0.3s ease;
+}
+
+.swipe-left {
+    transform: translateX(-100%);
+}
