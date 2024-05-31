@@ -122,7 +122,14 @@ li {
     flex-direction: column;
     justify-content: flex-start;
 }
+#card {
+    transition: transform 0s; /* Immediately return to original position */
+    /* transition: transform 0.3s ease; */
+}
 
+.swipe-left {
+    transform: translateX(-100%);
+}
 
 .swipe-left {
     transform: translateX(-100%);
