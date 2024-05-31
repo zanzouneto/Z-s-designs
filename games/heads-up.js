@@ -1,4 +1,3 @@
-
 let words = [];
 let currentWordIndex = 0;
 let correctWords = [];
@@ -7,6 +6,7 @@ let timerInterval;
 let isGameRunning = false;
 let wakeLock = null;
 let clickTimeout = null;
+let gameWords = [];
 
 function startGame() {
     const time = parseInt(document.getElementById('time').value);
@@ -17,6 +17,7 @@ function startGame() {
     currentWordIndex = 0;
     correctWords = [];
     passedWords = [];
+    gameWords = []; // Reset gameWords
 
     document.getElementById('main-menu').style.display = 'none';
     document.getElementById('game-screen').style.display = 'flex';
@@ -58,7 +59,9 @@ function handleDoubleClick(event) {
 
 function handleNext() {
     if (isGameRunning) {
-        correctWords.push(words[currentWordIndex]);
+        const word = words[currentWordIndex];
+        correctWords.push(word);
+        recordWord(word, 'correct');
         currentWordIndex++;
         displayWord();
     }
@@ -66,7 +69,9 @@ function handleNext() {
 
 function handlePass() {
     if (isGameRunning) {
-        passedWords.push(words[currentWordIndex]);
+        const word = words[currentWordIndex];
+        passedWords.push(word);
+        recordWord(word, 'passed');
         currentWordIndex++;
         displayWord();
     }
@@ -92,6 +97,10 @@ function startTimer(time) {
     }, 1000);
 }
 
+function recordWord(word, status) {
+    gameWords.push({ word: word, status: status });
+}
+
 function endGame() {
     isGameRunning = false;
     releaseWakeLock();
@@ -100,22 +109,58 @@ function endGame() {
 
     const scoreList = document.getElementById('score-list');
     scoreList.innerHTML = '';
-    correctWords.forEach(word => {
+    
+    const scoreHeader = document.createElement('li');
+    scoreHeader.innerHTML = `<span class="correct">${correctWords.length}</span> : <span class="passed">${passedWords.length}</span><br><br>`;
+    scoreList.appendChild(scoreHeader);
+
+    gameWords.forEach(item => {
         const li = document.createElement('li');
-        li.innerText = word;
-        li.classList.add('correct');
-        scoreList.appendChild(li);
-    });
-    passedWords.forEach(word => {
-        const li = document.createElement('li');
-        li.innerText = word;
-        li.classList.add('passed');
+        li.innerText = item.word;
+        li.classList.add(item.status);
         scoreList.appendChild(li);
     });
 
     document.removeEventListener('click', handleClick);
     document.removeEventListener('dblclick', handleDoubleClick);
 }
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+async function requestWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', () => {
+            console.log('Screen Wake Lock was released');
+        });
+        console.log('Screen Wake Lock is active');
+    } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+    }
+}
+
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            wakeLock = null;
+        });
+    }
+}
+
+function startNewRound() {
+    document.getElementById('score-screen').style.display = 'none';
+    document.getElementById('main-menu').style.display = 'block';
+}
+
+document.getElementById('start-game').addEventListener('click', startGame);
+document.getElementById('new-round').addEventListener('click', startNewRound);
+
 
 function getWordsForTheme(theme) {
     if (theme === 'animals') {
@@ -445,39 +490,3 @@ function getWordsForTheme(theme) {
         ];    
     }    return [];
 }
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-async function requestWakeLock() {
-    try {
-        wakeLock = await navigator.wakeLock.request('screen');
-        wakeLock.addEventListener('release', () => {
-            console.log('Screen Wake Lock was released');
-        });
-        console.log('Screen Wake Lock is active');
-    } catch (err) {
-        console.error(`${err.name}, ${err.message}`);
-    }
-}
-
-function releaseWakeLock() {
-    if (wakeLock !== null) {
-        wakeLock.release().then(() => {
-            wakeLock = null;
-        });
-    }
-}
-
-function startNewRound() {
-    document.getElementById('score-screen').style.display = 'none';
-    document.getElementById('main-menu').style.display = 'block';
-}
-
-document.getElementById('start-game').addEventListener('click', startGame);
-document.getElementById('new-round').addEventListener('click', startNewRound);
