@@ -123,8 +123,7 @@ li {
     justify-content: flex-start;
 }
 #card {
-    transition: transform 0s; /* Immediately return to original position */
-    /* transition: transform 0.3s ease; */
+    transition: transform 0.3s ease;
 }
 .swipe-left {
     transform: translateX(-100%);
