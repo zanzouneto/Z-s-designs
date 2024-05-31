@@ -129,6 +129,6 @@ li {
     transform: translateX(-100%);
 }
 .instant-reset {
-    transition: none; /* Instant reset transition */
-    transform: translateX(0); /* Reset to original position */
+    transition: none; 
+    transform: translateX(0);
 }
