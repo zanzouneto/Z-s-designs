@@ -362,10 +362,9 @@ function startGame() {
     
     document.getElementById('player-section').style.display = 'none';
     document.getElementById('theme-section').style.display = 'none';
-    let introDivs = document.getElementsByClassName('start-screen');
-    for (let i = 0; i < introDivs.length; i++) {
-        introDivs[i].style.display = 'none';
-    }
+    let introDiv = document.getElementById('start-screen');
+    introDiv.style.display = 'none';
+
     document.getElementById('game-section').style.display = 'block';
     document.getElementById('edit-player-section').style.display = 'none';
     document.getElementById('edit-filter-section').style.display = 'none';
