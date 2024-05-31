@@ -465,6 +465,17 @@ function returnToGame() {
     document.getElementById('game-section').style.display = 'block';
 }
 
+// Variables to track touch position and card movement
+let xDown = null;
+let yDown = null;
+let card = document.getElementById('card');
+
+function handleTouchStart(event) {
+    xDown = event.touches[0].clientX;
+    yDown = event.touches[0].clientY;
+}
+
+
 function handleTouchMove(event) {
     if (!xDown || !yDown) {
         return;
