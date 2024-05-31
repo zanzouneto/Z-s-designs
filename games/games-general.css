@@ -36,7 +36,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px auto;
+    margin: 10px;
+    width: 100%;
 }
 .note{
     font-size: 14px;
@@ -83,6 +84,12 @@ button:hover{
 #game-section{
     margin: auto;
 }
+.two-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 /* Tablet styles */
 @media (min-width: 600px) {
     body{

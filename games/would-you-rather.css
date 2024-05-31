@@ -48,10 +48,6 @@ p{
     align-items: stretch;
     text-align: center;
 }
-.two-buttons{
-    display: flex;
-    justify-content: space-around;
-}
 .next-question{
     width: 100%;
     margin: 0;

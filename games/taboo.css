@@ -54,9 +54,7 @@ select{
 .phonenote{
     display: block;
 }
-.two-buttons{
-    width: 100%;
-}
+
 /* Tablet styles */
 @media (min-width: 600px) {
     .phonenote{
