@@ -463,3 +463,28 @@ function returnToGame() {
     document.getElementById('edit-player-section').style.display = 'none';
     document.getElementById('game-section').style.display = 'block';
 }
+
+function handleTouchMove(event) {
+    if (!xDown || !yDown) {
+        return;
+    }
+
+    let xDiff = xDown - event.touches[0].clientX;
+    let yDiff = yDown - event.touches[0].clientY;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0) {
+            // Swipe left
+            card.classList.add('swipe-left');
+            setTimeout(() => {
+                passWord();
+                card.style.transform = '';
+                card.classList.remove('swipe-left');
+            }, 100); // Adjust the duration to match your CSS transition duration
+        } 
+    }
+
+    // Reset touch position
+    xDown = null;
+    yDown = null;
+}
