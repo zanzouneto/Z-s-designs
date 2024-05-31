@@ -2,6 +2,7 @@ let players = [];
 let selectedThemes = [];
 let usedQuestions = new Set();
 let isDrinkingGame = false;
+document.getElementById('card').addEventListener('touchmove', handleTouchMove, false);
 
 const questions = {
     general: [
