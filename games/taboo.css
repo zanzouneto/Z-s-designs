@@ -2,18 +2,16 @@ body {
     text-align: center;
     padding: 20px;
 }
-
 #game-board {
     margin-top: 20px;
     width: 90vw;
     max-width: 600px;
+    margin: auto;
 }
-
 #timer {
     font-size: 24px;
     margin-bottom: 20px;
 }
-
 #card {
     font-size: 20px;
     margin-bottom: 20px;
@@ -27,7 +25,6 @@ body {
     transform: translateX(-100%);
     transition: transform 0s; /* Immediately return to original position */
 }
-
 .swipe-right {
     transform: translateX(100%);
     transition: transform 0s; /* Immediately return to original position */
