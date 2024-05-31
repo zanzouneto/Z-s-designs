@@ -2,7 +2,7 @@ let players = [];
 let selectedThemes = [];
 let usedQuestions = new Set();
 let isDrinkingGame = false;
-document.getElementById('card').addEventListener('touchmove', handleTouchMove, false);
+// document.getElementById('card').addEventListener('touchmove', handleTouchMove, false);
 
 const questions = {
     general: [
@@ -465,38 +465,78 @@ function returnToGame() {
     document.getElementById('game-section').style.display = 'block';
 }
 
-// Variables to track touch position and card movement
+// // Variables to track touch position and card movement
+// let xDown = null;
+// let yDown = null;
+// let card = document.getElementById('card');
+
+// function handleTouchStart(event) {
+//     xDown = event.touches[0].clientX;
+//     yDown = event.touches[0].clientY;
+// }
+
+
+// function handleTouchMove(event) {
+//     if (!xDown || !yDown) {
+//         return;
+//     }
+
+//     let xDiff = xDown - event.touches[0].clientX;
+//     let yDiff = yDown - event.touches[0].clientY;
+
+//     if (Math.abs(xDiff) > Math.abs(yDiff)) {
+//         if (xDiff > 0) {
+//             // Swipe left
+//             card.classList.add('swipe-left');
+//             setTimeout(() => {
+//                 passWord();
+//                 card.style.transform = '';
+//                 card.classList.remove('swipe-left');
+//             }, 100); // Adjust the duration to match your CSS transition duration
+//         } 
+//     }
+
+//     // Reset touch position
+//     xDown = null;
+//     yDown = null;
+// }
 let xDown = null;
 let yDown = null;
-let card = document.getElementById('card');
+const card = document.getElementById('card');
+
+card.addEventListener('touchstart', handleTouchStart, false);
+card.addEventListener('touchmove', handleTouchMove, false);
 
 function handleTouchStart(event) {
-    xDown = event.touches[0].clientX;
-    yDown = event.touches[0].clientY;
+    const firstTouch = event.touches[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
 }
-
 
 function handleTouchMove(event) {
     if (!xDown || !yDown) {
         return;
     }
 
-    let xDiff = xDown - event.touches[0].clientX;
-    let yDiff = yDown - event.touches[0].clientY;
+    const xUp = event.touches[0].clientX;
+    const yUp = event.touches[0].clientY;
+
+    const xDiff = xDown - xUp;
+    const yDiff = yDown - yUp;
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (xDiff > 0) {
             // Swipe left
             card.classList.add('swipe-left');
             setTimeout(() => {
-                passWord();
-                card.style.transform = '';
+                nextQuestion();
                 card.classList.remove('swipe-left');
-            }, 100); // Adjust the duration to match your CSS transition duration
-        } 
+            }, 300); // Adjust the duration to match your CSS transition duration
+        }
     }
 
     // Reset touch position
     xDown = null;
     yDown = null;
 }
+
