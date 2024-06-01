@@ -12,17 +12,18 @@
     <div class="container" id="intro-div">
         <div id="team-input">
             <h2>Teams:</h2>
-            <input type="text" id="teamName" placeholder="Team Name" onkeydown="if(event.key === 'Enter') addTeam()">
-            <button onclick="addTeam()">+</button>
+            <div class="input-outer-div">
+                <input class="input-field" type="text" id="teamName" placeholder="Team Name" onkeydown="if(event.key === 'Enter') addTeam()">
+                <button onclick="addTeam()">+</button>
+            </div>
             <ul id="teamList"></ul>
         </div>
     
         <div id="theme-selection">
             <h2>Theme:</h2>
-            <select id="theme">
-                <option value="general">General Knowledge</option>
-                <option value="sports">Sports</option>
-                <option value="science">Science</option>
+            <select id="theme" class="drop-down-menu">
+                <option value="geography">Geography</option>
+                <option value="popculture">Pop culture</option>
             </select>
             <br>
             <br>

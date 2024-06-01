@@ -22,9 +22,41 @@ body {
     flex-direction: column;
     align-items: stretch;
 }
+#question-area button{
+    margin: 20px 0;
+}
 #answers button {
     display: block;
     margin: 5px 0;
     width: 100%;
     background-color: #f3fbed;
+}
+.input-outer-div{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.input-field {
+    width: 100%;
+}
+#team-input button{
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgb(204, 241, 229);
+    border-style: none;
+    cursor: pointer;
+    color: black;
+}
+#theme-selection button{
+    width: 100%;
+    margin-left: 0;
+}
+#scoreboard{
+    background-color: #ffffff00;
+    margin-left: -40px;
+}
+#next-question{
+    width: 100%;
+    margin-left: 0;
 }
