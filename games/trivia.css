@@ -55,6 +55,9 @@ body {
 #scoreboard{
     background-color: #ffffff00;
     margin-left: -40px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
 }
 #next-question{
     width: 100%;
