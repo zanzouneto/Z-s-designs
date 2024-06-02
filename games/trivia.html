@@ -12,23 +12,21 @@
             </script>        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Game</title>
+    <title>Trivia</title>
     <link rel="stylesheet" href="games-general.css">
     <link rel="stylesheet" href="trivia.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 <body>
-
     <div class="container" id="intro-div">
         <div id="team-input">
             <h2>Teams:</h2>
             <div class="input-outer-div">
-                <input class="input-field" type="text" id="teamName" placeholder="Team Name" onkeydown="if(event.key === 'Enter') addTeam()">
+                <input class="input-field" type="text" id="teamName" placeholder="Team Name">
                 <button onclick="addTeam()">+</button>
             </div>
             <ul id="teamList"></ul>
         </div>
-    
         <div id="theme-selection">
             <h2>Theme:</h2>
             <div class="input-container">
@@ -47,7 +45,6 @@
             <button onclick="startGame()">Start Game</button>
         </div>
     </div>
-
     <div id="game-area">
         <div class="container">
             <div id="scoreboard"></div>
@@ -62,9 +59,6 @@
             <button id="next-question" style="display:none;" onclick="nextQuestion()">Next Question</button>
         </div>
     </div>
-
-
-
     <script src="trivia.js"></script>
 </body>
 </html>

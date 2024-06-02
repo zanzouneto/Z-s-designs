@@ -8,11 +8,22 @@ function addTeam() {
     const teamName = document.getElementById('teamName').value;
     if (teamName && !teams.includes(teamName)) {
         teams.push(teamName);
-        scores[teamName] = 0;
-        document.getElementById('teamList').innerHTML += `<li>${teamName}</li>`;
+        scores[teamName] = 0; // Initialize score for the team
+        updateTeamList(); // Update the team list
         document.getElementById('teamName').value = '';
     }
 }
+
+function updateTeamList() {
+    const teamList = document.getElementById('teamList');
+    teamList.innerHTML = teams.map(team => `<li>${team}</li>`).join('');
+}
+
+document.getElementById('teamName').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        addTeam();
+    }
+});
 
 function startGame() {
     const themeCheckboxes = document.querySelectorAll('#theme-selection input:checked');
@@ -230,7 +241,7 @@ let themes = {
         { question: "Which artist released the album '1989', featuring the hit single 'Shake It Off'?", answers: ["Taylor Swift", "Ariana Grande", "Katy Perry", "Selena Gomez"], correct: 0 },
         { question: "Which film features a young boy named Kevin who is accidentally left behind by his family during Christmas?", answers: ["Home Alone", "Elf", "The Santa Clause", "A Christmas Story"], correct: 0 },
         { question: "Who played the character of Batman in 'The Dark Knight' trilogy?", answers: ["Christian Bale", "Michael Keaton", "Ben Affleck", "George Clooney"], correct: 0 },
-        { question: "Which animated film features a robot named WALL-E?", answers: ["Finding Nemo", "The Incredibles", "Ratatouille", "WALL-E"], correct: 3 }    
+        { question: "Which animated film features a robot named WALL-E?", answers: ["Finding Nemo", "The Incredibles", "Ratatouille", "WALL-E"], correct: 3 },    
         { question: "What is the real name of the rapper Eminem?", answers: ["Curtis Jackson", "Calvin Broadus", "Marshall Mathers", "Shawn Carter"], correct: 2 },
         { question: "In which movie did Heath Ledger play the Joker?", answers: ["Batman Begins", "The Dark Knight", "The Dark Knight Rises", "Batman v Superman"], correct: 1 },
         { question: "Which actor voices the character of Groot in the Marvel Cinematic Universe?", answers: ["Bradley Cooper", "Vin Diesel", "Chris Pratt", "Dave Bautista"], correct: 1 },
