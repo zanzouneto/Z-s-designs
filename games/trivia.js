@@ -8,8 +8,8 @@ function addTeam() {
     const teamName = document.getElementById('teamName').value;
     if (teamName && !teams.includes(teamName)) {
         teams.push(teamName);
-        scores[teamName] = 0; // Initialize score for the team
-        updateTeamList(); // Update the team list
+        scores[teamName] = 0; 
+        updateTeamList(); 
         document.getElementById('teamName').value = '';
     }
 }
@@ -68,12 +68,11 @@ function displayQuestion() {
 }
 
 function selectAnswer(index) {
-    // Handle answer selection logic
 }
 
 function showAnswer() {
     const correctAnswerIndex = questions[currentQuestionIndex].correct;
-    document.getElementById('answers').children[correctAnswerIndex].style.backgroundColor = 'lightgreen';
+    document.getElementById('answers').children[correctAnswerIndex].style.backgroundColor = 'antiquewhite';
     displayTeamsCorrect();
 }
 
@@ -120,7 +119,6 @@ function updateScoreboard() {
     }
 }
 
-// Shuffle the questions array to mix themes
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
