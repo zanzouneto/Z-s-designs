@@ -84,7 +84,7 @@ function displayTeamsCorrect() {
     const teamsCorrectDiv = document.getElementById('teams-correct');
     teamsCorrectDiv.innerHTML = '<h3>Who got it right?</h3>';
     teams.forEach(team => {
-        teamsCorrectDiv.innerHTML += `<label><input type="checkbox" value="${team}"> ${team}</label><br>`;
+        teamsCorrectDiv.innerHTML += `<div class="team-container"><label><input type="checkbox" value="${team}"> ${team}</label></div>`;
     });
     document.getElementById('next-question').style.display = 'block';
     teamsCorrectDiv.style.display = 'block';
@@ -119,7 +119,7 @@ function updateScoreboard() {
     const scoreboard = document.getElementById('scoreboard');
     scoreboard.innerHTML = '';
     for (let team in scores) {
-        scoreboard.innerHTML += `<p>${team}: ${scores[team]}</p>`;
+        scoreboard.innerHTML += `<p><u>${team}:</u> ${scores[team]}</p>`;
     }
 }
 
