@@ -593,7 +593,7 @@ let themes = {
         { question: "Which brand uses the logo of three stripes?", answers: ["Adidas", "Nike", "Puma", "Reebok"], correct: 3 },
         { question: "Which company uses the slogan 'The happiest place on Earth'?", answers: ["Disneyland", "Universal Studios", "Six Flags", "Legoland"], correct: 0 },
         { question: "Which company uses the slogan 'Think Different'?", answers: ["Apple", "Microsoft", "IBM", "Google"], correct: 2 },
-        { question: "Which brand uses the logo of a red and white target?", answers: ["Target", "Walmart", "Kmart", "Costco"], correct: 0 },
+        { question: "Which brand uses the logo of a red and white bullseye?", answers: ["Target", "Walmart", "Kmart", "Costco"], correct: 0 },
         { question: "Which company uses the slogan 'The best a man can get'?", answers: ["Gillette", "Schick", "Bic", "Dollar Shave Club"], correct: 3 },
         { question: "Which brand uses the logo of a green and white mermaid?", answers: ["Starbucks", "Costa Coffee", "Dunkin' Donuts", "Tim Hortons"], correct: 1 },
         { question: "Which company uses the slogan 'Because you're worth it'?", answers: ["L'Oréal", "Maybelline", "Revlon", "CoverGirl"], correct: 0 },
