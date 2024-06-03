@@ -62,18 +62,22 @@ function displayQuestion() {
     question.answers.forEach((answer, index) => {
         answersDiv.innerHTML += `<button onclick="selectAnswer(${index})">${answer}</button>`;
     });
+
+    document.getElementById('show-answer').style.display = 'block'; // Show the "Show Answer" button
     document.getElementById('next-question').style.display = 'none';
     document.getElementById('teams-correct').style.display = 'none';
     resetAnswerColors();
 }
 
 function selectAnswer(index) {
+    // Add functionality if needed
 }
 
 function showAnswer() {
     const correctAnswerIndex = questions[currentQuestionIndex].correct;
     document.getElementById('answers').children[correctAnswerIndex].style.backgroundColor = 'antiquewhite';
     displayTeamsCorrect();
+    document.getElementById('show-answer').style.display = 'none'; // Hide the "Show Answer" button
 }
 
 function displayTeamsCorrect() {
