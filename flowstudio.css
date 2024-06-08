@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Yeseva+One&display=swap');
+:root {
+    --main-yellow: #d7ff00;
+    --main-non: #ff000000; 
+    --main-gray: #cdc9c5; 
+    --main-black: #262626;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    --font-family-headers: 'Yeseva One', cursive;
+    --font-family-body: 'Josefin Sans', sans-serif;
+    --font-extrabold: 800;
+    --font-bold: 700;
+    --font-medium: 500;
+    --font-regular: 400;
+    /* --font-size-huge:;
+    --font-size-xl:;
+    --font-size-l:;
+    --font-size-m:;
+    --font-size-s:;
+    --font-size-xs:; */
+}
+html{
+    scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-family-headers);
+}
+::selection {
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+}
+.cursor {
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-yellow);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; 
+    border: 1px solid var(--main-black);
+    transition: 0.3s ease;
+    z-index: 1001;
+}
+.cursor.hover {
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-non);
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-family-headers);
+}
+button{
+    background-color: var(--main-non);
+    border: 0px;
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    font-family: var(--font-family-headers);
+    border-radius: 9999px;
+    padding: 10px 30px;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+/* highlight */
+.highlight {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.02em; 
+}
+.highlight::before {
+    content: '';
+    position: absolute;
+    bottom: 0.05em; 
+    left: 0.2em;
+    width: calc(100% + 0.2em);
+    height: 0.6em; 
+    background-color: var(--main-yellow); 
+    z-index: -1; 
+    transition: width 0.5s ease;
+}
+.highlight:hover::before {
+    width: 0;
+    transition: width 0s;
+    animation: grow 0.5s ease forwards;
+}
+@keyframes grow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+body{
+    background-color: var(--main-gray);
+    margin: 20px;
+    font-family: var(--font-family-body);
+    font-size: 1.5vw;
+}
+.logo{
+    font-size: 1.5vw;
+    z-index: 20;
+}
+section{
+    margin: 150px 0;
+}
+.nav{
+    margin: 0 -20px;
+    padding: 40px;
+    border-bottom: 1px solid var(--main-black) ;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-inner-div{
+    display: flex;
+    gap: 30px;
+    margin-top: -6px;
+}
+.nav-link{
+    color: var(--main-black);
+    transition: 0.3s ease;
+}
+
+.floating-nav{
+    background-color: var(--main-black);
+    color: var(--main-gray);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    width: fit-content;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    animation: dropIn 1s ease forwards;
+}
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-50%, 10px);
+    }
+    80% {
+        transform: translate(-50%, -5px);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+.floating-nav a{
+    background-color: #8e8e8e66;
+    color: var(--main-yellow);
+    padding: 10px 20px 5px 20px;
+    border-radius: 20px;
+    transition: transform 0.6s ease;
+    font-size: 20px;
+}
+.floating-nav a:hover{
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+}
+.floating-nav .cta{
+    background-color: var(--main-yellow);
+    color: var(--main-black);
+}
+.floating-nav .cta:hover{
+    background-color: var(--main-non);
+    color: var(--main-yellow);
+}
+.nav-link:hover{
+    color: var(--main-yellow);
+}
+.cta{
+    background-color: var(--main-yellow);
+    transition: 0.3s ease;
+    font-size: 3vw;
+}
+.cta.sub{
+    font-size: 1vw;
+}
+.cta:hover{
+    background-color: var(--main-black);
+    color: var(--main-yellow);
+}
+/* hero */
+.heroh1{
+    font-size: 5vw;
+    text-align: center;
+}
+.hero{
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+.hero-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+.hero h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    margin: 0;
+    margin-left: auto;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: var(--font-extrabold);
+    line-height: 5.5vw;
+}
+#typing-cursor {
+    display: inline-block;
+    font-weight: var(--font-bold);
+    animation: blink 0.7s steps(1) infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.hero-div p{
+    font-size: 1vw;
+    line-height: 1.1vw;
+    margin: 10px;
+}
+.low-caption{
+    margin-top: 50px;
+    font-size: large;
+    line-height: 150%;
+}
+.note{
+    font-size: 12px;
+}
+.center{
+    display: flex; 
+    justify-content: center;
+}
+.split{
+    display: flex;
+}
+.box{
+    max-width: 250px;
+    font-size: 1.4em;
+}
+.boxes{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* gallery */
+.work-container-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;     
+    margin-left: -20px;
+}
+.work-container {
+    display: flex;
+    width: max-content;
+    transition: transform 0.1s linear;
+    will-change: transform; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */  
+    padding: 10px 0;
+    gap: 30px;
+}
+.work-container:hover {
+    animation-duration: 20s; 
+}
+.work-cover{
+    border-radius: 10px; 
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s ease;
+}
+.work-cover:hover{
+    box-shadow: var(--box-shadow);
+    scale: 1.05;
+}
+.work-container::-webkit-scrollbar {
+    display: none;
+}
+  
+/* how */
+.number-container {
+    position: relative;
+    display: inline-block;
+}
+.circle-bg{
+    background-color: var(--main-yellow);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--main-black);
+    position: absolute;
+    top: 60%; 
+    left: -20px; 
+    transform: translateY(-50%); 
+    z-index: -1; 
+}
+.step-box{
+    max-width: 500px;
+}
+/* faq */
+.faq-container{
+    background-color: var(--main-black);
+    color: var(--main-gray);
+    padding: 50px; 
+    border-radius: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+.faq {
+    /* border-bottom: 1px solid #ccc; */
+    padding: 10px 0;
+}
+.faq-container h2{
+    color: var(--main-yellow);
+    margin: auto;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.answer {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    margin: 0 40px;
+    line-height: 150%;
+}
+.answer.show {
+    display: block;
+    max-height: 200px; /* Adjust height based on your content */
+    animation: slideDown 2s ease-out;
+}
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 200px; /* Adjust height based on your content */
+    }
+}
+.plus {
+    font-size: xx-large;
+    line-height: 0%;
+    transition: transform 0.3s;
+    color: var(--main-yellow);
+}
+
+/* tabel */
+thead th{
+    font-weight: var(--font-bold);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f220;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f235;
+}
+tr:hover {
+    border: 2px solid var(--main-yellow);
+}
+
+/* subscriptions */
+.subscriptions{
+    display: flex;
+}
+.subscription{
+    border: 1px solid var(--main-black);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: var(--box-shadow);
+}
+.subscription .cta{
+    display: none;
+    opacity: 0.1;
+    transition: transform 0.6s ease, opacity 0.3s ease;
+}
+.subscription h2{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.subscription:hover .cta {
+    display: block;
+    opacity: 1;
+    top: 0;
+    transform: translateY(-5px);
+}
+.subscription:hover {
+    transform: translateY(-5px);
+}
