@@ -1,0 +1,491 @@
+{
+  "_help": "Project pages are generated from this file on every deploy (scripts/build-projects.mjs). Order here = 'Next project' order. Images live in /assets. Project fields: slug, title, pageTitle, description, client (optional), year (optional), liveUrl (optional), hero, contribution, blocks. Block fields: caption (text or list of lines; first line = heading), image | images (dark panel) | youtube (video id), size (w50|w60|w70|w80|w90), align (left|right), rounded (true).",
+  "projects": [
+    {
+      "slug": "Leonardite",
+      "title": "Leonardite",
+      "pageTitle": "AAZ Leonardite project",
+      "description": "Web design and logo design for AAZ Leonardite, a fertilizer company.",
+      "hero": {
+        "image": "AAZ web preview-min.png"
+      },
+      "contribution": [
+        "Web Design",
+        "Logo Design"
+      ],
+      "blocks": [
+        {
+          "image": "leo 5.png",
+          "size": "w90"
+        },
+        {
+          "image": "leo 3.png",
+          "size": "w80",
+          "align": "right"
+        },
+        {
+          "image": "leo 4.png",
+          "size": "w80",
+          "align": "right"
+        },
+        {
+          "image": "leo 6.jpeg",
+          "rounded": true
+        },
+        {
+          "image": "leo 7.jpg",
+          "rounded": true
+        },
+        {
+          "image": "leo 8.jpeg",
+          "rounded": true
+        }
+      ]
+    },
+    {
+      "slug": "lift99-dao",
+      "title": "LIFT99 DAO",
+      "pageTitle": "LIFT99 DAO project",
+      "description": "Web design and Webflow development for LIFT99's Web3 DAO project.",
+      "liveUrl": "https://lift99-dao.webflow.io/",
+      "hero": {
+        "image": "dao 1.png"
+      },
+      "contribution": [
+        "Web Design",
+        "Webflow Development"
+      ],
+      "blocks": [
+        {
+          "image": "dao 2.png",
+          "size": "w90"
+        },
+        {
+          "caption": "Interactive menu design",
+          "youtube": "rrsV2M07kRY"
+        },
+        {
+          "image": "dao 3.png"
+        }
+      ]
+    },
+    {
+      "slug": "lift99-hr",
+      "title": "LIFT99 HR",
+      "pageTitle": "LIFT99 HR project",
+      "description": "Web design, Webflow development and product design for LIFT99's HR platform.",
+      "liveUrl": "https://lift99-hr.webflow.io/",
+      "hero": {
+        "image": "hr 1.png"
+      },
+      "contribution": [
+        "Web Design",
+        "Webflow Development",
+        "Product Design"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Super duper filtering system",
+            "Company portal",
+            "Airtable integration",
+            "User management systems"
+          ],
+          "image": "hr 2.png",
+          "size": "w90"
+        },
+        {
+          "caption": "Buzz feed style quizzes with a custom calculator",
+          "youtube": "x5ruwQcsXeU"
+        },
+        {
+          "caption": "Extensive CMS",
+          "image": "hr 3.png"
+        },
+        {
+          "caption": "Designed for all screens",
+          "image": "hr 4.png"
+        }
+      ]
+    },
+    {
+      "slug": "mission-for-ukraine",
+      "title": "M4U",
+      "pageTitle": "Mission for Ukraine project",
+      "description": "Webflow development, web design and logo redesign for Mission for Ukraine, a non-profit organisation.",
+      "liveUrl": "https://www.missionforukraine.org/",
+      "hero": {
+        "image": "m4u project 1.png",
+        "dark": true
+      },
+      "contribution": [
+        "Webflow Development",
+        "Web Design",
+        "Logo redesign",
+        "SEO"
+      ],
+      "blocks": [
+        {
+          "images": [
+            "m4u logo progress.png",
+            "m4u logo.png"
+          ]
+        },
+        {
+          "image": "m4u project 2.png"
+        },
+        {
+          "image": "m4u project 3.png"
+        },
+        {
+          "image": "m4u project 4.png"
+        }
+      ]
+    },
+    {
+      "slug": "mouze",
+      "title": "MOUZE",
+      "pageTitle": "MOUZE project",
+      "description": "Logo design and corporate identity for Mouze Magic Box, a kids' toy sharing service.",
+      "hero": {
+        "image": "mouze presentation 1.jpg"
+      },
+      "contribution": [
+        "Logo design",
+        "Corporate identity",
+        "Aliens design"
+      ],
+      "blocks": [
+        {
+          "image": "mouze presentation 2.jpg"
+        },
+        {
+          "image": "mouze presentation 3.jpg"
+        },
+        {
+          "image": "mouze presentation 4.jpg"
+        },
+        {
+          "image": "mouze presentation 5.jpg"
+        },
+        {
+          "image": "mouze presentation 6.jpg"
+        },
+        {
+          "image": "mouze presentation 7.jpg"
+        },
+        {
+          "image": "mouze presentation 8.jpg"
+        },
+        {
+          "image": "mouze presentation 9.jpg"
+        },
+        {
+          "image": "mouze presentation 10.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pilar-elias-art",
+      "title": "Pilar",
+      "pageTitle": "Pilar Elias Art project",
+      "description": "Web design and development for painter Pilar Elias.",
+      "liveUrl": "https://pilar-elias-art.vercel.app/",
+      "hero": {
+        "image": "pilar 1.png"
+      },
+      "contribution": [
+        "Web Development",
+        "Web Design"
+      ],
+      "blocks": [
+        {
+          "image": "pilar 2.png"
+        },
+        {
+          "image": "pilar 3.png"
+        },
+        {
+          "image": "pilar 4.png"
+        }
+      ]
+    },
+    {
+      "slug": "sudoculus",
+      "title": "Sudoculus",
+      "pageTitle": "Sudoculus project",
+      "description": "App design, logo and icon design for Sudoculus, a math-based game.",
+      "hero": {
+        "image": "sudoculus 1.png",
+        "size": "w50"
+      },
+      "contribution": [
+        "App Design",
+        "Logo Design",
+        "Icon design"
+      ],
+      "blocks": [
+        {
+          "image": "sudoculus 2.png"
+        },
+        {
+          "image": "sudoculus 3.png",
+          "size": "w80"
+        },
+        {
+          "image": "sudoculus 4.png"
+        },
+        {
+          "image": "sudoculus 5.png",
+          "size": "w70"
+        }
+      ]
+    },
+    {
+      "slug": "ua911",
+      "title": "UA 911",
+      "pageTitle": "UA 911 project",
+      "description": "Web design and development for UA 911, a fundraising initiative in Ukraine.",
+      "liveUrl": "https://uabusiness911.webflow.io/",
+      "hero": {
+        "image": "911 1.png"
+      },
+      "contribution": [
+        "Web Design",
+        "Web Development"
+      ],
+      "blocks": [
+        {
+          "image": "911 2.png"
+        },
+        {
+          "image": "911 3.png"
+        },
+        {
+          "image": "911 4.png"
+        }
+      ]
+    },
+    {
+      "slug": "zbuzz",
+      "title": "ZBUZZ",
+      "pageTitle": "ZBUZZ project",
+      "description": "Web design, Webflow development and SEO for ZBUZZ, an ecommerce shop.",
+      "liveUrl": "https://zbuzz.webflow.io/",
+      "hero": {
+        "image": "zbuzz 1.png"
+      },
+      "contribution": [
+        "Webflow Development",
+        "SEO",
+        "Web Design"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Super duper ecommerce capabilities",
+            "Customization options under each product"
+          ],
+          "image": "zbuzz 6.png"
+        },
+        {
+          "caption": [
+            "Full screen menu",
+            "Multi lingual"
+          ],
+          "image": "zbuzz 2.png"
+        },
+        {
+          "caption": "Popup link divs on pictures",
+          "image": "zbuzz 3.png",
+          "size": "w80",
+          "align": "left"
+        },
+        {
+          "caption": "Custom made b4 & after slider",
+          "image": "zbuzz 4.png",
+          "size": "w80",
+          "align": "right"
+        },
+        {
+          "caption": "Filters",
+          "image": "zbuzz 5.png"
+        },
+        {
+          "caption": "Navigation page URL at the top of the page",
+          "image": "zbuzz 7.png"
+        }
+      ]
+    },
+    {
+      "slug": "active-mode",
+      "title": "Active Mode",
+      "pageTitle": "Active Mode project",
+      "description": "App design with full set of icon design for Active Mode, a sport social media platform.",
+      "hero": {
+        "image": "am 1.png"
+      },
+      "contribution": [
+        "App Design",
+        "Logo Design",
+        "Icon design"
+      ],
+      "blocks": [
+        {
+          "image": "am 2.png"
+        },
+        {
+          "image": "am 3.png"
+        },
+        {
+          "image": "am 4.png"
+        },
+        {
+          "image": "am 5.png",
+          "size": "w50"
+        },
+        {
+          "image": "am 6.png",
+          "size": "w50"
+        },
+        {
+          "image": "am 7.png",
+          "size": "w50",
+          "align": "left"
+        },
+        {
+          "image": "am 8.png",
+          "size": "w70"
+        }
+      ]
+    },
+    {
+      "slug": "arnaud-photography-portfolio",
+      "title": "Arnaud",
+      "pageTitle": "Arnaud De Decker photography portfolio",
+      "description": "Webflow development for photographer Arnaud De Decker's portfolio website.",
+      "liveUrl": "https://www.arnauddedecker.com/",
+      "hero": {
+        "image": "Arnaud.jpg"
+      },
+      "contribution": [
+        "Webflow Development",
+        "Webflow template adaptation"
+      ],
+      "blocks": [
+        {
+          "youtube": "d7YAF_hRJsE"
+        },
+        {
+          "image": "arnaud 1.png"
+        },
+        {
+          "image": "arnaud 2.png"
+        },
+        {
+          "image": "arnaud 3.png"
+        },
+        {
+          "image": "arnaud 4.png"
+        }
+      ]
+    },
+    {
+      "slug": "artbay",
+      "title": "ArtBay",
+      "pageTitle": "ArtBay of Scandinavia project",
+      "description": "Web design, mug design, logo redesign and business cards for an art collector.",
+      "hero": {
+        "image": "artbay 1.png"
+      },
+      "contribution": [
+        "Web Design",
+        "Mug Design",
+        "Logo redesign",
+        "Business Cards"
+      ],
+      "blocks": [
+        {
+          "image": "artbay 2.png",
+          "size": "w90"
+        },
+        {
+          "image": "artbay 3.png",
+          "size": "w80",
+          "align": "right"
+        },
+        {
+          "image": "artbay 4.png",
+          "size": "w80",
+          "align": "right"
+        },
+        {
+          "image": "artbay 5.png",
+          "rounded": true
+        },
+        {
+          "image": "artbay 6.png",
+          "size": "w60",
+          "rounded": true
+        }
+      ]
+    },
+    {
+      "slug": "coaching",
+      "title": "Coaching",
+      "pageTitle": "Coaches for Ukraine project",
+      "description": "Webflow development and SEO for Coaches for Ukraine, a coaching project.",
+      "liveUrl": "https://www.coachesforukraine.com/",
+      "hero": {
+        "image": "coach 1.png"
+      },
+      "contribution": [
+        "Webflow Development",
+        "SEO"
+      ],
+      "blocks": [
+        {
+          "caption": "Tags & filters",
+          "image": "coach 2.png"
+        },
+        {
+          "caption": "Interactive design",
+          "image": "coach 3.png",
+          "size": "w60"
+        }
+      ]
+    },
+    {
+      "slug": "help99",
+      "title": "HELP99",
+      "pageTitle": "HELP99 project",
+      "description": "Webflow development, web maintenance and SEO for Help99, a non-profit initiative.",
+      "liveUrl": "https://www.help99.co/",
+      "hero": {
+        "image": "help99 1.png"
+      },
+      "contribution": [
+        "Webflow Development",
+        "Web maintenance",
+        "Partial webdesign",
+        "SEO",
+        "Webmaster"
+      ],
+      "blocks": [
+        {
+          "caption": "Complex payment options",
+          "image": "help99 2.png"
+        },
+        {
+          "caption": "Adaptive to all screens",
+          "image": "help99 3.png",
+          "size": "w60"
+        },
+        {
+          "caption": "Dark mode for our NFT collection",
+          "image": "help99 4.png"
+        }
+      ]
+    }
+  ]
+}

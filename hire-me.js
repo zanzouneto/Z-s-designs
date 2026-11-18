@@ -1,19 +1,22 @@
-function openCity(cityName,elmnt,bgcolor,color) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+// Contact page: "Email me" / "Book a consult" tabs.
+(function () {
+    'use strict';
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.hm-tab'));
+    function select(tab) {
+        tabs.forEach(function (t) {
+            var on = t === tab;
+            t.setAttribute('aria-selected', String(on));
+            t.tabIndex = on ? 0 : -1;
+            document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+        });
     }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].style.backgroundColor = "";
-      tablinks[i].style.color ="";
-    }
-    document.getElementById(cityName).style.display = "block";
-    elmnt.style.backgroundColor = bgcolor;
-    elmnt.style.color = color;
-  
-}
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-  
+    tabs.forEach(function (t, i) {
+        t.addEventListener('click', function () { select(t); });
+        t.addEventListener('keydown', function (e) {
+            if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+            var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+            select(next); next.focus();
+        });
+    });
+    if (location.hash === '#book') select(tabs[1]);
+})();

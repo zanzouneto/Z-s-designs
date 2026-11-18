@@ -1,0 +1,812 @@
+{
+ "themes": [
+  {
+   "id": "general",
+   "label": "General",
+   "default": true,
+   "items": [
+    [
+     "Be able to fly",
+     "Be invisible whenever you want"
+    ],
+    [
+     "Always be 10 minutes late",
+     "Always be 20 minutes early"
+    ],
+    [
+     "Live in the city",
+     "Live in the countryside"
+    ],
+    [
+     "Have a rewind button for your life",
+     "Have a pause button for your life"
+    ],
+    [
+     "Travel 100 years into the past",
+     "Travel 100 years into the future"
+    ],
+    [
+     "Never use social media again",
+     "Never watch a movie or series again"
+    ],
+    [
+     "Speak every language in the world",
+     "Play every musical instrument"
+    ],
+    [
+     "Have summer all year",
+     "Have winter all year"
+    ],
+    [
+     "Eat only sweet food forever",
+     "Eat only salty food forever"
+    ],
+    [
+     "Live by the sea",
+     "Live in the mountains"
+    ],
+    [
+     "Know every secret of your friends",
+     "Have your friends know all of yours"
+    ],
+    [
+     "Be famous",
+     "Be rich but unknown"
+    ],
+    [
+     "Have unlimited free flights",
+     "Have unlimited free food"
+    ],
+    [
+     "Read minds",
+     "See 10 seconds into the future"
+    ],
+    [
+     "Never feel cold again",
+     "Never feel tired again"
+    ],
+    [
+     "Have a personal chef",
+     "Have a personal driver"
+    ],
+    [
+     "Lose your phone for a week",
+     "Lose your wallet for a week"
+    ],
+    [
+     "Be the funniest person in the room",
+     "Be the smartest person in the room"
+    ],
+    [
+     "Teleport anywhere",
+     "Talk to animals"
+    ],
+    [
+     "Give up coffee forever",
+     "Give up chocolate forever"
+    ],
+    [
+     "Have a pet dragon",
+     "Have a pet unicorn"
+    ],
+    [
+     "Win the lottery",
+     "Live twice as long"
+    ],
+    [
+     "Work from home forever",
+     "Work from a beach café forever"
+    ],
+    [
+     "Only be able to whisper",
+     "Only be able to shout"
+    ],
+    [
+     "Never need sleep",
+     "Never need to eat"
+    ],
+    [
+     "Visit space",
+     "Visit the deepest part of the ocean"
+    ],
+    [
+     "Be a famous singer",
+     "Be a famous actor"
+    ],
+    [
+     "Have free Wi-Fi everywhere",
+     "Have free coffee everywhere"
+    ],
+    [
+     "Relive your best day",
+     "Skip your worst day"
+    ],
+    [
+     "Be stuck in an elevator with your ex",
+     "Be stuck in an elevator with your boss"
+    ],
+    [
+     "Always have to say what you think",
+     "Never be able to speak again"
+    ],
+    [
+     "Have a photographic memory",
+     "Be able to forget anything you want"
+    ],
+    [
+     "Live without music",
+     "Live without movies"
+    ],
+    [
+     "Be the best player on a losing team",
+     "Be the worst player on a winning team"
+    ],
+    [
+     "Have a house with a pool",
+     "Have a house with a rooftop terrace"
+    ],
+    [
+     "Only eat breakfast food",
+     "Only eat dinner food"
+    ],
+    [
+     "Be able to breathe underwater",
+     "Be able to see in the dark"
+    ],
+    [
+     "Have one real best friend",
+     "Have a hundred good friends"
+    ],
+    [
+     "Go on a road trip",
+     "Go on a cruise"
+    ],
+    [
+     "Always know when someone is lying",
+     "Always get away with lying"
+    ],
+    [
+     "Be a kid again for a year",
+     "Fast-forward five years"
+    ],
+    [
+     "Live in a treehouse",
+     "Live in a houseboat"
+    ],
+    [
+     "Have a robot that cleans",
+     "Have a robot that cooks"
+    ],
+    [
+     "Meet your favourite celebrity",
+     "Meet your great-great-grandparents"
+    ],
+    [
+     "Have unlimited battery on your phone",
+     "Have unlimited storage on your phone"
+    ]
+   ]
+  },
+  {
+   "id": "funny",
+   "label": "Funny",
+   "default": true,
+   "items": [
+    [
+     "Have permanent clown makeup",
+     "A permanent red nose"
+    ],
+    [
+     "Have a personal theme song that plays whenever you enter a room",
+     "Have a spotlight follow you everywhere"
+    ],
+    [
+     "Only be able to communicate through interpretive dance",
+     "Have everything you say be in rhyme"
+    ],
+    [
+     "Have to always wear a full clown costume",
+     "A tutu everywhere you go"
+    ],
+    [
+     "Have a pet dinosaur",
+     "A pet dragon"
+    ],
+    [
+     "Only be able to speak in puns",
+     "Have to wear a chicken suit every Friday"
+    ],
+    [
+     "Be able to talk to animals but they all gossip about you",
+     "Be able to speak all foreign languages but none of them fluently"
+    ],
+    [
+     "Have a magical unicorn horn",
+     "Fairy wings"
+    ],
+    [
+     "Have a bottomless bowl of guacamole",
+     "A lifetime supply of tacos"
+    ],
+    [
+     "Have to eat a stick of butter every morning",
+     "A bowl of mayonnaise every night"
+    ],
+    [
+     "Have spaghetti for hair",
+     "Sweat maple syrup"
+    ],
+    [
+     "Have everything you touch turn into glitter",
+     "Have to always wear a beekeeper suit"
+    ],
+    [
+     "Have a constantly itchy nose",
+     "Constantly sticky fingers"
+    ],
+    [
+     "Have to wear clown shoes wherever you go",
+     "A nose that honks every time you speak"
+    ],
+    [
+     "Have to wear a mustache made of tape",
+     "Eyebrows made of candy"
+    ],
+    [
+     "Have a permanent unibrow",
+     "A permanent unibrow"
+    ],
+    [
+     "Sneeze confetti",
+     "Burp glitter"
+    ],
+    [
+     "Have to hop everywhere you go",
+     "Crawl like a baby"
+    ],
+    [
+     "Have a tiny elephant as a pet",
+     "A giant hamster"
+    ],
+    [
+     "Have to wear a beard of bees",
+     "A crown of thorns"
+    ],
+    [
+     "Have to wear a tutu to work every day",
+     "A bathing suit in the snow"
+    ],
+    [
+     "Have to walk backward everywhere you go",
+     "Only be able to skip"
+    ],
+    [
+     "Have a talking parrot on your shoulder at all times repeating everything you say",
+     "A monkey that follows you around and mimics your every move"
+    ],
+    [
+     "Have to wear a tutu to the grocery store",
+     "A wedding dress to the gym"
+    ],
+    [
+     "Have to wear a chicken suit every time it rains",
+     "A swimsuit in the snow"
+    ],
+    [
+     "Have a personal theme song that plays every time you enter a room",
+     "A laugh track that plays after everything you say"
+    ],
+    [
+     "Have to speak in rhyme for the rest of your life",
+     "Only be able to communicate through interpretive dance"
+    ],
+    [
+     "Have a permanent clown nose",
+     "A permanent clown wig"
+    ],
+    [
+     "Have a pet dinosaur that's always cranky",
+     "A pet dragon that's afraid of heights"
+    ],
+    [
+     "Have to wear a tutu to work every day",
+     "A superhero costume under your clothes"
+    ],
+    [
+     "Have to eat a bowl of live worms",
+     "A jar of expired mayonnaise"
+    ],
+    [
+     "Have to always wear a full clown costume",
+     "A full-body chicken suit"
+    ],
+    [
+     "Have a bottomless bowl of guacamole",
+     "An endless supply of tacos"
+    ],
+    [
+     "Have spaghetti for hair",
+     "Sweat spaghetti sauce"
+    ],
+    [
+     "Have everything you touch turn into glitter",
+     "Have everything you say be in rhyme"
+    ],
+    [
+     "Have a magic wand that can only summon rubber chickens",
+     "A magic carpet that can only fly a foot off the ground"
+    ],
+    [
+     "Sneeze confetti",
+     "Burp bubbles"
+    ],
+    [
+     "Have a talking parrot on your shoulder that repeats everything you say",
+     "A monkey that mimics your every move"
+    ],
+    [
+     "Have a permanent unibrow",
+     "Permanent clown makeup"
+    ],
+    [
+     "Have to wear a clown nose that honks every time you speak",
+     "A tutu that lights up and plays music when you dance"
+    ]
+   ]
+  },
+  {
+   "id": "serious",
+   "label": "Deep",
+   "default": false,
+   "items": [
+    [
+     "Lose the ability to read",
+     "Lose the ability to speak"
+    ],
+    [
+     "Have a high-profile job with no family life",
+     "A low-profile job with a happy family life"
+    ],
+    [
+     "Always speak your mind",
+     "Never speak again"
+    ],
+    [
+     "Have the power to heal others",
+     "The power to heal yourself"
+    ],
+    [
+     "Know the date of your death",
+     "The cause of your death"
+    ],
+    [
+     "Be able to see one year into the future",
+     "Change one decision from your past"
+    ],
+    [
+     "Live forever but be forgotten by everyone",
+     "Live a normal lifespan with lasting memories"
+    ],
+    [
+     "Have the ability to change the past",
+     "See into the future"
+    ],
+    [
+     "Be able to control your dreams",
+     "Be able to control time"
+    ],
+    [
+     "Have the power to eliminate hunger and disease worldwide",
+     "Bring peace to all nations"
+    ],
+    [
+     "Know the history of every object you touched",
+     "Be able to talk to animals"
+    ],
+    [
+     "Have the ability to change your appearance at will",
+     "Teleport anywhere in the world"
+    ],
+    [
+     "Be able to erase your memories",
+     "View the memories of others"
+    ],
+    [
+     "Always be able to tell when someone is lying",
+     "Never be able to lie yourself"
+    ],
+    [
+     "Have the ability to see the world in black and white",
+     "See everything in slow motion"
+    ],
+    [
+     "Have the power to stop time",
+     "Skip it forward"
+    ],
+    [
+     "Be able to read minds",
+     "Accurately predict the future"
+    ],
+    [
+     "Have unlimited knowledge",
+     "Unlimited wealth"
+    ],
+    [
+     "Be able to control the elements (fire, water, air, earth)",
+     "Control animals"
+    ],
+    [
+     "Be able to speak all languages",
+     "Communicate with machines"
+    ],
+    [
+     "Be able to experience the beginning of the universe",
+     "The end of the universe"
+    ],
+    [
+     "Be able to cure all illnesses but shorten your lifespan",
+     "Live a long life without the ability to cure any illnesses"
+    ],
+    [
+     "Have the power to bring someone back to life",
+     "Prevent a disaster from happening"
+    ],
+    [
+     "Be able to teleport anywhere",
+     "Be able to instantly learn any skill"
+    ],
+    [
+     "Have perfect health for the rest of your life",
+     "A guaranteed peaceful death"
+    ],
+    [
+     "Have the ability to control people's emotions",
+     "Their actions"
+    ],
+    [
+     "Have the power to change the past",
+     "Control the future"
+    ],
+    [
+     "Be able to speak with the dead",
+     "See into the future"
+    ],
+    [
+     "Have the ability to never feel fear",
+     "Never feel sadness"
+    ],
+    [
+     "Be able to control the weather",
+     "The outcome of sporting events"
+    ],
+    [
+     "Have the ability to change the outcome of any decision you've made",
+     "Be able to see the outcome of any decision before you make it"
+    ],
+    [
+     "Have the power to bring peace to the world",
+     "End world hunger"
+    ],
+    [
+     "Have the ability to fly",
+     "Breathe underwater"
+    ],
+    [
+     "Be able to travel to any point in time",
+     "Any place in the world"
+    ],
+    [
+     "Have the ability to change your appearance at will",
+     "Be able to teleport short distances"
+    ],
+    [
+     "Be able to communicate with animals",
+     "Speak all foreign languages"
+    ],
+    [
+     "Have the power to heal any wound",
+     "Never feel physical pain"
+    ],
+    [
+     "Have the ability to control minds",
+     "Manipulate matter"
+    ],
+    [
+     "Be able to travel to parallel universes",
+     "Have unlimited wealth in this one"
+    ],
+    [
+     "Have the ability to see in complete darkness",
+     "See miles away like binoculars"
+    ],
+    [
+     "Have the power to bring back extinct species",
+     "Prevent future species from going extinct"
+    ],
+    [
+     "Have the ability to see the world in slow motion",
+     "Speed up time at will"
+    ],
+    [
+     "Have the power to control fire",
+     "Water"
+    ],
+    [
+     "Have the ability to fly at the speed of sound",
+     "Be able to breathe underwater"
+    ],
+    [
+     "Be able to talk to animals",
+     "Speak all human languages"
+    ],
+    [
+     "Have the ability to teleport anywhere",
+     "Be able to read minds"
+    ],
+    [
+     "Have the power to change the past",
+     "See the future"
+    ],
+    [
+     "Have the ability to change your appearance at will",
+     "Be able to teleport"
+    ],
+    [
+     "Be able to control the weather",
+     "Control luck"
+    ],
+    [
+     "Have the power to heal any wound",
+     "Heal any illness"
+    ],
+    [
+     "Have the ability to travel through time",
+     "Space"
+    ],
+    [
+     "Have the power to control minds",
+     "Manipulate time"
+    ],
+    [
+     "Be able to control electricity",
+     "Magnetism"
+    ],
+    [
+     "Have the ability to fly",
+     "Be able to turn invisible"
+    ],
+    [
+     "Have the power to control animals",
+     "Control the elements (fire, water, air, earth)"
+    ],
+    [
+     "Have the ability to communicate with plants",
+     "With the dead"
+    ],
+    [
+     "Have the power to stop time",
+     "Rewind it"
+    ],
+    [
+     "Have the ability to control the outcome of sporting events",
+     "Political elections"
+    ],
+    [
+     "Have the ability to see into the future",
+     "Change the past"
+    ],
+    [
+     "Have the power to control minds",
+     "Control the weather"
+    ],
+    [
+     "Have the ability to teleport anywhere",
+     "Be able to fly"
+    ],
+    [
+     "Be able to speak all languages",
+     "Have perfect knowledge of history"
+    ],
+    [
+     "Have the power to heal any wound",
+     "Bring peace to all conflicts"
+    ],
+    [
+     "Have the ability to change your appearance at will",
+     "Have unlimited wealth"
+    ],
+    [
+     "Have the power to control time",
+     "Space"
+    ],
+    [
+     "Have the ability to see in complete darkness",
+     "Have superhuman strength"
+    ],
+    [
+     "Have the power to control fire",
+     "Ice"
+    ],
+    [
+     "Have the ability to teleport anywhere",
+     "Be able to breathe underwater"
+    ],
+    [
+     "Have the power to control minds",
+     "Control the elements (fire, water, air, earth)"
+    ],
+    [
+     "Have the ability to communicate with animals",
+     "Speak all human languages"
+    ]
+   ]
+  },
+  {
+   "id": "spicy",
+   "label": "Spicy 🌶️",
+   "default": false,
+   "items": [
+    [
+     "Have your partner read your search history",
+     "Have them read your old messages"
+    ],
+    [
+     "Go on a blind date",
+     "Let your friends pick your date"
+    ],
+    [
+     "Kiss someone with bad breath",
+     "Kiss someone who is a terrible kisser"
+    ],
+    [
+     "Date someone who is too clingy",
+     "Date someone who never texts back"
+    ],
+    [
+     "Have your crush see you singing in the shower",
+     "Have them see your baby photos"
+    ],
+    [
+     "Get a love letter",
+     "Get a surprise date night"
+    ],
+    [
+     "Date someone much older",
+     "Date someone much younger"
+    ],
+    [
+     "Have a secret admirer",
+     "Be someone's secret admirer"
+    ],
+    [
+     "Accidentally like your ex's old photo",
+     "Accidentally text your crush 'I love you'"
+    ],
+    [
+     "Slow dance with your crush in front of everyone",
+     "Confess your feelings over text"
+    ],
+    [
+     "Have your first kiss in the rain",
+     "Have your first kiss on a rooftop at sunset"
+    ],
+    [
+     "Date someone who looks amazing but is boring",
+     "Date someone average-looking but hilarious"
+    ],
+    [
+     "Have your parents choose your partner",
+     "Have your best friend choose your partner"
+    ],
+    [
+     "Be in a long-distance relationship",
+     "Live with your partner after one month"
+    ],
+    [
+     "Go on a date to a fancy restaurant",
+     "Go on a date to a street-food market"
+    ],
+    [
+     "Get a hickey before a family dinner",
+     "Get caught flirting by your mum"
+    ],
+    [
+     "Have a partner who is jealous",
+     "Have a partner who doesn't care at all"
+    ],
+    [
+     "Send a flirty text to the wrong person",
+     "Have your flirty text read out loud"
+    ],
+    [
+     "Date your best friend's sibling",
+     "Date your sibling's best friend"
+    ],
+    [
+     "Marry for love and be broke",
+     "Marry for money and be bored"
+    ],
+    [
+     "Have your ex at your wedding",
+     "Have your partner's ex at your wedding"
+    ],
+    [
+     "Know what your partner really thinks of you",
+     "Never know and stay happy"
+    ],
+    [
+     "Be flirted with by a stranger",
+     "Be flirted with by a friend"
+    ],
+    [
+     "Wear matching outfits with your partner",
+     "Get matching tattoos with your partner"
+    ],
+    [
+     "Have a dance-off on a first date",
+     "Have a karaoke duet on a first date"
+    ],
+    [
+     "Be with someone who cooks amazingly",
+     "Be with someone who gives amazing massages"
+    ],
+    [
+     "Get back with an ex",
+     "Stay single for five years"
+    ],
+    [
+     "Find out your partner has a dating app",
+     "Find out they have a secret social account"
+    ],
+    [
+     "Get proposed to in public",
+     "Get proposed to in private"
+    ],
+    [
+     "Date someone with no sense of humour",
+     "Date someone who jokes about everything"
+    ],
+    [
+     "Be caught stalking your crush's profile",
+     "Be caught practising your kiss on a pillow"
+    ],
+    [
+     "Go skinny dipping at night",
+     "Go to a party in pyjamas"
+    ],
+    [
+     "Have a partner who sings to you every morning",
+     "Have one who writes you poems"
+    ],
+    [
+     "Spend a weekend in a cabin with your crush",
+     "Spend a weekend in Paris with your crush"
+    ],
+    [
+     "Kiss in a cinema",
+     "Kiss on a Ferris wheel"
+    ],
+    [
+     "Have your partner's family love you",
+     "Have your partner's friends love you"
+    ],
+    [
+     "Share one bed with a snorer",
+     "Share one blanket with a blanket thief"
+    ],
+    [
+     "Get a romantic surprise every week",
+     "Get one huge surprise every year"
+    ],
+    [
+     "Date a celebrity in secret",
+     "Date a regular person publicly"
+    ],
+    [
+     "Be the one who says 'I love you' first",
+     "Wait for them to say it first"
+    ]
+   ]
+  }
+ ]
+}

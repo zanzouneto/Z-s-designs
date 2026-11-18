@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-        
-            gtag('config', 'G-6YZQRLN0R4');
-        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeina Saade</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="elements.js"></script>
-    <header-links></header-links>
+    <title>Zeina Saade · Graphic &amp; web designer</title>
+    <meta name="description" content="Zeina Saade, graphic & web designer and Webflow developer. Portfolio, CV and online party games.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <nav-menu></nav-menu>
-    <div class="phone">
-        <a class="right" href="portfolio.html">PORTFOLIO<br>&<br>STUFF</a>
-        <a class="left" href="games.html">Games</a>
-    </div>
-    <div class="hover">
-        <div style="position: fixed;">
-            <div class="background" id="backgroundA"><p class="p-a">Games</p></div>
-            <div class="background" id="backgroundB"><p class="p-b">PORTFOLIO<br>&<br>STUFF</p></div>
-            <div id="custom-cursor"></div>
+<body data-no-bg data-hand>
+    <nav-menu variant="overlay"></nav-menu>
+    <main class="home" id="home">
+        <img class="home-photo is-games" src="/assets/zeina-bottomright.jpg" alt="Zeina pointing down to the left, toward Games">
+        <img class="home-photo is-port" src="/assets/zeina-topright.jpg" alt="Zeina pointing up to the right, toward Portfolio">
+        <img class="home-photo is-phone" src="/assets/zeina-background-phone.jpg" alt="Zeina pointing to Portfolio and Games">
+        <div class="home-shade top" aria-hidden="true"></div>
+        <div class="home-shade bottom" aria-hidden="true"></div>
+
+        <a class="home-side left" href="/games" tabindex="-1" aria-hidden="true"></a>
+        <a class="home-side right" href="/portfolio" tabindex="-1" aria-hidden="true"></a>
+
+        <div class="home-intro">
+            <span class="home-badge"><span class="dot" aria-hidden="true"></span>Open for new projects</span>
+            <h1>Graphic &amp; web designer and Webflow developer.</h1>
         </div>
-    </div>
+
+        <a class="home-label port" href="/portfolio">PORTFOLIO<br>&amp;<br>STUFF</a>
+        <a class="home-label games" href="/games">Games</a>
+        <p class="home-hint" aria-hidden="true">← move left or right →</p>
+    </main>
     <hire-me-component></hire-me-component>
-    <script src="index.js"></script>
-    <script src="navigation.js"></script>
+    <div id="hand-cursor" aria-hidden="true"></div>
+    <script src="/navigation.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>
- 

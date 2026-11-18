@@ -1,100 +1,54 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-body {
-    cursor: none;
-    background-color: rgb(28, 17, 17);
-} 
-#custom-cursor {
-    width: 90px;
-    height: 100px;
-    background-image: url('assets/pointer.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    pointer-events: none;
-    transition: transform 4s ease-out; /* This gives the fluid effect */
-    transform-origin: center;
-    z-index: 9999;
+/* Home: two comic photos that swap as you move left / right */
+html, body { height: 100%; }
+body { overflow: hidden; }
+.home { position: relative; width: 100%; height: 100vh; height: 100svh; min-height: 560px; overflow: hidden; background: var(--ink); }
+
+.home-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.35s ease; }
+.home-photo.is-port { opacity: 0; }
+.home-photo.is-phone { display: none; }
+.home-shade { position: absolute; left: 0; right: 0; pointer-events: none; z-index: 1; }
+.home-shade.top { top: 0; height: 200px; background: linear-gradient(180deg, rgba(13, 24, 32, 0.72), rgba(13, 24, 32, 0)); }
+.home-shade.bottom { bottom: 0; height: 240px; background: linear-gradient(0deg, rgba(13, 24, 32, 0.62), rgba(13, 24, 32, 0)); }
+
+.home-side { position: absolute; top: 0; bottom: 0; width: 50%; z-index: 2; cursor: pointer; }
+.home-side.left { left: 0; }
+.home-side.right { right: 0; }
+
+.home-intro { position: absolute; z-index: 3; top: 112px; left: 40px; max-width: 360px; display: flex; flex-direction: column; gap: 14px; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4); pointer-events: none; }
+.home-intro h1 { margin: 0; font-size: 20px; line-height: 1.4; font-weight: 500; }
+.home-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: rgba(13, 24, 32, 0.72); border: 1px solid rgba(243, 240, 232, 0.18); font-size: 13px; font-weight: 500; text-shadow: none; }
+.home-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.6); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.6); } 70% { box-shadow: 0 0 0 8px rgba(255, 204, 0, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); } }
+
+.home-label { position: absolute; z-index: 3; font-family: 'Micro', monospace; font-size: clamp(64px, 7.3vw, 112px); line-height: 0.86; color: var(--paper); text-decoration: none; text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45); transition: color 0.35s ease; }
+.home-label:hover, .home-label.on { color: var(--yellow); }
+.home-label.port { top: 112px; right: 40px; text-align: right; }
+.home-label.games { bottom: 40px; left: 40px; }
+.home-hint { position: absolute; z-index: 3; bottom: 48px; left: 50%; transform: translateX(-50%); margin: 0; font-size: 13px; letter-spacing: 0.06em; color: rgba(243, 240, 232, 0.82); white-space: nowrap; pointer-events: none; }
+
+/* phones and tablets: one photo, tap a label */
+@media (max-width: 1023px), (hover: none) {
+    .home-photo.is-games, .home-photo.is-port { display: none; }
+    .home-photo.is-phone { display: block; object-position: 42% 50%; }
+    .home-side, .home-hint { display: none; }
+    .home-label { font-size: clamp(48px, 13vw, 72px); }
+    .home-label.port { top: 92px; right: 20px; color: var(--yellow); }
+    .home-label.games { left: 20px; bottom: 32px; }
+    .home-intro { top: auto; left: 20px; right: 20px; bottom: 140px; gap: 10px; }
+    .home-intro h1 { font-size: 17px; max-width: 230px; }
 }
 
-.background {
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: opacity 0.3s;
-    align-items: flex-star;
-    justify-content: flex-end;
-}
-
-#backgroundA {
-    background-image: url('assets/zeina-bottomright.jpg');
-    background-size: cover;
-    opacity: 1;
-    align-items: flex-end;
-    justify-content: flex-start;
-    background-position: center;
-}
-.p-a{
-    font-size: 7vw;
-    line-height: 6vw;
-    color: white;
-    font-family: micro;
-    margin-left: 50px;
-}
-.p-b{
-    font-size: 7vw;
-    line-height: 6vw;
-    font-family: micro;
-    text-align: right;
-    color: white;
-    margin-right: 50px;
-}
-
-#backgroundB {
-    background-image: url('assets/zeina-topright.jpg');
-    background-size: cover;
-    opacity: 0;
-    background-position: center;
-}
-.hover{
-    display: none;
-}
-.phone{
-    position: relative;
-    background-image:url(assets/zeina-background-phone.jpg);
-    width: 100vw;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-}
-a{
-    position: fixed;
-    font-size: 40px;
-    color: aliceblue;
-    font-family: micro, sans-serif;
-    text-decoration: none;
-}
-.right{
-    text-align: end;
-    top: 20px;
-    right: 20px;
-}
-.left{
-    left: 10px;
-    bottom: 20px;
-}
-@media (min-width: 1024px) {
-    .phone{
-        display: none;
+/* the giant pixel hand that follows the mouse and grows when you move fast */
+#hand-cursor { display: none; }
+@media (hover: hover) and (pointer: fine) {
+    body[data-hand], body[data-hand] * { cursor: none !important; }
+    body[data-hand] a:hover, body[data-hand] button:hover { animation: none; }
+    body[data-hand] .zs-hire:hover { animation: zs-bob 3.2s ease-in-out infinite; }
+    #hand-cursor {
+        display: block; position: fixed; left: 0; top: 0; z-index: 10002; pointer-events: none;
+        width: 90px; height: 100px; background: url('/assets/pointer.png') no-repeat center / contain;
+        image-rendering: pixelated; transform-origin: 24% 3%; will-change: transform; opacity: 0; transition: opacity 0.2s ease;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
     }
-    .hover{
-        display: block;
-    }
+    #hand-cursor.on { opacity: 1; }
 }

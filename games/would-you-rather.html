@@ -1,95 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-6YZQRLN0R4');
-        </script>    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
     <meta charset="UTF-8">
-    <title>Would You Rather Party Game</title>
-    <link rel="stylesheet" href="would-you-rather.css">
-    <link rel="stylesheet" href="games-general.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0221">
+    <title>Would You Rather · Play online by ZS</title>
+    <meta name="description" content="Would You Rather party game in English and Arabic: take turns or play the drinking-game version.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/games/shared/games.css">
+    <script src="/games/shared/core.js"></script>
+    <style>
+        .wyr-opt { display: block; width: 100%; padding: 22px 18px; border-radius: 16px; font-size: clamp(19px, 4.6vw, 24px); font-weight: 700; line-height: 1.35; cursor: pointer; border: 2px solid transparent; transition: transform .15s, box-shadow .2s; }
+        .wyr-a { background: linear-gradient(135deg, rgba(255,42,109,.28), rgba(255,158,61,.18)); border-color: rgba(255,42,109,.6); }
+        .wyr-b { background: linear-gradient(135deg, rgba(5,217,232,.25), rgba(80,90,255,.18)); border-color: rgba(5,217,232,.6); }
+        .wyr-opt.picked { transform: scale(1.02); box-shadow: 0 0 26px rgba(255,255,255,.35); border-color: #fff; }
+        .wyr-or { display: block; margin: 12px auto; width: 56px; height: 56px; line-height: 56px; border-radius: 50%; background: var(--bg-1); border: 2px solid var(--yellow); color: var(--yellow); font: 700 18px/52px var(--display); text-align: center; }
+        #who { font: 700 20px/1.3 var(--display); color: var(--muted); margin-bottom: 14px; }
+        .flip { animation: pop .35s ease; }
+        @keyframes pop { from { opacity: 0; transform: translateY(10px) scale(.98); } to { opacity: 1; transform: none; } }
+    </style>
 </head>
 <body>
-    <div id="start-screen">
-        <div class="container">
-            <h2>Would You Rather</h2>
-        </div>
-        <div class="container" id="drinking-game-section">
-            <h2>Drinking Game Option</h2>
-            <p class="note">
-                In the non-drinking game, each player gets a unique question. <br>
-                In the drinking game, the same question is posed to all players.
-            </p>
-            <div class="two-buttons">
-                <label><input type="radio" name="game-type" value="drinking" onclick="setGameType('drinking')"> Drinking game</label>
-                <label><input type="radio" name="game-type" value="non-drinking" onclick="setGameType('non-drinking')"> Non-drinking game</label>
+    <header class="zs-top">
+        <a class="zs-back" href="/games" data-i18n="back">Games</a>
+        <h1 class="zs-title" data-i18n="wyr_title">Would You Rather</h1>
+        <button class="zs-lang" id="zs-lang" type="button">عربي</button>
+    </header>
+    <main class="zs-main">
+        <section class="screen" id="mode">
+            <div class="card">
+                <h2 data-i18n="wyr_mode">How do you want to play?</h2>
+                <div class="options">
+                    <button class="option" type="button" data-mode="classic"><b data-i18n="wyr_classic">Take turns</b><span class="muted" data-i18n="wyr_classic_d"></span></button>
+                    <button class="option" type="button" data-mode="group"><b data-i18n="wyr_group">Drinking game</b><span class="muted" data-i18n="wyr_group_d"></span></button>
+                </div>
             </div>
-        </div>
-        <div class="container" id="theme-section" style="display: none;">
-            <h2>Filter Themes</h2>
-            <div class="checkbox-container">
-                <label><input type="checkbox" id="general" value="general" checked> General</label>
-                <label><input type="checkbox" id="funny" value="funny" checked> Funny</label>
-                <label><input type="checkbox" id="serious" value="serious" checked> Serious</label>
-                <label><input type="checkbox" id="adults" value="adults" checked> Adults</label>
+        </section>
+        <section class="screen" id="setup" hidden>
+            <div class="card">
+                <h3 data-i18n="themes">Themes</h3>
+                <div class="chips" id="themes"></div>
+                <div id="players-block">
+                    <h3 data-i18n="players">Players</h3>
+                    <div class="field"><input class="input" id="player-input" maxlength="24" data-i18n-ph="playerName" autocomplete="off"><button class="btn btn-ghost btn-add" id="player-add" type="button" aria-label="Add">+</button></div>
+                    <ul class="names" id="player-list"></ul>
+                </div>
+                <div class="row" style="margin-top:20px"><button class="btn btn-ghost" id="change-mode" type="button" data-i18n="back2">Back</button><span class="spacer"></span><button class="btn btn-primary btn-lg" id="start" type="button" data-i18n="start">Start</button></div>
             </div>
-            <button onclick="continueToPlayerSection()">Continue</button>
-        </div>
-        <div class="container" id="player-section" style="display: none;">
-            <h2>Add Players</h2>
-            <div class="input-outer-div">
-                <input type="text" id="player-name" placeholder="Player name">
-                <button onclick="addPlayer()">+</button>
+        </section>
+        <section class="screen" id="game" hidden>
+            <div class="card play" id="qcard">
+                <div id="who"></div>
+                <button class="wyr-opt wyr-a" id="opt-a" type="button"></button>
+                <span class="wyr-or" data-i18n="or">OR</span>
+                <button class="wyr-opt wyr-b" id="opt-b" type="button"></button>
+                <p class="muted" id="group-hint" style="margin-top:16px" data-i18n="wyr_group_hint" hidden></p>
             </div>
-            <ul id="player-list"></ul>
-            <button onclick="startGame()">Start Game</button>
-        </div>
-    </div>
-    <div id="game-section" style="display: none;">
-        <div id="card">
-            <div class="container">
-                <p id="player" class="or"></p>
-                <p id="question"></p>
-            </div>
-        </div>
-        <br>
-        <p class="note ">Swipe card left for Next</p>
-        <button class="next-question" onclick="nextQuestion()">Next Question<br></button>
-        <br>
-        <div class="two-buttons">
-            <button class="second-button" onclick="editPlayers()">Edit Players</button>
-            <button class="second-button" onclick="editFilters()">Edit Filters</button>
-        </div>
-    </div>
-    <div id="edit-filter-section" style="display: none;">
-        <h2>Edit Filters</h2>
-        <div class="themes-container">
-            <label><input type="checkbox" id="general-edit" value="general"> General</label>
-            <label><input type="checkbox" id="funny-edit" value="funny"> Funny</label>
-            <label><input type="checkbox" id="serious-edit" value="serious"> Serious</label>
-            <label><input type="checkbox" id="adults-edit" value="adults"> Adults</label>
-        </div>
-        <button onclick="applyFilters()">Apply Filters</button>
-        <button onclick="returnToGame()">Return to Game</button>
-    </div>    
-    <div id="edit-player-section" style="display: none;">
-        <h2>Edit Players</h2>
-        <input type="text" id="new-player-name" placeholder="Enter new player name">
-        <button onclick="addPlayer()">Add Player</button>
-        <ul id="edit-player-list"></ul>
-        <button onclick="returnToGame()">Return to Game</button>
-    </div>
-    <div>
-    </div>
-
-    <script src="would-you-rather.js"></script>
+            <div class="row"><button class="btn btn-ghost" id="settings" type="button" data-i18n="settings">Settings</button><span class="spacer"></span><button class="btn btn-primary btn-lg" id="next" type="button" data-i18n="next">Next</button></div>
+            <p class="muted center" style="margin-top:14px" data-i18n="wyr_swipe"></p>
+        </section>
+    </main>
+    <script src="/games/would-you-rather.js"></script>
 </body>
 </html>

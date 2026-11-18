@@ -5,7 +5,7 @@ class HeaderLinks extends HTMLElement {
         // Favicon link
         const faviconLink = document.createElement('link');
         faviconLink.rel = "icon";
-        faviconLink.href = "assets/favicon.png";
+        faviconLink.href = "/assets/favicon.png";
         faviconLink.type = "image/x-icon";
         head.appendChild(faviconLink);
 
@@ -23,7 +23,7 @@ class HeaderLinks extends HTMLElement {
 
         // Google Fonts link
         const googleFontsLink = document.createElement('link');
-        googleFontsLink.href = "https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap";
+        googleFontsLink.href = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap";
         googleFontsLink.rel = "stylesheet";
         head.appendChild(googleFontsLink);
 
@@ -63,7 +63,7 @@ class HeaderLinksProjects extends HTMLElement {
         // Favicon link
         const faviconLink = document.createElement('link');
         faviconLink.rel = "icon"; 
-        faviconLink.href = "../assets/favicon.png";
+        faviconLink.href = "/assets/favicon.png";
         faviconLink.type = "image/x-icon";
         head.appendChild(faviconLink);
 
@@ -81,7 +81,7 @@ class HeaderLinksProjects extends HTMLElement {
 
         // Google Fonts link
         const googleFontsLink = document.createElement('link');
-        googleFontsLink.href = "https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap";
+        googleFontsLink.href = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap";
         googleFontsLink.rel = "stylesheet";
         head.appendChild(googleFontsLink);
 
