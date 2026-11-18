@@ -2,6 +2,74 @@
   "_help": "Project pages are generated from this file on every deploy (scripts/build-projects.mjs). Order here = 'Next project' order. Images live in /assets. Project fields: slug, title, pageTitle, description, client (optional), year (optional), liveUrl (optional), hero, contribution, blocks. Block fields: caption (text or list of lines; first line = heading), image | images (dark panel) | youtube (video id), size (w50|w60|w70|w80|w90), align (left|right), rounded (true).",
   "projects": [
     {
+      "slug": "s-lab",
+      "title": "S.Lab",
+      "pageTitle": "S.Lab project",
+      "description": "Web design, WordPress development and site maintenance for S.Lab, a startup making biodegradable packaging from mycelium.",
+      "year": "2026",
+      "liveUrl": "https://s-lab.bio/",
+      "hero": {
+        "image": "slab 1.png"
+      },
+      "contribution": [
+        "Web Design",
+        "WordPress Development",
+        "Web maintenance",
+        "Content",
+        "SEO"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Material explainer",
+            "Mycelium + agricultural waste = 100% organic packaging",
+            "Expandable info cards"
+          ],
+          "image": "slab 2.jpg",
+          "size": "w90",
+          "rounded": true
+        },
+        {
+          "image": "slab 3.jpg",
+          "size": "w90",
+          "rounded": true
+        },
+        {
+          "caption": [
+            "Industry pages",
+            "Beauty, decor, electronics, fashion, food and pharma"
+          ],
+          "image": "slab 4.jpg",
+          "size": "w90",
+          "rounded": true
+        },
+        {
+          "caption": [
+            "WooCommerce shop",
+            "Order samples or bulk packaging",
+            "Filters by category, industry and size"
+          ],
+          "image": "slab 5.jpg",
+          "size": "w90",
+          "rounded": true
+        },
+        {
+          "caption": [
+            "Solutions pages",
+            "Bilingual: English and French",
+            "FAQ accordion"
+          ],
+          "image": "slab 6.jpg",
+          "size": "w90",
+          "rounded": true
+        },
+        {
+          "caption": "Designed for all screens",
+          "image": "slab 7.png"
+        }
+      ]
+    },
+    {
       "slug": "Leonardite",
       "title": "Leonardite",
       "pageTitle": "AAZ Leonardite project",
