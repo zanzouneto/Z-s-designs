@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0221">
+    <title>Trivia · Play online by ZS</title>
+    <meta name="description" content="Trivia party game in English and Arabic for teams or solo.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/games/shared/games.css">
+    <script src="/games/shared/core.js"></script>
+    <style>
+        .answers { display: grid; gap: 10px; margin-top: 16px; }
+        .answers button { text-align: start; padding: 15px 18px; border-radius: 14px; border: 1px solid rgba(185,167,214,.35); background: rgba(255,255,255,.05); font-size: 17px; font-weight: 600; cursor: pointer; }
+        .answers button.sel { border-color: var(--cyan); background: rgba(5,217,232,.12); }
+        .answers button.right { background: rgba(46,229,157,.22); border-color: var(--green); color: #c9ffe8; }
+        .answers button.wrong { background: rgba(255,77,109,.18); border-color: var(--red); }
+        .question { font: 700 clamp(20px, 4.8vw, 26px)/1.35 var(--body); margin: 12px 0 0; }
+        .who .chip span { min-width: 90px; text-align: center; }
+    </style>
+</head>
+<body>
+    <header class="zs-top">
+        <a class="zs-back" href="/games" data-i18n="back">Games</a>
+        <h1 class="zs-title" data-i18n="trivia_title">Trivia</h1>
+        <button class="zs-lang" id="zs-lang" type="button">عربي</button>
+    </header>
+    <main class="zs-main">
+        <section class="screen" id="setup">
+            <div class="card">
+                <h3 data-i18n="teams">Teams</h3>
+                <div class="field"><input class="input" id="team-input" maxlength="20" data-i18n-ph="teamName" autocomplete="off"><button class="btn btn-ghost btn-add" id="team-add" type="button" aria-label="Add">+</button></div>
+                <ul class="names" id="team-list"></ul>
+                <p class="muted" style="margin-top:8px" data-i18n="trivia_solo"></p>
+                <h3 data-i18n="themes">Themes</h3>
+                <div class="chips" id="themes"></div>
+                <h3 data-i18n="trivia_count">Questions</h3>
+                <div class="chips seg" id="count-seg"></div>
+                <button class="btn btn-primary btn-lg btn-block" style="margin-top:22px" id="start" type="button" data-i18n="start">Start</button>
+            </div>
+        </section>
+        <section class="screen" id="game" hidden>
+            <div class="row"><span class="badge" id="qnum"></span><span class="spacer"></span><span class="badge" id="qcat"></span></div>
+            <div class="card">
+                <p class="question" id="question"></p>
+                <div class="answers" id="answers"></div>
+            </div>
+            <div class="card who" id="who" hidden>
+                <h3 data-i18n="trivia_who" style="margin-top:0">Who got it right?</h3>
+                <div class="chips" id="who-chips"></div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" id="reveal" type="button" data-i18n="trivia_reveal">Show answer</button>
+            <button class="btn btn-primary btn-lg btn-block" id="next" type="button" data-i18n="next" hidden>Next</button>
+            <ul class="scoreboard" id="live-scores" style="margin-top:16px"></ul>
+        </section>
+        <section class="screen" id="final" hidden>
+            <div class="card play">
+                <h2 data-i18n="trivia_final">Final scores</h2>
+                <p class="big-word" id="winner" style="font-size:clamp(26px,6vw,38px)"></p>
+                <ul class="scoreboard" id="final-scores"></ul>
+                <button class="btn btn-primary btn-lg btn-block" style="margin-top:20px" id="again" type="button" data-i18n="playAgain">Play again</button>
+            </div>
+        </section>
+    </main>
+    <script src="/games/trivia.js"></script>
+</body>
+</html>

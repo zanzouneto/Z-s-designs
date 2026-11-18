@@ -1,0 +1,124 @@
+{
+ "categories": [
+  {
+   "id": "fun",
+   "label": "Fun",
+   "default": true,
+   "tasks": [
+    "Sing the chorus of the last song you listened to.",
+    "Do your best impression of someone in the room — they guess who.",
+    "Talk in an accent of the group's choice until your next turn.",
+    "Walk like a penguin around the table.",
+    "Tell a joke. If nobody laughs, tell another one.",
+    "Make up a 4-line rap about the person on your left.",
+    "Do the chicken dance for 15 seconds.",
+    "Act like your favourite animal until your next turn.",
+    "Say the alphabet backwards as fast as you can.",
+    "Try to lick your elbow. Good luck.",
+    "Speak only in questions until your next turn.",
+    "Invent a new word and explain what it means.",
+    "Describe a famous movie badly — the group guesses which one.",
+    "Do your best evil-villain laugh.",
+    "Narrate the next turn like a sports commentator.",
+    "Pose like a statue until someone laughs.",
+    "Show the group the last photo in your camera roll (or do 10 squats).",
+    "Give a 30-second TED talk about socks.",
+    "Let the group choose a new nickname for you for the rest of the game.",
+    "Read your last sent text in a dramatic voice.",
+    "Do a runway walk across the room.",
+    "Draw a portrait of the player on your right in 30 seconds."
+   ]
+  },
+  {
+   "id": "social",
+   "label": "Social",
+   "default": true,
+   "tasks": [
+    "Give a genuine compliment to everyone at the table.",
+    "Share your most embarrassing moment.",
+    "Answer one question from the group honestly.",
+    "Tell us something nobody here knows about you.",
+    "What's the best advice you've ever received?",
+    "Swap seats with any player you choose.",
+    "Describe your perfect day in three sentences.",
+    "Name your guilty-pleasure song and hum it.",
+    "Which player would survive longest in a zombie apocalypse? Explain.",
+    "Tell the story of how you met the person on your left.",
+    "Truth or dare — the group decides which.",
+    "What's the weirdest food you've ever eaten?",
+    "Reveal your phone's screen time from yesterday.",
+    "Choose a player to take this dare for you — then do theirs next turn.",
+    "Share your worst job or worst holiday story.",
+    "Name three things you're grateful for right now.",
+    "If you could live anywhere for a year, where and why?",
+    "Everyone says one word to describe you. Guess who said what."
+   ]
+  },
+  {
+   "id": "physical",
+   "label": "Physical",
+   "default": true,
+   "tasks": [
+    "Do 10 push-ups (knees allowed).",
+    "Hold a plank for 30 seconds.",
+    "Do 15 jumping jacks.",
+    "Balance on one foot until your next turn.",
+    "Do 10 squats while saying the alphabet.",
+    "Play your next turn with your non-dominant hand.",
+    "Play your next turn with one eye closed.",
+    "Hold a wall sit for 30 seconds.",
+    "Touch your toes and hold for 20 seconds.",
+    "Do your best dance move for 10 seconds.",
+    "Spin around five times, then pull your next block immediately.",
+    "Do 5 burpees.",
+    "Hop on one leg around the table.",
+    "Do a yoga tree pose for 20 seconds."
+   ]
+  },
+  {
+   "id": "trivia",
+   "label": "Brain teasers",
+   "default": true,
+   "tasks": [
+    "Name 5 countries that start with the letter B in 15 seconds.",
+    "Name 5 animals that live in the sea in 10 seconds.",
+    "Name the capital of 3 countries the group chooses.",
+    "Spell your full name backwards.",
+    "Count down from 50 in sevens: 50, 43… Mistake = pull another block.",
+    "Name 10 fruits in 20 seconds.",
+    "Name 4 Harry Potter characters in 10 seconds.",
+    "Say a tongue twister 3 times fast: 'Red lorry, yellow lorry'.",
+    "Name 5 brands that start with S.",
+    "Name 3 movies with a number in the title.",
+    "List the planets in order from the Sun.",
+    "Name 5 Disney movies in 15 seconds.",
+    "Name 6 car brands in 15 seconds.",
+    "Name the 7 continents.",
+    "Name 5 things you find in a kitchen that start with P.",
+    "Name 3 words that rhyme with 'game' — then 3 more."
+   ]
+  },
+  {
+   "id": "drinking",
+   "label": "Drinking 🍻",
+   "default": false,
+   "tasks": [
+    "Take a sip. That's it. Enjoy.",
+    "Everyone who has been to another country drinks.",
+    "Choose someone to drink with you.",
+    "Waterfall: everyone drinks until you stop.",
+    "The last person to touch their nose drinks.",
+    "Make a rule. Anyone who breaks it drinks.",
+    "Never have I ever — say one. Whoever has, drinks.",
+    "Drink if you've texted an ex this year.",
+    "The youngest player drinks.",
+    "The person with the most recent birthday drinks.",
+    "Categories: pick a category; go around the table — first to fail drinks.",
+    "Give out 3 sips to anyone you like.",
+    "Drink if you're wearing black.",
+    "Toast to the player on your right and you both drink.",
+    "Rhyme time: say a word, go around rhyming it — first to fail drinks."
+   ]
+  }
+ ]
+}

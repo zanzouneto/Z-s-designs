@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0221">
+    <title>Heads Up · Play online by ZS</title>
+    <meta name="description" content="Heads Up party game in English and Arabic: phone on your forehead, tilt to answer.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/games/shared/games.css">
+    <script src="/games/shared/core.js"></script>
+    <style>
+        #play { position: fixed; inset: 0; z-index: 40; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;
+            background: linear-gradient(180deg, var(--bg-1), var(--bg-2)); user-select: none; -webkit-user-select: none; touch-action: none; }
+        #play.ok { background: linear-gradient(180deg, #0a4d34, #0b6b47); }
+        #play.no { background: linear-gradient(180deg, #5a0c22, #8a1432); }
+        #play .big-word { font-size: clamp(40px, 11vw, 96px); margin: 0; }
+        .hu-hud { position: absolute; top: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 18px; align-items: center; }
+        .hu-zone { position: absolute; bottom: 14px; font-weight: 700; font-size: 15px; opacity: .65; }
+        .hu-zone.left { left: 18px; color: var(--red); } .hu-zone.right { right: 18px; color: var(--green); }
+        #count { font: 700 120px/1 var(--display); color: var(--yellow); }
+    </style>
+</head>
+<body>
+    <header class="zs-top">
+        <a class="zs-back" href="/games" data-i18n="back">Games</a>
+        <h1 class="zs-title" data-i18n="hu_title">Heads Up</h1>
+        <button class="zs-lang" id="zs-lang" type="button">عربي</button>
+    </header>
+    <main class="zs-main">
+        <section class="screen" id="setup">
+            <div class="card">
+                <p data-i18n="hu_help"></p>
+                <p class="muted" data-i18n="hu_controls"></p>
+                <h3 data-i18n="theme">Theme</h3>
+                <div class="chips" id="themes"></div>
+                <h3 data-i18n="time">Time</h3>
+                <div class="chips seg" id="time-seg"></div>
+                <button class="btn btn-primary btn-lg btn-block" style="margin-top:22px" id="start" type="button" data-i18n="start">Start</button>
+            </div>
+        </section>
+        <section class="screen" id="results" hidden>
+            <div class="card play">
+                <h2 data-i18n="hu_results">Results</h2>
+                <p class="timer" id="res-score"></p>
+                <ul class="result-list" id="res-list" style="margin:14px 0 20px"></ul>
+                <button class="btn btn-primary btn-lg btn-block" id="again" type="button" data-i18n="playAgain">Play again</button>
+            </div>
+        </section>
+        <div id="play" hidden>
+            <div class="hu-hud"><span class="timer" id="timer"></span><span class="badge" id="tilt-state"></span></div>
+            <div id="count" hidden></div>
+            <div class="big-word" id="word"></div>
+            <span class="hu-zone left" data-i18n="hu_pass">Pass</span><span class="hu-zone right" data-i18n="hu_correct">Got it</span>
+        </div>
+    </main>
+    <script src="/games/heads-up.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found · Zeina Saade</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        .nf { position: absolute; z-index: 3; top: 104px; left: 40px; width: 420px; max-width: calc(100% - 80px); padding: 28px 32px 32px; border-radius: var(--radius); background: rgba(13, 24, 32, 0.8); border: 1px solid rgba(243, 240, 232, 0.14); display: flex; flex-direction: column; gap: 14px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+        .nf-code { font-family: 'Micro', monospace; font-size: 168px; line-height: 0.78; color: var(--yellow); animation: glitch 2.6s steps(1) infinite; }
+        .nf h1 { margin: 0; font-size: 30px; line-height: 1.2; font-weight: 600; }
+        .nf p { margin: 0; font-size: 17px; line-height: 1.55; color: #c9d0d6; }
+        .nf .row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        @keyframes glitch { 0%, 86%, 100% { transform: translate(0, 0); } 88% { transform: translate(-4px, 2px); } 90% { transform: translate(4px, -2px); } 92% { transform: translate(-2px, 0); } }
+        @media (max-width: 1023px), (hover: none) {
+            .nf { top: 84px; left: 20px; max-width: calc(100% - 40px); width: auto; padding: 22px 22px 24px; }
+            .nf-code { font-size: 112px; }
+            .nf h1 { font-size: 24px; }
+            .home-intro, .home-label.port { display: none; }
+        }
+        @media (prefers-reduced-motion: reduce) { .nf-code { animation: none; } }
+    </style>
+</head>
+<body data-no-bg>
+    <nav-menu variant="overlay"></nav-menu>
+    <main class="home" data-start="games">
+        <img class="home-photo is-games" src="/assets/zeina-bottomright.jpg" alt="">
+        <img class="home-photo is-port" src="/assets/zeina-topright.jpg" alt="">
+        <img class="home-photo is-phone" src="/assets/zeina-background-phone.jpg" alt="">
+        <div class="home-shade top" aria-hidden="true"></div>
+        <div class="home-shade bottom" aria-hidden="true"></div>
+        <a class="home-side left" href="/games" tabindex="-1" aria-hidden="true"></a>
+        <a class="home-side right" href="/portfolio" tabindex="-1" aria-hidden="true"></a>
+
+        <section class="nf" aria-labelledby="nf-title">
+            <span class="nf-code" aria-hidden="true">404</span>
+            <h1 id="nf-title">Page not found</h1>
+            <p>This page wandered off, or never existed. Pick a side to keep exploring, or head back home.</p>
+            <div class="row">
+                <a class="zs-btn zs-btn-yellow" href="/">Back to home</a>
+                <a class="zs-btn zs-btn-ghost" href="/portfolio">See my work</a>
+            </div>
+        </section>
+
+        <a class="home-label port" href="/portfolio">PORTFOLIO<br>&amp;<br>STUFF</a>
+        <a class="home-label games" href="/games">Games</a>
+        <p class="home-hint" aria-hidden="true">← pick a side →</p>
+    </main>
+    <hire-me-component></hire-me-component>
+    <script src="/navigation.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

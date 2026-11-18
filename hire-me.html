@@ -1,74 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-        
-            gtag('config', 'G-6YZQRLN0R4');
-        </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me</title>
-    <script src="elements.js" defer></script>
-    <link rel="stylesheet" href="navigation.css">
-    <header-links></header-links>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="hire-me.css">
+    <title>Hire me · Zeina Saade</title>
+    <meta name="description" content="Get in touch with Zeina Saade for graphic design, web design and Webflow projects. Email me or book a consultation.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/hire-me.css">
 </head>
 <body>
-    <div id="cursor1"></div>
-    <div id="cursor2"></div>
-    <div class="container">
-        <div class="header-div-info">
-            <p class="title">I'm available for projects</p>
-            <p class="title">Lets build</p>
-            <p class="title">Awesomeness together</p>
-            <img class="hire-me" src="assets/hire me.png">
-        </div>
-        <div class="buttondiv">
-            <button class="tablink" onclick="openCity('London', this, 'var(--main-yellow)', 'var(--black)')" id="defaultOpen">Email me</button>
-            <button class="tablink" onclick="openCity('Paris', this, '#fbfcfd','var(--black)')">Book a consult</button>
-        </div>
-        <div class="tabs-div">
-            <div id="London" class="tabcontent">
-                <form action="https://formspree.io/f/xleyzdvq" method="POST">
-                    <h2>Lets build awesomeness</h2>
+    <nav-menu></nav-menu>
+    <main class="zs-wrap hm">
+        <section class="hm-hero">
+            <div class="hm-hero-text">
+                <span class="hm-badge"><span class="dot" aria-hidden="true"></span>I’m available for projects</span>
+                <h1 class="zs-display">Let’s build awesomeness together</h1>
+                <p class="zs-lead">Graphic design, web design and Webflow builds. Send me a message or book a free call, whichever is easier.</p>
+            </div>
+            <img class="hm-wave" src="/assets/hire%20me.png" alt="Zeina waving hello" width="260" height="271">
+        </section>
+
+        <section class="hm-panel">
+            <div class="hm-tabs" role="tablist" aria-label="How to reach me">
+                <button class="hm-tab" type="button" role="tab" id="tab-email" aria-controls="panel-email" aria-selected="true">Email me</button>
+                <button class="hm-tab" type="button" role="tab" id="tab-call" aria-controls="panel-call" aria-selected="false" tabindex="-1">Book a consult</button>
+            </div>
+
+            <div class="hm-card" id="panel-email" role="tabpanel" aria-labelledby="tab-email">
+                <form action="https://formspree.io/f/xleyzdvq" method="POST" class="hm-form">
+                    <h2 class="zs-h2">Tell me things</h2>
                     <label>
-                        <input placeholder="Your Email" type="email" name="email" class="input">
+                        <span>Your email</span>
+                        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
                     </label>
                     <label>
-                        <textarea placeholder="Subject" name="Subject" class="input"></textarea>
+                        <span>Subject</span>
+                        <input type="text" name="Subject" placeholder="A new website, a logo, …">
                     </label>
                     <label>
-                        <textarea placeholder="Tell me things" name="message" class="input"></textarea>
+                        <span>Message</span>
+                        <textarea name="message" rows="6" required placeholder="What are you working on?"></textarea>
                     </label>
-                    <button class="button" type="submit">Send</button>
+                    <button class="zs-btn zs-btn-lg zs-btn-ink" type="submit">Send</button>
                 </form>
             </div>
-            <div id="Paris" class="tabcontent calendar">
+
+            <div class="hm-card is-call" id="panel-call" role="tabpanel" aria-labelledby="tab-call" hidden>
                 <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/zeina-saade/consultation?background_color=0d1820&text_color=ffffff" style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/zeina-saade/consultation?background_color=15222c&amp;text_color=f3f0e8&amp;primary_color=ffcc00" style="min-width:300px;height:700px;"></div>
+                <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Calendly inline widget end -->
             </div>
-        </div>
-        <!-- <p class="title">What others say about me</p>
-        <div class='sk-ww-linkedin-recommendations' style="margin: 50px 0;" data-embed-id='251591'></div><script src='https://widgets.sociablekit.com/linkedin-recommendations/widget.js' async defer></script> -->
-    </div>
-    <div class="grainy-div">
-        <div class="grainy">
-        </div>
-        <div class="grain">
-        </div>
-    </div>
-    <nav-menu></nav-menu>
+        </section>
+    </main>
     <main-footer></main-footer>
-    <script src="hire-me.js"></script>
-    <script src="navigation.js"></script>
-    <script src="styles.js"></script>
+    <script src="/navigation.js"></script>
+    <script src="/hire-me.js"></script>
 </body>
 </html>

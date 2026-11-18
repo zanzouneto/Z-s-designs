@@ -1,126 +1,59 @@
 <!DOCTYPE html>
+<!-- GENERATED from content/projects.json by scripts/build-projects.mjs. Edit the JSON, not this file. -->
 <html lang="en">
-<head> 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-        
-            gtag('config', 'G-6YZQRLN0R4');
-        </script>
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnaud De Decker photography portfolio</title>
-    <script src="../elements.js"></script>
-    <header-links-projects></header-links-projects>
-    <link rel="stylesheet" href="project.css">
+    <title>Arnaud De Decker photography portfolio · Zeina Saade</title>
+    <meta name="description" content="Webflow development for photographer Arnaud De Decker's portfolio website.">
+    <link rel="canonical" href="https://www.zanzouneto.com/project/arnaud-photography-portfolio">
+    <meta property="og:title" content="Arnaud De Decker photography portfolio">
+    <meta property="og:description" content="Webflow development for photographer Arnaud De Decker's portfolio website.">
+    <meta property="og:image" content="https://www.zanzouneto.com/assets/Arnaud.jpg">
+    <meta property="og:url" content="https://www.zanzouneto.com/project/arnaud-photography-portfolio">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="/project/project.css">
 </head>
 <body>
-    <div class="center">
-        <img class="fullwidth" src="../assets/Arnaud.jpg">
-    </div>
-    <section>
-        <div class="h1div">
-            <h1>Arnaud</h1>
+    <nav-menu></nav-menu>
+    <main class="zs-wrap p-wrap">
+        <section class="p-head">
+            <a class="zs-ylink p-back" href="/portfolio">← All work</a>
+            <h1 class="zs-display">Arnaud</h1>
+            <p class="zs-lead">Webflow development for photographer Arnaud De Decker's portfolio website.</p>
+            <dl class="p-facts">
+                <div><dt>My role</dt><dd>Webflow Development, Webflow template adaptation</dd></div>
+                <div><dt>Live site</dt><dd><a class="zs-ylink" href="https://www.arnauddedecker.com/" target="_blank" rel="noopener">arnauddedecker.com ↗</a></dd></div>
+            </dl>
+        </section>
+        <div class="p-hero"><figure class="p-figure is-flush"><img src="/assets/Arnaud.jpg" alt="Arnaud project cover"></figure></div>
+        <div class="p-blocks">
+        <section class="p-block reveal"><figure class="p-figure is-flush"><div class="p-video"><iframe src="https://www.youtube.com/embed/d7YAF_hRJsE?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=d7YAF_hRJsE&amp;playsinline=1&amp;rel=0" title="Arnaud video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></figure></section>
+        <section class="p-block reveal"><figure class="p-figure"><img src="/assets/arnaud%201.png" alt="Arnaud — project image" loading="lazy"></figure></section>
+        <section class="p-block reveal"><figure class="p-figure"><img src="/assets/arnaud%202.png" alt="Arnaud — project image" loading="lazy"></figure></section>
+        <section class="p-block reveal"><figure class="p-figure"><img src="/assets/arnaud%203.png" alt="Arnaud — project image" loading="lazy"></figure></section>
+        <section class="p-block reveal"><figure class="p-figure"><img src="/assets/arnaud%204.png" alt="Arnaud — project image" loading="lazy"></figure></section>
         </div>
-        <a class="link" target="_blank" href="https://www.arnauddedecker.com/">Check out live web</a>
-    </section>
-    <section>
-        <p class="highlighted smaller">
-            my contribution:
-        </p>
-        <p class="highlighted removetop">
-            -> Webflow Development <br>-> Webflow template adaptation
-        </p> 
-    </section>
-    <section> 
-        <!-- youtube embed, auto play, auto pause -->
-        <script src="https://www.youtube.com/iframe_api"></script>
-        <div class="video-container">
-            <iframe 
-                id="youtube-video"
-                width="560" height="315" 
-                src="https://www.youtube.com/embed/d7YAF_hRJsE?enablejsapi=1" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        
-        <script>
-            // This function creates an <iframe> (and YouTube player)
-            // after the API code downloads.
-            var player;
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('youtube-video', {
-                    events: {
-                        'onReady': onPlayerReady
-                    }
-                });
-            }
-        
-            // The API will call this function when the video player is ready.
-            function onPlayerReady(event) {
-                // Add scroll event listener
-                window.addEventListener('scroll', checkScroll);
-                checkScroll();  // Check if video is already in view
-            }
-        
-            // Check if the video is in the viewport
-            function checkScroll() {
-                var video = document.getElementById('youtube-video');
-                var bounding = video.getBoundingClientRect();
-        
-                if (
-                    bounding.top >= 0 &&
-                    bounding.left >= 0 &&
-                    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-                ) {
-                    // Video is in view, play the video
-                    player.playVideo();
-                } else {
-                    // Video is not in view, pause the video
-                    player.pauseVideo();
-                }
-            }
-
-            // This function will be called when the player's state changes
-            function onPlayerStateChange(event) {
-                if (event.data === YT.PlayerState.ENDED) {
-                    player.seekTo(0); // Go back to the start of the video
-                    player.playVideo(); // Play the video again
-                }
-            }
-
-        </script>
-    </section>
-    <section>
-        <img class="fullwidth" src="../assets/arnaud 1.png">
-        <div style="height: 10px; margin: 30px 0; background-color: rgb(126, 126, 126); width: 100%;"></div>
-    </section>
-    <section>
-        <img class="fullwidth" src="../assets/arnaud 2.png">
-        <div style="height: 10px; margin: 30px 0; background-color: rgb(126, 126, 126); width: 100%;"></div>
-    </section>
-    <section>
-        <img class="fullwidth" src="../assets/arnaud 3.png">
-        <div style="height: 10px; margin: 30px 0; background-color: rgb(126, 126, 126); width: 100%;"></div>
-    </section>
-    <section>
-        <img class="fullwidth" src="../assets/arnaud 4.png">
-        <div style="height: 10px; margin: 30px 0; background-color: rgb(126, 126, 126); width: 100%;"></div>
-    </section>
-    <section>
-        <a class="next-button" href="artbay.html">Next project -></a>
-    </section>
-    <nav-menu base-path="../"></nav-menu>
-    <hire-me-component base-path="../"></hire-me-component>
-    <main-footer base-path="../"></main-footer>
-    <script src="project.js"></script>
-    <script src="../navigation.js"></script>
-</body> 
+        <a class="p-next" href="/project/artbay">
+            <span><span class="zs-kicker">Next project</span><span class="p-next-title">ArtBay</span></span>
+            <span class="p-next-arrow" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg></span>
+        </a>
+    </main>
+    <main-footer></main-footer>
+    <hire-me-component></hire-me-component>
+    <script src="/navigation.js"></script>
+    <script src="/project/project.js"></script>
+</body>
 </html>

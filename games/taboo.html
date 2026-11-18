@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YZQRLN0R4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6YZQRLN0R4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0d0221">
+    <title>Taboo · Play online by ZS</title>
+    <meta name="description" content="Taboo party game in English and Arabic with teams, rounds and scores.">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/games/shared/games.css">
+    <script src="/games/shared/core.js"></script>
+    <style>
+        .taboo-list { list-style: none; padding: 0; margin: 0 auto 6px; max-width: 320px; display: grid; gap: 6px; }
+        .taboo-list li { padding: 8px 12px; border-radius: 10px; background: rgba(255,77,109,.12); border: 1px solid rgba(255,77,109,.35); color: #ffd6de; font-weight: 600; }
+        .turn-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .actions3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+        .team-score { font-weight: 700; color: var(--yellow); }
+    </style>
+</head>
+<body>
+    <header class="zs-top">
+        <a class="zs-back" href="/games" data-i18n="back">Games</a>
+        <h1 class="zs-title" data-i18n="taboo_title">Taboo</h1>
+        <button class="zs-lang" id="zs-lang" type="button">عربي</button>
+    </header>
+    <main class="zs-main">
+        <section class="screen" id="setup">
+            <div class="card">
+                <p class="muted" data-i18n="taboo_help"></p>
+                <h3 data-i18n="teams">Teams</h3>
+                <div class="field"><input class="input" id="team-input" maxlength="20" data-i18n-ph="teamName" autocomplete="off"><button class="btn btn-ghost btn-add" id="team-add" type="button" aria-label="Add">+</button></div>
+                <ul class="names" id="team-list"></ul>
+                <h3 data-i18n="theme">Theme</h3>
+                <div class="chips" id="themes"></div>
+                <h3 data-i18n="time">Time</h3>
+                <div class="chips seg" id="time-seg"></div>
+                <h3 data-i18n="taboo_rounds">Rounds per team</h3>
+                <div class="chips seg" id="round-seg"></div>
+                <button class="btn btn-primary btn-lg btn-block" style="margin-top:22px" id="start" type="button" data-i18n="start">Start</button>
+            </div>
+        </section>
+        <section class="screen" id="ready" hidden>
+            <div class="card play">
+                <span class="badge" id="round-label"></span>
+                <h2 class="big-word" id="ready-team" style="font-size:clamp(28px,7vw,42px)"></h2>
+                <p class="muted" data-i18n="taboo_turn_d"></p>
+                <ul class="scoreboard" id="mini-scores" style="margin:16px 0"></ul>
+                <button class="btn btn-primary btn-lg btn-block" id="go" type="button" data-i18n="start">Start</button>
+            </div>
+        </section>
+        <section class="screen" id="turn" hidden>
+            <div class="turn-bar"><span class="badge" id="turn-team"></span><span class="timer" id="timer">60</span><span class="team-score" id="turn-points">0</span></div>
+            <div class="card play" id="tcard">
+                <div class="big-word" id="word"></div>
+                <ul class="taboo-list" id="taboo-words"></ul>
+            </div>
+            <div class="actions3">
+                <button class="btn btn-bad btn-lg" id="buzz" type="button" data-i18n="taboo_buzz">Taboo!</button>
+                <button class="btn btn-ghost btn-lg" id="skip" type="button" data-i18n="taboo_skip">Skip</button>
+                <button class="btn btn-good btn-lg" id="got" type="button" data-i18n="taboo_got">Got it</button>
+            </div>
+        </section>
+        <section class="screen" id="summary" hidden>
+            <div class="card play">
+                <h2 data-i18n="taboo_turn_over">Time's up!</h2>
+                <p class="timer" id="sum-points" style="font-size:28px"></p>
+                <ul class="result-list" id="sum-list" style="margin:14px 0 20px"></ul>
+                <button class="btn btn-primary btn-lg btn-block" id="next-turn" type="button" data-i18n="next">Next</button>
+            </div>
+        </section>
+        <section class="screen" id="final" hidden>
+            <div class="card play">
+                <h2 data-i18n="taboo_final">Final score</h2>
+                <p class="big-word" id="winner" style="font-size:clamp(26px,6vw,38px)"></p>
+                <ul class="scoreboard" id="final-scores"></ul>
+                <button class="btn btn-primary btn-lg btn-block" style="margin-top:20px" id="again" type="button" data-i18n="playAgain">Play again</button>
+            </div>
+        </section>
+    </main>
+    <script src="/games/taboo.js"></script>
+</body>
+</html>

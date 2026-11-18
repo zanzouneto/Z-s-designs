@@ -1,107 +1,36 @@
+/* Contact page (layout on top of /site.css) */
+.hm { max-width: 1100px; }
+.hm-hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px; padding: 72px 0 48px; }
+.hm-hero-text { flex: 1 1 520px; display: flex; flex-direction: column; gap: 18px; }
+.hm-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); font-size: 13px; font-weight: 500; }
+.hm-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--yellow); }
+.hm-wave { flex: 0 0 auto; width: 240px; height: auto; animation: zs-bob 3.2s ease-in-out infinite; }
 
-body{
-    background-color: var(--black);
-    font-family: coda, sans-serif;
+.hm-panel { padding-bottom: 120px; }
+.hm-tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); margin-bottom: 20px; }
+.hm-tab { min-height: 44px; padding: 0 22px; border: 0; border-radius: 999px; background: transparent; color: var(--paper); font: 600 15px 'Space Grotesk', system-ui, sans-serif; cursor: pointer; }
+.hm-tab:hover { color: var(--yellow); }
+.hm-tab[aria-selected="true"] { background: var(--yellow); color: var(--ink); }
+.hm-card { border-radius: 24px; overflow: hidden; }
+.hm-card[hidden] { display: none; }
+#panel-email { background: var(--yellow); color: var(--ink); padding: 48px; }
+.hm-card.is-call { background: var(--surface); border: 1px solid var(--line); padding: 8px; }
+.hm-form { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
+.hm-form .zs-h2 { margin-bottom: 8px; }
+.hm-form label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600; }
+.hm-form input, .hm-form textarea {
+    font: 400 16px 'Space Grotesk', system-ui, sans-serif; color: var(--ink);
+    background: rgba(255, 255, 255, 0.55); border: 1.5px solid rgba(13, 24, 32, 0.35); border-radius: 12px; padding: 12px 14px; resize: vertical;
 }
-.title{
-    font-family: micro, coda, sans-serif;
-    font-size: 30px;
-    margin:  0;
-    color: var(--main-yellow);
-    text-align: center;
-}
-.lmtWIHO_gkbTeeyuvoJC.mOUYF5ZmuNL6I7t0mSFg{
-    background-color: unset !important;
-}
-.container{
-    max-width: 1300px;
-    margin:auto;
-    position: relative;
-    z-index: 1;
-}
-.header-div-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 50px 25px 50px;
-}
-.hire-me{
-    width: 200px;
-} 
+.hm-form input::placeholder, .hm-form textarea::placeholder { color: rgba(13, 24, 32, 0.5); }
+.hm-form input:focus, .hm-form textarea:focus { outline: none; border-color: var(--ink); background: rgba(255, 255, 255, 0.8); }
+.hm-form .zs-btn { align-self: flex-start; border: 0; }
 
-/* tabs */
-.buttondiv{
-    position: relative;
-    height: 45px;
-    z-index: 1;
-    display: flex;
-    align-items: stretch;
+@media (max-width: 640px) {
+    .hm-hero { padding: 40px 0 32px; }
+    .hm-wave { width: 150px; }
+    #panel-email { padding: 28px 20px; }
+    .hm-tabs { display: flex; }
+    .hm-tab { flex: 1; padding: 0 12px; }
 }
-.tablink {
-    font-family: coda, sans-serif;
-    background-color: var(--black);
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 50%;
-    color: var(--main-yellow);
-}
-.tablink:hover {
-  background-color: #777;
-}
-.tabcontent {
-    position: relative;
-    color: rgb(0, 0, 0);
-    display: none;
-    padding: 50px;
-    text-align: center;
-    z-index: 3;
-}
-.tabcontent.calendar{
-    padding: 50px 0;
-}
-#London {background-color: var(--main-yellow);}
-#Paris {background-color:#fbfcfd;}
-.tutorial_link{
-    display: none;
-}
-.tabs-div{
-    margin-bottom: 50px;
-}
-/* form */
-.input {
-    background-color: #1c122d00;
-    border: #555 solid 1px;
-    font-family: coda, sans-serif;
-    color: var(--black);
-    padding: 2.5%;
-    max-width: 95%;
-    max-height: 20vh;
-    margin-bottom: 10px;
-}
-.button {
-    font-family: coda, sans-serif;
-    font-weight: 700;
-    margin-top: 40px;
-    width: 100%;
-    background-color: var(--main-yellow);
-    box-shadow: none;
-    border-radius: 0;
-    padding: 10px 30px;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--black); 
-    transition: ease-in;
-}
-
-@media (min-width: 600px) {
-    p{
-        font-size: 40px;
-    }
-    .tabcontent.calendar{
-        padding: 50px;
-    }
-}
+@media (prefers-reduced-motion: reduce) { .hm-wave { animation: none; } }

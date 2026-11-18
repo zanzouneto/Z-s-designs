@@ -1,24 +1,15 @@
-function reveal() {
-  var reveals = document.querySelectorAll("section");
-
-  for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-
-      // Default value for larger screens
-      var elementVisible = 150;
-
-      // If screen width is less than or equal to 768px (common breakpoint for mobile)
-      if (window.innerWidth <= 768) {
-          elementVisible = 40; // Adjust this value to suit your requirements
-      }
-
-      if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-      } else {
-          reveals[i].classList.remove("active");
-      }
-  }
-}
-
-window.addEventListener("scroll", reveal);
+// Project pages: fade sections in gently as they scroll into view.
+(function () {
+    'use strict';
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+})();
