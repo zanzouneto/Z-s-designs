@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Orbit In — homepage refresh concept · Zanzouneto</title>
+<meta name="description" content="Concept homepage redesign for Orbit In, a 1950s Herbert Burns courtyard hotel in Palm Springs.">
+<meta property="og:title" content="Orbit In — homepage refresh concept">
+<meta property="og:description" content="Concept homepage redesign for Orbit In, Palm Springs.">
+<meta property="og:image" content="/concepts/orbit-in/hero-pool.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#22282b; --ink-2:#2f3639; --ink-3:#333b3e; --body:#41494c; --body-2:#454d50; --body-3:#4b5356;
+    --muted:#636b6e; --teal:#1f6f6b; --teal-2:#2a8a84; --rust:#c95a2e; --gold:#d9a23a;
+    --cream:#fbf9f4; --sand:#f1ebdf; --line:#e3ddd0; --line-2:#ddd5c5; --chip-line:#c9c2b4;
+    --jost:'Jost',system-ui,sans-serif; --karla:'Karla',system-ui,sans-serif;
+    --pad:64px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--karla);-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  p,h1,h2,h3,h5,figure,blockquote,ul{margin:0;padding:0}
+  ul{list-style:none}
+  section,[id]{scroll-margin-top:96px}
+  .wrap{max-width:1440px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+  /* type */
+  .eyebrow{font:600 12.5px var(--jost);letter-spacing:2.5px;text-transform:uppercase;color:var(--rust)}
+  .h2{padding-top:10px;font:500 44px/47.52px var(--jost);letter-spacing:-.66px;color:var(--ink)}
+  .lede{font:400 16.5px/26.4px var(--karla);color:var(--muted);max-width:440px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:40px;padding:14px 26px;font:500 16px var(--jost);white-space:nowrap;cursor:pointer;border:0;transition:background .2s,color .2s,border-color .2s}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{background:#185956}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);background:transparent}
+  .btn-outline:hover{background:var(--ink);color:#fff}
+
+  /* top bar */
+  .topbar{background:var(--ink);font:400 13.5px var(--karla);color:#d6dcdc}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:24px;padding-top:9px;padding-bottom:9px}
+  .topbar b{font-weight:700;color:var(--gold)}
+
+  /* header */
+  .site-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+  .site-header .wrap{display:flex;align-items:center;gap:44px;height:80px}
+  .site-header .logo img{width:168.5px;height:52px;object-fit:contain}
+  .nav{display:flex;gap:28px;font:500 15.5px var(--karla);color:#3a4245;text-transform:lowercase}
+  .nav a:hover{color:var(--teal)}
+  .header-right{margin-left:auto;display:flex;align-items:center;gap:22px}
+  .phone{font:500 16px var(--jost);letter-spacing:.32px;color:var(--ink)}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:minmax(0,600fr) minmax(0,840fr);min-height:680px;max-width:1440px;margin:0 auto}
+  .hero-copy{padding:64px 56px 56px var(--pad)}
+  .hero h1{padding-top:18px;max-width:480px;font:500 60px/62.4px var(--jost);letter-spacing:-1.2px;color:var(--ink)}
+  .hero .attribution{padding-top:12px;font:600 12px var(--jost);letter-spacing:2.16px;text-transform:uppercase;color:var(--muted)}
+  .hero .intro{padding-top:18px;max-width:470px;font:400 18.5px/29.6px var(--karla);color:var(--body-2)}
+  .booking{margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:0 10px 15px rgba(34,40,43,.08)}
+  .dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .date-field{position:relative;border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:56px;cursor:pointer}
+  .date-field:focus-within{border-color:var(--teal)}
+  .date-field .label{display:block;font:600 10.5px var(--jost);letter-spacing:1.68px;text-transform:uppercase;color:var(--muted)}
+  .date-field .value{display:block;font:500 16px var(--karla);color:var(--ink)}
+  .date-field input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;border:0}
+  .booking .btn{width:100%;margin-top:10px;padding:15px;font-size:17px}
+  .booking small{display:block;padding-top:10px;font:400 13px/18.85px var(--karla);color:var(--muted);text-align:center}
+  .hero-media{position:relative;min-height:100%}
+  .hero-media>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .rating-pill{position:absolute;left:24px;bottom:23px;display:flex;align-items:center;gap:10px;padding:9px 16px;border-radius:30px;background:rgba(255,255,255,.92);font:500 13.5px var(--jost);color:var(--ink)}
+  .rating-pill b{font:700 18px var(--karla);color:var(--teal)}
+  .concept-badge{position:absolute;top:13px;right:180px;padding:5px 10px;border-radius:20px;background:rgba(34,40,43,.55);font:600 10px var(--jost);letter-spacing:1.4px;text-transform:uppercase;color:#fff}
+
+  /* press */
+  .press{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr)}
+  .press figure{padding:26px 34px;border-right:1px solid var(--line)}
+  .press figure:last-child{border-right:0}
+  .press blockquote{font:italic 400 16.5px/23.925px var(--jost);color:var(--ink-3)}
+  .press figcaption{padding-top:8px;font:600 11px var(--jost);letter-spacing:1.98px;text-transform:uppercase;color:var(--teal)}
+
+  /* rooms */
+  .rooms{padding-top:84px;padding-bottom:84px}
+  .room-grid{margin-top:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .room .media{position:relative;height:236px}
+  .room .media img{width:100%;height:100%;object-fit:cover}
+  .room .num{position:absolute;left:16px;top:16px;padding:6px 12px;border-radius:20px;background:#fff;font:600 14px var(--jost);color:var(--ink)}
+  .room .body{padding:20px 22px}
+  .room h3{font:500 25px var(--jost);letter-spacing:-.25px;color:var(--ink)}
+  .chips{padding-top:10px;display:flex;flex-wrap:wrap;gap:5px 6px}
+  .chips li{padding:5px 11px;border-radius:20px;background:var(--sand);font:400 13.5px var(--karla);color:var(--body)}
+  .room-foot{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .rate-label{display:block;padding-bottom:1px;font:600 10px var(--jost);letter-spacing:1.4px;text-transform:uppercase;color:var(--rust)}
+  .rate{font:400 14px var(--karla);color:var(--muted);white-space:nowrap}
+  .rate strong{font:600 18px var(--jost);color:var(--ink)}
+  .room-actions{display:flex;gap:8px}
+  .pill{padding:8px 15px;border-radius:20px;font:500 14px var(--jost);white-space:nowrap}
+  .pill-outline{border:1px solid var(--chip-line);color:var(--ink)}
+  .pill-outline:hover{border-color:var(--ink)}
+  .pill-teal{background:var(--teal);color:#fff}
+  .pill-teal:hover{background:#185956}
+  .rooms-note{padding-top:22px;display:flex;justify-content:space-between;gap:24px;font:400 13.5px var(--karla);color:var(--muted)}
+
+  /* gallery */
+  .gallery{padding-top:84px;padding-bottom:90px;overflow:hidden}
+  .gallery-stage{position:relative;margin-top:36px}
+  .gallery-track{display:flex;gap:20px;padding-left:var(--pad);transition:transform .6s cubic-bezier(.22,.61,.36,1);will-change:transform}
+  .slide{flex:0 0 var(--slide-w);width:var(--slide-w);aspect-ratio:1040/620;border-radius:16px;overflow:hidden;opacity:.9;transition:opacity .4s}
+  .slide.is-active{opacity:1}
+  .slide img{width:100%;height:100%;object-fit:cover}
+  .gallery{--slide-w:min(1040px, calc(100vw - var(--pad) * 2))}
+  .gallery-ui{position:absolute;top:0;left:var(--pad);width:var(--slide-w);aspect-ratio:1040/620;pointer-events:none}
+  .gal-btn{pointer-events:auto;position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:26px;border:0;background:rgba(255,255,255,.82);box-shadow:0 4px 16px rgba(0,0,0,.12);font:400 24px/1 var(--jost);color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0 0 3px}
+  .gal-btn:hover{background:#fff}
+  .gal-prev{left:22px}.gal-next{right:22px}
+  .gal-caption{position:absolute;left:24px;bottom:22px;padding:8px 16px;border-radius:30px;background:rgba(255,255,255,.92);font:500 14px var(--jost);color:var(--ink)}
+  .gallery-controls{width:calc(var(--slide-w) + var(--pad) * 2);max-width:100%;padding:26px var(--pad) 0;display:flex;align-items:center;justify-content:space-between}
+  .dots{display:flex;gap:9px;align-items:center}
+  .dots button{width:8px;height:8px;border-radius:4px;border:0;padding:0;background:#cfc8ba;cursor:pointer;transition:width .3s,background .3s}
+  .dots button[aria-current="true"]{width:28px;border-radius:5px;background:var(--teal)}
+  .counter{font:500 14px var(--jost);letter-spacing:1.68px;color:var(--muted)}
+
+  /* amenities */
+  .amenities{background:var(--sand)}
+  .amenities .wrap{padding-top:84px;padding-bottom:84px;display:grid;grid-template-columns:minmax(0,582fr) minmax(0,670fr);gap:60px;align-items:center}
+  .amen-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  .amen-photos img{width:100%;border-radius:12px;object-fit:cover}
+  .amen-photos .p1{aspect-ratio:284/440}
+  .amen-photos .p2{aspect-ratio:284/380;margin-top:60px}
+  .social-hour{margin-top:24px;background:var(--ink);border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:22px}
+  .social-hour .badge{flex:0 0 62px;height:62px;border-radius:31px;background:var(--gold);display:grid;place-items:center;text-align:center;font:600 13px/14.3px var(--jost);color:var(--ink)}
+  .social-hour h3{font:500 20px var(--jost);color:#fff}
+  .social-hour p{padding-top:3px;font:400 15px/22.5px var(--karla);color:#cfd6d6}
+  .amen-list{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;column-gap:34px}
+  .amen-list li{position:relative;padding:12px 0 12px 20px;min-height:43px;border-bottom:1px solid var(--line-2);font:400 15.5px var(--karla);color:var(--ink)}
+  .amen-list li::before{content:"";position:absolute;left:0;top:17px;width:8px;height:8px;border-radius:4px;background:var(--teal-2)}
+
+  /* experiences */
+  .experiences{padding-top:84px;padding-bottom:84px}
+  .exp-grid{margin-top:36px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+  .exp img{width:100%;height:200px;object-fit:cover}
+  .exp .body{padding:20px 22px 24px}
+  .exp h3{font:500 22px/26.4px var(--jost);letter-spacing:-.22px;color:var(--ink)}
+  .exp p{padding-top:8px;font:400 15px/23.25px var(--karla);color:var(--body-3)}
+  .text-link{display:inline-block;margin-top:14px;border-bottom:1px solid var(--gold);font:500 14px/20px var(--jost);color:var(--teal)}
+  .text-link:hover{border-color:var(--teal)}
+
+  /* design */
+  .design{padding-top:84px;padding-bottom:84px}
+  .design .grid{display:grid;grid-template-columns:minmax(0,653.7fr) minmax(0,594.3fr);gap:64px;align-items:center}
+  .design .photo{width:100%;aspect-ratio:653.7/470;object-fit:cover;border-radius:12px}
+  .design p{padding-top:16px;font:400 17px/28.05px var(--karla);color:var(--body)}
+  .design .names{padding-top:16px;font:500 18px/30.6px var(--jost);color:var(--teal)}
+  .design .owners{padding-top:22px;padding-bottom:16px}
+
+  /* reviews */
+  .reviews{padding-bottom:84px}
+  .reviews .card{padding:36px 40px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:center}
+  .score{font:500 72px/72px var(--jost);color:var(--teal);margin-top:-16px;height:72px}
+  .score-sub{padding-top:6px;font:400 15px/22.5px var(--karla);color:var(--muted)}
+  .score-sub a{display:block;font-weight:700;color:var(--teal)}
+  .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-self:stretch}
+  .quotes figure{border-top:3px solid var(--gold);padding-top:18px}
+  .quotes blockquote{font:400 18px/27px var(--jost);color:var(--ink-2)}
+  .quotes figcaption{padding-top:12px;font:600 11px/16.5px var(--jost);letter-spacing:1.32px;text-transform:uppercase;color:var(--teal)}
+
+  /* good to know + location */
+  .essentials{background:var(--sand)}
+  .essentials .wrap{padding-top:84px;padding-bottom:84px;display:grid;grid-template-columns:minmax(0,685fr) minmax(0,571fr);gap:56px}
+  .facts{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .fact h3{padding-bottom:3px;font:500 17px var(--jost);color:var(--ink)}
+  .fact p{padding-top:2px;font:400 14.5px/21.75px var(--karla);color:var(--muted)}
+  .policies{display:inline-block;margin-top:18px;font:400 14.5px var(--karla);color:var(--muted)}
+  .policies:hover{color:var(--teal)}
+  .location .photo{margin-top:18px;width:100%;aspect-ratio:571/270;object-fit:cover;border-radius:12px}
+  .location address{padding-top:18px;font:400 16px/25.6px var(--karla);color:var(--body)}
+  .location address b{display:block;font-weight:700}
+  .location .actions{padding-top:20px;display:flex;flex-wrap:wrap;gap:12px}
+
+  /* cta */
+  .cta{background:var(--teal);text-align:center}
+  .cta .wrap{padding-top:76px;padding-bottom:76px}
+  .cta .h2{color:#fff}
+  .cta p{padding:12px 0 26px;font:400 18px var(--karla);color:#d9ecea}
+  .cta .btn{background:#fff;color:var(--teal);padding:16px 32px;font-size:17px}
+  .cta .btn:hover{background:var(--cream)}
+
+  /* footer */
+  .site-footer{background:var(--ink);color:#c9d0d1}
+  .site-footer .wrap{padding-top:56px;padding-bottom:26px}
+  .foot-grid{display:grid;grid-template-columns:minmax(0,344fr) minmax(0,265fr) minmax(0,265fr) minmax(0,318fr);gap:40px}
+  .site-footer .logo{width:162px;height:50px;object-fit:contain}
+  .site-footer h5{font:600 12px var(--jost);letter-spacing:1.92px;text-transform:uppercase;color:#fff}
+  .foot-text{padding-top:12px;font:400 15px/27px var(--karla)}
+  .foot-text a:hover{color:#fff}
+  .signup{margin-top:12px;display:flex;height:48px;padding:5px;border-radius:30px;background:#fff;max-width:318px}
+  .signup input{flex:1;min-width:0;border:0;background:transparent;padding:0 14px;font:400 14.5px var(--karla);color:var(--ink);outline:none}
+  .signup input::placeholder{color:#8a9193}
+  .signup button{border:0;border-radius:24px;background:var(--teal);color:#fff;padding:0 16px;font:500 14px var(--jost);cursor:pointer}
+  .foot-bottom{margin-top:40px;padding-top:16px;border-top:1px solid #3a4245;display:flex;justify-content:space-between;gap:24px;font:400 12.5px var(--karla);color:#8a9193}
+
+  /* responsive */
+  @media (max-width:1180px){
+    .nav{display:none}
+    .room-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .exp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .reviews .card{grid-template-columns:1fr;gap:28px}
+  }
+  @media (max-width:960px){
+    :root{--pad:40px}
+    .hero{grid-template-columns:1fr}
+    .hero-copy{padding:48px var(--pad)}
+    .hero h1,.hero .intro{max-width:none}
+    .hero-media{min-height:420px;order:-1}
+    .concept-badge{right:auto;left:24px}
+    .amenities .wrap,.design .grid,.essentials .wrap{grid-template-columns:1fr;gap:48px}
+    .design .photo{order:0}
+    .sec-head{flex-direction:column;align-items:flex-start;gap:16px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .rooms-note,.foot-bottom{flex-direction:column;gap:8px}
+  }
+  @media (max-width:760px){
+    :root{--pad:20px}
+    .topbar .wrap{flex-direction:column;gap:2px;font-size:12.5px}
+    .phone{display:none}
+    .site-header .wrap{height:68px;gap:16px}
+    .site-header .logo img{width:140px;height:43px}
+    .site-header .btn{padding:11px 18px;font-size:15px}
+    .hero h1{font-size:42px;line-height:46px}
+    .h2{font-size:32px;line-height:36px}
+    .press{grid-template-columns:1fr}
+    .press figure{border-right:0;border-bottom:1px solid var(--line)}
+    .press figure:last-child{border-bottom:0}
+    .rooms,.experiences,.design{padding-top:56px;padding-bottom:56px}
+    .gallery{padding-top:56px;padding-bottom:56px}
+    .amenities .wrap,.essentials .wrap{padding-top:56px;padding-bottom:56px}
+    .room-grid,.exp-grid,.quotes,.facts{grid-template-columns:1fr}
+    .amen-list{grid-template-columns:1fr}
+    .reviews{padding-bottom:56px}
+    .reviews .card{padding:28px 22px}
+    .social-hour{padding:20px}
+    .gal-btn{width:42px;height:42px}
+    .gal-caption{left:14px;bottom:14px;font-size:13px}
+    .foot-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>562 W. Arenas Road · Historic Tennis Club neighborhood · Palm Springs</span>
+    <span><b>Complimentary Orbitini hour</b> Thursday–Sunday at the poolside Boomerang Bar</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Orbit In home"><img src="/concepts/orbit-in/logo.png" alt="Orbit In — the ultimate Palm Springs modern experience" width="169" height="52"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#rooms">rooms</a>
+      <a href="#amenities">amenities</a>
+      <a href="#design">the design</a>
+      <a href="#experiences">the village</a>
+      <a href="#good-to-know">good to know</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <div class="header-right">
+      <a class="phone" href="tel:+17603233585">760.323.3585</a>
+      <a class="btn btn-teal" href="#book">Check availability</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Herbert Burns · 1950s · Palm Springs</p>
+      <h1>A slice of classic Palm Springs glamour</h1>
+      <p class="attribution">— Lonely Planet</p>
+      <p class="intro">A courtyard pool with mountain views, a short stroll from downtown, and rooms furnished with Eames, Saarinen and Bertoia. Quiet and adult-oriented.</p>
+      <form class="booking" id="book" onsubmit="return false">
+        <div class="dates">
+          <label class="date-field">
+            <span class="label">Arrive</span>
+            <span class="value" data-for="arrive">Select date</span>
+            <input type="date" id="arrive" aria-label="Arrival date">
+          </label>
+          <label class="date-field">
+            <span class="label">Depart</span>
+            <span class="value" data-for="depart">Select date</span>
+            <input type="date" id="depart" aria-label="Departure date">
+          </label>
+        </div>
+        <button class="btn btn-teal" type="submit">Check availability</button>
+        <small>All rooms are for two guests · one room per booking (call for more) · 2-night minimum most weekends</small>
+      </form>
+    </div>
+    <div class="hero-media">
+      <img src="/concepts/orbit-in/hero-pool.jpg" alt="Orbit In pool and courtyard" width="840" height="712" fetchpriority="high">
+      <span class="concept-badge">Concept mockup</span>
+      <div class="rating-pill"><b>4.9</b> of 5 on Tripadvisor · 604 reviews</div>
+    </div>
+  </section>
+
+  <div class="press">
+    <figure><blockquote>“Modernist Heaven… It’s THE place to stay”</blockquote><figcaption>TIME</figcaption></figure>
+    <figure><blockquote>“A Desert Oasis where the 1950’s never went out of style”</blockquote><figcaption>Travel + Leisure</figcaption></figure>
+    <figure><blockquote>“…lovingly returned to its Rat Pack glamour days”</blockquote><figcaption>Hip Hotels, USA</figcaption></figure>
+  </div>
+
+  <section class="rooms wrap" id="rooms">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Rooms 102–110</p>
+        <h2 class="h2">Nine rooms, each with its own story</h2>
+      </div>
+      <p class="lede">Every room has a private patio, a flat-screen TV with DVD and a vintage-style record player with LPs. Each one is themed and furnished differently.</p>
+    </div>
+    <div class="room-grid">
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-102-rat-pack.jpg" alt="Room #102, Rat Pack" width="417" height="236" loading="lazy"><span class="num">#102</span></div>
+        <div class="body">
+          <h3>Rat Pack</h3>
+          <ul class="chips"><li>King bed</li><li>Pool &amp; mountain views</li><li>1950s metal kitchen</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$229</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-103-twin-palms.jpg" alt="Room #103, Twin Palms" width="417" height="236" loading="lazy"><span class="num">#103</span></div>
+        <div class="body">
+          <h3>Twin Palms</h3>
+          <ul class="chips"><li>Queen bed</li><li>Private rear patio</li><li>Pink-tiled original bath</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$189</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-104-leopard-lounge.jpg" alt="Room #104, Leopard Lounge" width="417" height="236" loading="lazy"><span class="num">#104</span></div>
+        <div class="body">
+          <h3>Leopard Lounge</h3>
+          <ul class="chips"><li>King bed</li><li>Pool &amp; mountain views</li><li>1950s kitchen</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$229</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-105-atomic-paradise.jpg" alt="Room #105, Atomic Paradise" width="417" height="236" loading="lazy"><span class="num">#105</span></div>
+        <div class="body">
+          <h3>Atomic Paradise</h3>
+          <ul class="chips"><li>King bed</li><li>Pool &amp; mountain views</li><li>Paulin “orange slice” chair</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$229</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-106-bertoias-den.jpg" alt="Room #106, Bertoia’s Den" width="417" height="236" loading="lazy"><span class="num">#106</span></div>
+        <div class="body">
+          <h3>Bertoia’s Den</h3>
+          <ul class="chips"><li>Queen bed</li><li>Pool view</li><li>Bertoia “bird” chair</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$219</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-107-bossanovaville.jpg" alt="Room #107, BossaNovaVille" width="417" height="236" loading="lazy"><span class="num">#107</span></div>
+        <div class="body">
+          <h3>BossaNovaVille</h3>
+          <ul class="chips"><li>King bed</li><li>Secluded mountain-view patio</li><li>Wheelchair-accessible features</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$219</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-108-frey-lounge.jpg" alt="Room #108, Frey Lounge" width="417" height="236" loading="lazy"><span class="num">#108</span></div>
+        <div class="body">
+          <h3>Frey Lounge</h3>
+          <ul class="chips"><li>Queen bed</li><li>Pool views</li><li>Fireplace · outdoor shower</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$229</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-109-eames-studio.jpg" alt="Room #109, Eames Studio" width="417" height="236" loading="lazy"><span class="num">#109</span></div>
+        <div class="body">
+          <h3>Eames Studio</h3>
+          <ul class="chips"><li>King bed</li><li>Pool views</li><li>Wet bar &amp; fridge</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$229</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+      <article class="card room">
+        <div class="media"><img src="/concepts/orbit-in/room-110-cha-cha-room.jpg" alt="Room #110, Cha-Cha Room" width="417" height="236" loading="lazy"><span class="num">#110</span></div>
+        <div class="body">
+          <h3>Cha-Cha Room</h3>
+          <ul class="chips"><li>Queen bed</li><li>Pool views</li><li>Lush private patio</li></ul>
+          <div class="room-foot"><div><span class="rate-label">Published rate</span><span class="rate">from <strong>$199</strong>/night</span></div><div class="room-actions"><a class="pill pill-outline" href="#rooms">Details</a><a class="pill pill-teal" href="#book">Book</a></div></div>
+        </div>
+      </article>
+    </div>
+    <div class="rooms-note">
+      <p>Published rates on orbitin.com: weekday (Mon–Thu) rate per night for two guests. Weekend and holiday rates are higher; rates subject to change.</p>
+      <p>Photos: orbitin.com</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery" aria-roledescription="carousel" aria-label="Photo gallery">
+    <div class="wrap">
+      <p class="eyebrow">Gallery</p>
+      <h2 class="h2">A look around Orbit In</h2>
+    </div>
+    <div class="gallery-stage">
+      <div class="gallery-track">
+        <div class="slide is-active" data-caption="The courtyard pool after dark"><img src="/concepts/orbit-in/gallery-1-pool-night.jpg" alt="Orbit In pool and courtyard at night" width="1040" height="620" loading="lazy"></div>
+        <div class="slide" data-caption="The entryway at night"><img src="/concepts/orbit-in/gallery-2-entryway.jpg" alt="Orbit In entryway at night" width="1040" height="620" loading="lazy"></div>
+        <div class="slide" data-caption="Boomerang Bar by the pool"><img src="/concepts/orbit-in/gallery-3-boomerang-bar.jpg" alt="Boomerang Bar by the pool" width="1040" height="620" loading="lazy"></div>
+        <div class="slide" data-caption="The mid-century lounge"><img src="/concepts/orbit-in/gallery-4-lounge.jpg" alt="Mid-century lounge at Orbit In" width="1040" height="620" loading="lazy"></div>
+        <div class="slide" data-caption="The pool at twilight"><img src="/concepts/orbit-in/gallery-5-pool-twilight.jpg" alt="Pool at twilight" width="1040" height="620" loading="lazy"></div>
+        <div class="slide" data-caption="Exterior and palms"><img src="/concepts/orbit-in/gallery-6-exterior.jpg" alt="Orbit In exterior and palms" width="1040" height="620" loading="lazy"></div>
+      </div>
+      <div class="gallery-ui">
+        <button class="gal-btn gal-prev" type="button" aria-label="Previous photo">‹</button>
+        <button class="gal-btn gal-next" type="button" aria-label="Next photo">›</button>
+        <span class="gal-caption" aria-live="polite">The courtyard pool after dark</span>
+      </div>
+    </div>
+    <div class="gallery-controls">
+      <div class="dots" role="tablist" aria-label="Choose photo"></div>
+      <span class="counter">01 / 06</span>
+    </div>
+  </section>
+
+  <section class="amenities" id="amenities">
+    <div class="wrap">
+      <div class="amen-photos">
+        <img class="p1" src="/concepts/orbit-in/amenities-glassware.jpg" alt="Vintage glassware by the pool" width="285" height="440" loading="lazy">
+        <img class="p2" src="/concepts/orbit-in/amenities-pool-twilight.jpg" alt="Pool at twilight" width="285" height="380" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow">Amenities</p>
+        <h2 class="h2">Small hotel, big extras</h2>
+        <div class="social-hour">
+          <div class="badge">Thu–<br>Sun</div>
+          <div>
+            <h3>Complimentary Orbitini social hour</h3>
+            <p>Cocktails at the poolside Boomerang Bar, before you stroll out to dinner.</p>
+          </div>
+        </div>
+        <ul class="amen-list">
+          <li>Courtyard pool</li>
+          <li>Gated hot tub with fire hearth</li>
+          <li>Poolside misters</li>
+          <li>Spectacular mountain views</li>
+          <li>Guest cruiser bikes</li>
+          <li>Vintage vinyl collection</li>
+          <li>Movie, book &amp; game library</li>
+          <li>Poolside snacks, yogurt &amp; granola</li>
+          <li>Free parking &amp; WiFi</li>
+          <li>Robes, in-room safes, free sodas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="experiences wrap" id="experiences">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Experiences</p>
+        <h2 class="h2">Things to do in and near Palm Springs</h2>
+      </div>
+      <p class="lede">From the pool to the village center and the mountains, here’s where our guests spend their days.</p>
+    </div>
+    <div class="exp-grid">
+      <article class="card exp">
+        <img src="/concepts/orbit-in/exp-amenities.jpg" alt="Orbit In pool and shade gazebo" width="308" height="200" loading="lazy">
+        <div class="body"><h3>A unique mix of amenities</h3><p>Everything to make the switch to “vacation” mode effortless, with a “home away from home” feel.</p><a class="text-link" href="#amenities">See our amenities</a></div>
+      </article>
+      <article class="card exp">
+        <img src="/concepts/orbit-in/exp-village.jpg" alt="Palm Springs VillageFest street fair at night" width="308" height="200" loading="lazy">
+        <div class="body"><h3>The Village Center</h3><p>A short stroll from the inn: shops, restaurants, theaters, museums and night spots, with our custom map to find them.</p><a class="text-link" href="#good-to-know">See more</a></div>
+      </article>
+      <article class="card exp">
+        <img src="/concepts/orbit-in/exp-shopping.jpg" alt="Desert Hills Premium Outlets" width="308" height="200" loading="lazy">
+        <div class="body"><h3>Mod Shopping Mecca</h3><p>Vintage thrift shops to modern outlet malls, plus our favorite haunts for the “found in Palm Springs” originals in our rooms.</p><a class="text-link" href="#good-to-know">Read more</a></div>
+      </article>
+      <article class="card exp">
+        <img src="/concepts/orbit-in/exp-tramway.jpg" alt="Palm Springs Aerial Tramway" width="308" height="200" loading="lazy">
+        <div class="body"><h3>Outdoor Adventures</h3><p>Golf, tennis, swimming, mountain biking and hiking, all year round, with the great outdoors at your doorstep.</p><a class="text-link" href="#good-to-know">What should I do?</a></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="design wrap" id="design">
+    <div class="grid">
+      <img class="photo" src="/concepts/orbit-in/design-exterior.jpg" alt="Orbit In exterior" width="654" height="470" loading="lazy">
+      <div>
+        <p class="eyebrow">The design</p>
+        <h2 class="h2">Palm Springs modern, the real thing</h2>
+        <p>Orbit In is a 1950s courtyard hotel designed by Herbert Burns. Inside, the rooms are furnished with classic mid-century pieces:</p>
+        <p class="names">Eames · Saarinen · Nelson · Bertoia · Noguchi · Paulin · Blue Dot · Cortez · Schultz</p>
+        <p class="owners">Kevin Miller and Jinny Park first came as guests, and they’ve owned and run the hotel since 2007.</p>
+        <a class="btn btn-outline" href="#design">Read our history</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews wrap" aria-label="Guest reviews">
+    <div class="card">
+      <div>
+        <p class="score">4.9</p>
+        <p class="score-sub">of 5 on Tripadvisor from 604 reviews<a href="#top">Read reviews →</a></p>
+      </div>
+      <div class="quotes">
+        <figure><blockquote>“Happy hour was so fun, enjoying Orbitinis and meeting other guests. Room was kept really clean, was quiet and comfortable.”</blockquote><figcaption>wundrwomynn · Guest review on Tripadvisor, Sep 2026</figcaption></figure>
+        <figure><blockquote>“If you are looking for a quiet stay with a retro vibe but close to the amenities of Palm Springs, you could not ask for a better place.”</blockquote><figcaption>Sarah S · Guest review on Tripadvisor, May 2026</figcaption></figure>
+        <figure><blockquote>“We booked the Rat Pack room, and it was perfect, right down to the mid-century furnishings”</blockquote><figcaption>Paula M · Guest review on Tripadvisor, Oct 2025</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="essentials" id="good-to-know">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Good to know</p>
+        <h2 class="h2">The essentials, at a glance</h2>
+        <div class="facts">
+          <div class="fact"><h3>Two guests per room</h3><p>Every room is designed for two.</p></div>
+          <div class="fact"><h3>One room per booking</h3><p>Call us before booking more than one room.</p></div>
+          <div class="fact"><h3>Minimum stay</h3><p>2 nights on most weekends.</p></div>
+          <div class="fact"><h3>Changes &amp; cancellations</h3><p>2 weeks’ notice, please.</p></div>
+          <div class="fact"><h3>Adult-oriented</h3><p>We’re very much an adult-oriented hotel; please call before bringing a child.</p></div>
+          <div class="fact"><h3>No pets · non-smoking</h3><p>Holiday &amp; Modernism Week nights are priced as weekends.</p></div>
+        </div>
+        <a class="policies" href="#good-to-know">Full policies →</a>
+      </div>
+      <div class="location">
+        <p class="eyebrow">Location</p>
+        <h2 class="h2">Steps from downtown</h2>
+        <img class="photo" src="/concepts/orbit-in/location-pool.jpg" alt="Pool, palms and sky at Orbit In" width="571" height="270" loading="lazy">
+        <address><b>562 W. Arenas Road, Palm Springs, CA 92262</b>A wind-free spot in the Historic Tennis Club neighborhood, a short walk to restaurants, nightlife, shopping, galleries, theatres, the desert museum and hiking trails.</address>
+        <div class="actions">
+          <a class="btn btn-teal" href="https://www.google.com/maps/search/?api=1&amp;query=562+W+Arenas+Rd+Palm+Springs+CA+92262" target="_blank" rel="noopener">Get directions</a>
+          <a class="btn btn-outline" href="#experiences">Local guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2 class="h2">Your room is waiting by the pool</h2>
+      <p>Choose dates to see which of the nine rooms are free.</p>
+      <a class="btn" href="#book">Check availability</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img class="logo" src="/concepts/orbit-in/logo-light.png" alt="Orbit In" width="163" height="50" loading="lazy">
+        <p class="foot-text">562 W. Arenas Road<br>Palm Springs, CA 92262</p>
+      </div>
+      <div>
+        <h5>Call or write</h5>
+        <p class="foot-text">Local <a href="tel:+17603233585">760.323.3585</a><br>Toll-free <a href="tel:+18779967248">877.996.7248</a><br><a href="mailto:mail@orbitin.com">mail@orbitin.com</a></p>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <p class="foot-text">Instagram<br>Facebook<br>Accessibility statement</p>
+      </div>
+      <div>
+        <h5>Orbit In guest list</h5>
+        <form class="signup" onsubmit="return false">
+          <input type="email" placeholder="Your email" aria-label="Your email">
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Concept homepage mockup prepared for Orbit In · not a live website · photography from orbitin.com</span>
+      <span>Booking hands off to the existing ResNexus engine · © Orbit In, LLC</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Date fields: show the picked date in the "Select date" slot
+  document.querySelectorAll('.date-field input').forEach(function (input) {
+    var out = document.querySelector('[data-for="' + input.id + '"]');
+    input.addEventListener('click', function () { if (input.showPicker) { try { input.showPicker(); } catch (e) {} } });
+    input.addEventListener('change', function () {
+      if (!input.value) { out.textContent = 'Select date'; return; }
+      var d = new Date(input.value + 'T00:00:00');
+      out.textContent = d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      if (input.id === 'arrive') { var dep = document.getElementById('depart'); dep.min = input.value; }
+    });
+  });
+
+  // Gallery carousel
+  (function () {
+    var track = document.querySelector('.gallery-track');
+    var slides = Array.prototype.slice.call(track.children);
+    var dotsWrap = document.querySelector('.dots');
+    var counter = document.querySelector('.counter');
+    var caption = document.querySelector('.gal-caption');
+    var i = 0, n = slides.length;
+    var pad = function (k) { return (k < 10 ? '0' : '') + k; };
+    slides.forEach(function (s, k) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Photo ' + (k + 1) + ' of ' + n);
+      b.addEventListener('click', function () { go(k); });
+      dotsWrap.appendChild(b);
+    });
+    var dots = dotsWrap.children;
+    function go(k) {
+      i = (k + n) % n;
+      var step = slides[0].getBoundingClientRect().width + 20;
+      track.style.transform = 'translateX(' + (-i * step) + 'px)';
+      slides.forEach(function (s, j) { s.classList.toggle('is-active', j === i); s.setAttribute('aria-hidden', j === i ? 'false' : 'true'); });
+      for (var j = 0; j < dots.length; j++) dots[j].setAttribute('aria-current', j === i ? 'true' : 'false');
+      counter.textContent = pad(i + 1) + ' / ' + pad(n);
+      caption.textContent = slides[i].getAttribute('data-caption');
+    }
+    document.querySelector('.gal-prev').addEventListener('click', function () { go(i - 1); });
+    document.querySelector('.gal-next').addEventListener('click', function () { go(i + 1); });
+    document.querySelector('.gallery').addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') go(i - 1);
+      if (e.key === 'ArrowRight') go(i + 1);
+    });
+    var sx = null;
+    track.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 40) go(dx < 0 ? i + 1 : i - 1);
+      sx = null;
+    });
+    window.addEventListener('resize', function () { go(i); });
+    go(0);
+  })();
+</script>
+</body>
+</html>
