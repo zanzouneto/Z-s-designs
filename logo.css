@@ -12,3 +12,7 @@
     .lw-offer { border-radius: 20px; padding: 16px 20px; }
     .logo-card { aspect-ratio: 4 / 3; }
 }
+
+/* hover: logo slowly zooms in */
+.logo-card img { transition: transform 2s ease; }
+.logo-card:hover img { transform: scale(1.2); }

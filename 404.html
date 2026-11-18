@@ -27,7 +27,7 @@
         @media (prefers-reduced-motion: reduce) { .nf-code { animation: none; } }
     </style>
 </head>
-<body data-no-bg>
+<body data-no-bg data-hand>
     <nav-menu variant="overlay"></nav-menu>
     <main class="home" data-start="games">
         <img class="home-photo is-games" src="/assets/zeina-bottomright.jpg" alt="">
@@ -53,6 +53,7 @@
         <p class="home-hint" aria-hidden="true">← pick a side →</p>
     </main>
     <hire-me-component></hire-me-component>
+    <div id="hand-cursor" aria-hidden="true"></div>
     <script src="/navigation.js"></script>
     <script src="/index.js"></script>
 </body>

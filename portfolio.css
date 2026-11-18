@@ -102,3 +102,12 @@ swiper-container:not(:defined) { display: flex; gap: 16px; overflow-x: auto; scr
 swiper-container:not(:defined) swiper-slide { flex: 0 0 100%; aspect-ratio: 1.45; scroll-snap-align: center; position: relative; }
 .hl-swiper:not(:defined) swiper-slide { aspect-ratio: 1.42; }
 @media (max-width: 640px) { .hl-swiper:not(:defined) swiper-slide { aspect-ratio: 0.68; } }
+
+/* hover: project pictures slowly zoom in, client logos pop */
+.pcard-media { overflow: hidden; }
+.pcard-media img { transition: transform 2s ease; }
+.pcard:hover .pcard-media img { transform: scale(1.2); }
+.pf-clients img { transition: transform 0.6s ease, opacity 2s ease; }
+.pf-clients img:hover { transform: scale(1.2); opacity: 1; }
+.tool { transition: border-color 0.25s ease, transform 0.25s ease; }
+.tool:hover { border-color: var(--yellow); transform: translateY(-2px); }

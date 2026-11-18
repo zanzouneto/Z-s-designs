@@ -4,5 +4,12 @@
 .g-card { display: flex; flex-direction: column; overflow: hidden; text-decoration: none; color: var(--paper); }
 .g-card:hover { color: var(--paper); }
 .g-card img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; }
-.g-card span { padding: 18px 22px 22px; font-family: 'Micro', monospace; font-size: 34px; line-height: 1; }
+.g-card > span:not(.g-cover) { padding: 18px 22px 22px; font-family: 'Micro', monospace; font-size: 34px; line-height: 1; }
 @media (max-width: 640px) { .g-hero { padding: 56px 0 32px; } }
+
+/* hover: cover zooms, name turns cyan (like before) */
+.g-cover { display: block; overflow: hidden; }
+.g-card img { transition: transform 0.5s ease; }
+.g-card:hover img { transform: scale(1.2); }
+.g-card span:not(.g-cover) { transition: color 0.3s ease; }
+.g-card:hover span:not(.g-cover) { color: rgb(35, 200, 218); }

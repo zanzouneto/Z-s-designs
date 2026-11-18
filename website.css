@@ -19,3 +19,8 @@
     .web-wide { display: none; }
     .web-tall { display: block; }
 }
+
+/* hover: pictures slowly zoom in */
+.web-media { overflow: hidden; }
+.web-media img { transition: transform 2s ease; }
+.web-card:hover .web-media img { transform: scale(1.2); }

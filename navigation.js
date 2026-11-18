@@ -119,6 +119,7 @@
             body.prepend(bg);
         }
         if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+        if (body.hasAttribute('data-hand')) return; // the home page has the big hand instead
         var c1 = document.getElementById('cursor1');
         var c2 = document.getElementById('cursor2');
         if (!c1) { c1 = document.createElement('div'); c1.id = 'cursor1'; c1.setAttribute('aria-hidden', 'true'); body.appendChild(c1); }

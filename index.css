@@ -37,3 +37,18 @@ body { overflow: hidden; }
     .home-intro { top: auto; left: 20px; right: 20px; bottom: 140px; gap: 10px; }
     .home-intro h1 { font-size: 17px; max-width: 230px; }
 }
+
+/* the giant pixel hand that follows the mouse and grows when you move fast */
+#hand-cursor { display: none; }
+@media (hover: hover) and (pointer: fine) {
+    body[data-hand], body[data-hand] * { cursor: none !important; }
+    body[data-hand] a:hover, body[data-hand] button:hover { animation: none; }
+    body[data-hand] .zs-hire:hover { animation: zs-bob 3.2s ease-in-out infinite; }
+    #hand-cursor {
+        display: block; position: fixed; left: 0; top: 0; z-index: 10002; pointer-events: none;
+        width: 90px; height: 100px; background: url('/assets/pointer.png') no-repeat center / contain;
+        image-rendering: pixelated; transform-origin: 24% 3%; will-change: transform; opacity: 0; transition: opacity 0.2s ease;
+        filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+    }
+    #hand-cursor.on { opacity: 1; }
+}

@@ -177,3 +177,27 @@ a:hover { color: var(--yellow); }
     .zs-hire { width: 80px; right: 12px; bottom: 14px; }
     .zs-hire span { font-size: 22px; top: -12px; }
 }
+
+/* ==========================================================
+   Hover fun (brought back from the old site)
+   ========================================================== */
+/* eyes that look right, then left, on anything clickable */
+@media (hover: hover) and (pointer: fine) {
+    a:hover, button:hover { animation: zs-eyes 0.8s infinite; }
+}
+@keyframes zs-eyes {
+    0%, 100% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='26' font-size='24'>👀</text></svg>") 16 16, pointer; }
+    50% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><g transform='translate(32 0) scale(-1 1)'><text y='26' font-size='24'>👀</text></g></svg>") 16 16, pointer; }
+}
+/* nav links light up as pills */
+.zs-navlink { padding: 0 12px; border-radius: 999px; transition: background-color 0.25s ease, color 0.25s ease; }
+.zs-navlink:hover { background: var(--yellow); color: var(--ink); }
+.zs-menu nav a { align-self: flex-start; padding: 8px 16px; margin-left: -16px; border-radius: 30px; transition: background-color 0.25s ease, color 0.25s ease; }
+.zs-menu nav a:hover { background: var(--ink); color: var(--yellow); text-decoration: none; }
+/* hire me: waves at you and grows */
+.zs-hire { transition: scale 0.5s ease-in; }
+.zs-hire:hover {
+    scale: 1.1;
+    animation: zs-bob 3.2s ease-in-out infinite;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='26' font-size='24'>👋</text></svg>") 16 16, pointer;
+}
