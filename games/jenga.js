@@ -24,18 +24,6 @@ const tasks = {
         "Describe the plot of an origional movie in 10 seconds.",
         "Truth or Dare: Choose truth or dare. The group will determine your task"
     ],
-    Strip: [
-        "Remove one article of clothing.",
-        "Swap a piece of clothing with another player.",
-        "Take off your socks.",
-        "Unbutton your shirt halfway.",
-        "Wear your shirt backward for the next round.",
-        "Remove an accessory (e.g., hat, belt, watch).",
-        "Take off a shoe and give it to another player.",
-        "Roll up your pant legs to your knees.",
-        "Swap shirts with another player.",
-        "Flip, Sip, or Strip: Players flip a coin. If it lands on heads, they can either take a sip of their drink or strip off an item of clothing. If it lands on tails, they must do both."
-    ],
     social: [
         "Compliment the person to your left",
         "Share an embarrassing story",
