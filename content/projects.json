@@ -117,60 +117,6 @@
       ]
     },
     {
-      "slug": "kalimati",
-      "title": "Kalimati",
-      "pageTitle": "Kalimati app concept",
-      "description": "Concept app for kids abroad learning spoken Arabic: daily game runs, robot friends to collect, and portals for parents and teachers.",
-      "year": "2026",
-      "hero": {
-        "image": "kalimati 1.jpg"
-      },
-      "contribution": [
-        "Product concept",
-        "UX/UI design",
-        "App design",
-        "Interactive prototype"
-      ],
-      "blocks": [
-        {
-          "caption": [
-            "Short daily runs, 13 mini games",
-            "Three 2-minute games a day keep the streak going",
-            "Listen and pick, Build the sentence, Rooftop chase and more",
-            "Coins, XP and a reward set by the parent"
-          ],
-          "image": "kalimati 3.jpg"
-        },
-        {
-          "image": "kalimati 2.jpg"
-        },
-        {
-          "caption": [
-            "Robot friends to collect",
-            "12 robots, each named after an Arabic word",
-            "Unlock them with coins, then level them up"
-          ],
-          "image": "kalimati 4.jpg"
-        },
-        {
-          "caption": [
-            "Parent portal",
-            "Weekly summary and the words their child can say",
-            "Family missions and rewards"
-          ],
-          "image": "kalimati 5.jpg"
-        },
-        {
-          "caption": [
-            "Teacher portal and live class",
-            "Call queue, today's classes and content review",
-            "Shared whiteboard for group and one-on-one classes"
-          ],
-          "image": "kalimati 6.jpg"
-        }
-      ]
-    },
-    {
       "slug": "sequence-yoga",
       "title": "Sequence",
       "pageTitle": "Sequence yoga app",
