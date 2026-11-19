@@ -70,6 +70,148 @@
       ]
     },
     {
+      "slug": "paypergo",
+      "title": "PayPerGo",
+      "pageTitle": "PayPerGo app",
+      "description": "iOS app that tracks the real cost per use of your gym, classes, transit pass or any membership, and shows if you're on pace to make it pay off.",
+      "year": "2026",
+      "liveUrl": "https://apps.apple.com/us/app/paypergo/id6804397155",
+      "hero": {
+        "image": "paypergo 1.jpg"
+      },
+      "contribution": [
+        "Product design",
+        "App design",
+        "FlutterFlow development",
+        "Firebase",
+        "App Store launch"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Cost per use, live",
+            "Set the price, time window and a target cost per use",
+            "See if you're ahead or behind pace on every membership"
+          ],
+          "image": "paypergo 3.jpg"
+        },
+        {
+          "image": "paypergo 2.jpg"
+        },
+        {
+          "caption": [
+            "Log, fix, celebrate",
+            "One tap from the card or a Home screen widget",
+            "Calendar to add or remove any day",
+            "Milestones like Paid off and Half price"
+          ],
+          "image": "paypergo 4.jpg"
+        },
+        {
+          "caption": [
+            "Light and dark mode",
+            "Follows your phone, morning or night"
+          ],
+          "image": "paypergo 5.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "kalimati",
+      "title": "Kalimati",
+      "pageTitle": "Kalimati app concept",
+      "description": "Concept app for kids abroad learning spoken Arabic: daily game runs, robot friends to collect, and portals for parents and teachers.",
+      "year": "2026",
+      "hero": {
+        "image": "kalimati 1.jpg"
+      },
+      "contribution": [
+        "Product concept",
+        "UX/UI design",
+        "App design",
+        "Interactive prototype"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Short daily runs, 13 mini games",
+            "Three 2-minute games a day keep the streak going",
+            "Listen and pick, Build the sentence, Rooftop chase and more",
+            "Coins, XP and a reward set by the parent"
+          ],
+          "image": "kalimati 3.jpg"
+        },
+        {
+          "image": "kalimati 2.jpg"
+        },
+        {
+          "caption": [
+            "Robot friends to collect",
+            "12 robots, each named after an Arabic word",
+            "Unlock them with coins, then level them up"
+          ],
+          "image": "kalimati 4.jpg"
+        },
+        {
+          "caption": [
+            "Parent portal",
+            "Weekly summary and the words their child can say",
+            "Family missions and rewards"
+          ],
+          "image": "kalimati 5.jpg"
+        },
+        {
+          "caption": [
+            "Teacher portal and live class",
+            "Call queue, today's classes and content review",
+            "Shared whiteboard for group and one-on-one classes"
+          ],
+          "image": "kalimati 6.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sequence-yoga",
+      "title": "Sequence",
+      "pageTitle": "Sequence yoga app",
+      "description": "Yoga app in progress: build your own pose sequences, play them with a guided timer, and share sessions others can try or remix.",
+      "year": "2026",
+      "hero": {
+        "image": "sequence 1.jpg"
+      },
+      "contribution": [
+        "Product concept",
+        "UX/UI design",
+        "Figma Make prototype"
+      ],
+      "blocks": [
+        {
+          "caption": [
+            "Build a sequence",
+            "Pick poses from a library grouped by type and level",
+            "Set the time for each pose and reorder them"
+          ],
+          "image": "sequence 2.jpg"
+        },
+        {
+          "caption": [
+            "Play it",
+            "Guided timer, one pose at a time",
+            "Wrap-up screen with stats, streak and how you felt"
+          ],
+          "image": "sequence 3.jpg"
+        },
+        {
+          "caption": [
+            "Practice together",
+            "Feed of friends' sessions you can play or remix",
+            "Explore by style and level, and a profile with your sessions and sequences"
+          ],
+          "image": "sequence 4.jpg"
+        }
+      ]
+    },
+    {
       "slug": "Leonardite",
       "title": "Leonardite",
       "pageTitle": "AAZ Leonardite project",
