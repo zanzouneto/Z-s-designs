@@ -99,7 +99,9 @@ function page(p, next) {
     ['My role', esc(p.contribution.join(', '))],
     p.client && ['Client', esc(p.client)],
     p.year && ['When', esc(p.year)],
-    p.liveUrl && ['Live site', `<a class="zs-ylink" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">${esc(host(p.liveUrl))} ↗</a>`],
+    p.liveUrl && (/apps\.apple\.com/.test(p.liveUrl)
+      ? ['Download', `<a class="zs-ylink" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">App Store ↗</a>`]
+      : ['Live site', `<a class="zs-ylink" href="${esc(p.liveUrl)}" target="_blank" rel="noopener">${esc(host(p.liveUrl))} ↗</a>`]),
   ].filter(Boolean).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('\n                ');
   return `<!DOCTYPE html>
 <!-- GENERATED from content/projects.json by scripts/build-projects.mjs. Edit the JSON, not this file. -->
