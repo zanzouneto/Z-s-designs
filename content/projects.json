@@ -115,7 +115,6 @@
       "title": "LIFT99 DAO",
       "pageTitle": "LIFT99 DAO project",
       "description": "Web design and Webflow development for LIFT99's Web3 DAO project.",
-      "liveUrl": "https://lift99-dao.webflow.io/",
       "hero": {
         "image": "dao 1.png"
       },
@@ -142,7 +141,6 @@
       "title": "LIFT99 HR",
       "pageTitle": "LIFT99 HR project",
       "description": "Web design, Webflow development and product design for LIFT99's HR platform.",
-      "liveUrl": "https://lift99-hr.webflow.io/",
       "hero": {
         "image": "hr 1.png"
       },
@@ -314,7 +312,6 @@
       "title": "UA 911",
       "pageTitle": "UA 911 project",
       "description": "Web design and development for UA 911, a fundraising initiative in Ukraine.",
-      "liveUrl": "https://uabusiness911.webflow.io/",
       "hero": {
         "image": "911 1.png"
       },
@@ -503,7 +500,6 @@
       "title": "Coaching",
       "pageTitle": "Coaches for Ukraine project",
       "description": "Webflow development and SEO for Coaches for Ukraine, a coaching project.",
-      "liveUrl": "https://www.coachesforukraine.com/",
       "hero": {
         "image": "coach 1.png"
       },
